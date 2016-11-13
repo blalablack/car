@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="../css/video.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/main.css"/>
+    <link rel="stylesheet" href="../css/pagemain.css"/>
+    <script src="../js/jquery-1.11.3.js"></script>
+
+    <script>
+        //判断手机端还是pc端
+        var ua = navigator.userAgent;
+        if(ua.indexOf("Windows NT")!=-1||ua.indexOf("Mac OS X 10")!=-1){
+            //这是pc端
+            $(function () {
+                links=$("head link");
+                $(links[2]).after("<link rel='stylesheet' type='text/css' href='../css/pc.css'/>");
+                navcar();
+            })
+            console.log(1);
+        }else{
+            links=$("head link");
+            $(links[2]).after("<link rel='stylesheet' type='text/css' media='screen and (min-width:992px)' href='../css/ipad1.css'/>");
+            //这是手机,更改link
+            links=$("head link");
+            //middle考虑用还是不用
+            $(links[3]).after("<link rel='stylesheet' type='text/css' media='screen and (min-width:480px) and (max-width:992px)' href='../css/ipad.css'/>");
+            links=$("head link");
+            $(links[4]).after("<link rel='stylesheet' type='text/css' media='screen and (min-width:300px) and (max-width:480px)' href='../css/phone.css'/>");
+            links=$("head link");
+            $(links[5]).after("<link rel='stylesheet' type='text/css' media='screen and (max-width:300px)' href='../css/phone1.css'/>");
+
+        }
+    </script>
+
+
+
+</head>
+<body>
+<div class="kuang">
+    <div class="header">
+        <div ><div class="heading"></div></div>
+        <div class="nav">
+            <ul>
+                <li id="ferrari">
+                    <img src="../img/ferrari_hover1.png"><a href="#">Ferrari</a>
+                </li>
+                <li>
+                    <img src="../img/porsche_hover1.png"  alt=""><a href="#">Porsche</a>
+
+                </li>
+                <li>
+                    <img src="../img/bugatti_hover1.png"  alt=""> <a href="#">Bugatti</a>
+                </li>
+                <li>
+                    <img src="../img/Lamborghini_hover1.png"  alt=""><a href="#">Ohters</a>
+                </li>
+                <li>
+                    <img src="../img/others_hover1.png"  alt=""><a href="#">Contact</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content_header">
+            <p class="meta"><span>Wednesday, May 23, 2012</span></p>
+            <h1>bugatti chrion posted 2016 Geneva Motor Show</h1>
+        </div>
+        <div class="content_content">
+            <section id="player">
+                <div id="pause_on"><span></span></div>
+                <div id="poster_on"><img src="../img/bujiadi_poster.jpg" alt=""></div>
+                <video id="media" width="100%" poster="../img/bujiadi_poster.jpg" preload="metadata"
+                       src="../video/Ultimate_Final_h264_v02.mp4">您的浏览器不支持video</video>
+                <div id="control" onselectstart="return false;" style="-moz-user-select:none;">
+                    <div class="neirong">
+                        <div id="buttons">
+                            <span class="btn"></span>
+                        </div >
+                        <div id="time_now">
+                            <span class="now">0:00</span>
+                        </div>
+                        <div id="bar_parent">
+                            <div class="bar">
+                                <div class="buffer"></div>
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                        <div id="time_all" >
+                            <span class="all">0:00</span>
+                        </div>
+                        <div id="fullscreen">
+                            <span class="screen_btn"></span>
+                        </div>
+                        <div id="voice">
+                            <div class="volume"></div>
+                            <div class="voice_bar_parent">
+                                <span class="cicle"></span>
+                                <div id="tops" ></div>
+                                <div class="voice_bar">
+                                    <div class="voice_progress">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section id="content">
+                <div class="center">
+                    <span>NEXT DETAILS</span>
+                    <div class="center2"><h3>
+                       Recently the company announced the Bugatti Veyron Bugatti officially renamed "Chiron".</h3></div>
+                </div>
+                <div class="content_bottom">
+                    <div class="content_bottom_first"><img src="../img/chrion1.jpg" alt=""><p >Bugatti Chiron Grand Palais in Paris unveiled the world's limited 500.</p></div>
+                    <div class="content_bottom_first no"><img src="../img/chrion4.jpg" alt=""><p >Bugatti Chiron Grand Palais in Paris unveiled the world's limited 500.</p></div>
+                    <p><strong>CHRION SOURCE:</strong>
+                        "Chiron" from the most famous Bugatti driver Louis Alexandre Chiron (Louis Alexandre Chiron). Chiron (1899-1979) has more than ten times to drive Bugatti podium to become the most winning rider number, and Chiron is also the history of F1's oldest racer at 59 years old still drive an F1 car participated in the 1958 Monaco Grand Prix. The new car's name is in honor of the excellent driver, he was between the 1920s and 1930s do the racing driver, its name will be close historical ties with the Bugatti.</p>
+                    <p class="last_p"><strong>GLOBAL 500:</strong>
+                        In addition, Chiron (Chiron) models will also be taken to sell a limited way, the car is likely to be controlled at 500 production, which is expected to annually produce 100 cars.</p>
+                    <div><img src="../img/chrion2.jpg" alt=""> <p>Art specifications Chiron will four-turbocharged W16 8.0-liter engine, maximum power will reach 1103kW maximum torque 1500N·m.</p></div>
+                    <div class="no"><img src="../img/chrion5.jpg" alt=""> <p>Art specifications Chiron will four-turbocharged W16 8.0-liter engine, maximum power will reach 1103kW maximum torque 1500N·m.</p></div>
+                    <p><strong>DESIGN ELEMENTS:</strong>
+                        A new Bugatti Chiron will inherit the family of the design elements, the new car is still using mid-engined four-wheel drive transmission layout, and in coordination with the dual-clutch gearbox, the power can be efficiently and quickly spread to four wheels. The new supercar will be powered 8.0L engine that enables the engine to squeeze out the only 2.5 seconds to accelerate from a standstill to 100 km/h speed. Maximum speed of 420 km/h.</p>
+                    <p class="last_p"><strong>TECHNICAL SPECIFICATIONS:</strong>
+                        Aspect Chiron company will use four turbocharged W16 8.0-liter engine. The match will be a 7-speed dual-clutch gearbox, 0-100km/h acceleration time of just 2.3s, 0-300km h acceleration time is less than 15s, will reach a top speed of 480km/h.The new Bugatti models released tremendous technological innovation handling combination orders are improved a lot.</p>
+                    <div><img src="../img/chrion3.jpg" alt=""><p>Bugatti Chirion travel speed can reach 420 km/h,it will provide Bugatti Chirion range is 500km/h meter.</p></div>
+                    <div class="no"><img src="../img/chrion6.jpg" alt=""><p>Bugatti Chirion travel speed can reach 420 km/h,it will provide Bugatti Chirion range is 500km/h meter.</p></div>
+                    <p class="last_p"><strong>BODY DESIGN: </strong>
+                        Bucharest Dikai Long using sharp LED headlamps, signature front grille, body side C is exaggerated design elements. In addition,  in the Bucharest Dikai Long. Chiron carbon fiber body, the new adaptive chassis design, his sports PAX tires. Brake side will use 420mm front brake discs 400mm diameter. "Chiron" The future is not only on the speed champion, will be second to none in terms of innovation.</p>
+                </div>
+            </section>
+
+        </div>
+        <div></div>
+    </div>
+    <div class="aside">
+        <section>
+            <h4>MORE IDEA</h4>
+            <p>如果你有更好的想法赶快点击下边按钮让我们一起进步吧!</p>
+            <a href="https://github.com/"><span></span>I Need Your Idea</a>
+        </section>
+    </div>
+    <div class="footer">
+        <p><a href="#">自适应</a> | <a href="#">跑车</a> | <a href="#">科技</a> | <a href="#">瞎玩</a><br>More content is on the way</p>
+        <ul>
+            <li><a class="git" href="https://github.com/"></a></li>
+            <li><a class="qq" href=""></a></li>
+            <li><a class="wechat" href=""></a></li>
+        </ul>
+    </div>
+</div>
+<script src="../js/video.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
+

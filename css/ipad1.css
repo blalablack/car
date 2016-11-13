@@ -1,0 +1,139 @@
+.kuang{
+    width:1000px;
+}
+.nav ul li a{
+    font-size: 1.6em;
+}
+.content_header h1{
+    font-size:2.2em;
+}
+#content .center h3{
+    font-size:1.8em;
+}
+.content_bottom>p{
+    font-size:1.5em;
+}
+.content_bottom div p{
+    font-size:1em;
+}
+.aside{
+    font-size: 1.4em;
+}
+.footer{
+    font-size: 1.2em;
+}
+.header{
+    overflow: hidden;
+    width:100%;
+    margin-bottom:10px;
+}
+.heading{
+    width: 90px;
+    height: 90px;
+    background: url("../img/food-sense.png") no-repeat 0 0;
+    border:1px solid red;
+    float:left;
+}
+.nav{
+    text-align: left;
+    margin-top:20px;
+
+}
+.nav ul{
+    list-style: none;
+    padding:0;
+    overflow: hidden;
+    margin-right:5px;
+    float:right;
+}
+.nav ul li{
+    float: left;
+    margin-left:13px;//一会改成百分比
+
+}
+.nav ul li img{
+    display: none;
+}
+.nav ul li a{
+    display: block;
+    text-align: left;
+}
+/******************/
+.content{
+    float:none;
+}
+.content_header .meta{
+    display: none;
+}
+#content .no{
+    display: inline-block;
+}
+
+#content .center{
+    margin-bottom:-10px;
+}
+#content .center span{
+    display: none;
+}
+#content .center2 h3{
+    margin-bottom:0;
+    line-height: 28px;
+    text-align: center;
+}
+#content .content_bottom .content_bottom_first{
+    margin-top:0;
+}
+#content .content_bottom div p{
+    border: 1px solid #E5E5E5;
+    border-top:transparent;
+    padding-bottom: 5px;
+    margin-top:3px;
+    margin-bottom:3px;
+    padding-top:3px;
+    padding-left:5px;
+}
+#content .content_bottom>div{
+    width:48%;
+    float:left;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+#content .content_bottom .no{
+    margin-left:4%;
+}
+
+#content .content_bottom  .last_p{
+    border-bottom: 1px solid #E5E5E5;
+    box-shadow: 3px 3px 6px #F0F0F0;
+    padding-bottom:25px;
+}
+#content .content_bottom>p{
+    padding-left:6px;
+
+}
+.aside h4{
+    margin-bottom: 5px;
+}
+.aside p{
+    font-family:"微软雅黑 Light","微软雅黑";
+    line-height:25px;
+    margin-top:0;
+
+}
+.aside a{
+    display: block;
+    width:136px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 4px 2px 5px 0;
+}
+.aside a:hover{
+    background-color:#EFF8F7;
+}
+.aside a span{
+    float:left;
+    width:19px;
+    height:19px;
+    margin:1px 5px 0 3px;
+    background: url("../img/tubiao.png") -83px 0 no-repeat;
+}

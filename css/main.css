@@ -1,0 +1,219 @@
+
+body{
+    color: #141414;
+    font: 300 62.5% 'ff-zwo-web',Arial,sans-serif;
+}
+
+.kuang{
+    margin:30px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/***********************************/
+
+
+/*********************************/
+.content{
+    float: left;
+    overflow: hidden;
+}
+#hide{
+    margin: 0;
+}
+#hide img{
+    visibility: hidden;
+    display: block;
+    max-width:100%;//这个图片也要自适应，解决子元素absolute,父元素自适应
+}
+#picture img{
+    display: block;
+    height:auto;
+}
+#picture{
+    position:relative;
+}
+#picture>div{
+    position: absolute;
+    top:0;
+}
+#picture span{
+    position:absolute;
+    left:0;
+    right:0;
+    margin:0 auto;
+    border:1px solid #fff;
+    display:block;
+    color:#fff;
+    transition:all 240ms linear;
+    border-radius:1px;
+    cursor:pointer;
+    line-height: 24px;
+    width:20%;
+    height:22px;
+}
+/***************************/
+
+
+
+/**********/
+#back{
+    width:25%;
+    height:100%;
+    background: #D9EFEC;
+    position: absolute;
+    left:0;
+}
+.nav_content ul{
+    padding:0;
+    margin:0;
+    list-style: none;
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    position: absolute;
+}
+.nav_content ul li {
+    height:100%;
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    cursor: pointer;
+    border-right:1px solid #D3EDE9;
+}
+.nav_content{
+    color: #34AC98;
+    background-color:#EFF8F7;
+    text-shadow: 0 1px 0 #FAFDFC;
+    position: relative;
+}
+.nav_content h4{
+    margin-bottom:0;
+}
+
+
+
+
+/********************/
+#middle{
+    border-bottom:1px dashed #ddd;
+    margin-top:30px;
+    margin-bottom:3px;
+}
+#middle h3{
+    text-transform:uppercase;
+    color:#6a6a6a;
+    margin-bottom:5px;
+}
+/******************/
+#bottom{
+    overflow: hidden;
+}
+#bottom .neirong h4{
+    color:#60BEAE;
+    cursor: pointer;
+    transition:all 200ms linear;
+}
+#bottom .neirong h4:hover{
+    color: #f44129;
+}
+.neirong{
+    float:left;
+    position: relative;
+}
+.neirong h4{
+    margin-top: 3px;
+    margin-bottom:5px;
+}
+.neirong p{
+    letter-spacing: .05em;
+}
+.neirong .neirong_ft{
+    text-align: left;
+}
+.neirong>a div span{
+    position:relative;
+    display: block;
+}
+.neirong>a>div{
+    overflow: hidden;
+}
+.neirong>a{
+    border: 1px solid #E5E5E5;
+    display: block;
+}
+.neirong img{
+    width:100%;
+    display: block;
+
+}
+/*********************/
+.footer{
+
+    margin-top:20px;
+    padding-top: 10px;
+    border-top: 2px solid #E5E5E5;
+    color: #AAA;
+    clear: both;
+   // position:relative;
+}
+.footer p{
+    font-size:1.2em;
+    float: left;
+}
+.footer p a{
+    color:#60BEAE;
+    font-size:1em;
+    cursor: default;
+}
+.footer ul{
+    float:right;
+    list-style: none;
+}
+.footer ul li{
+    float:left;
+    margin-left:6px;
+}
+.footer ul li a{
+    display: block;
+    width:26px;
+    height:25px;
+    opacity: .4;
+}
+.git{
+    background: url("../img/tubiao.png");
+}
+.qq{
+    background: url("../img/tubiao.png") -58px 0 no-repeat;
+}
+.footer ul li .wechat{
+    width:33px;
+    background: url("../img/tubiao.png") -26px 0 no-repeat;
+}
+.footer ul li a:hover{
+    opacity: .9;
+}
+/************************/
+a{
+    transition:all 200ms linear;
+    color:#60BEAE;
+    text-decoration: none;
+}
+a:hover{
+    color: #f44129;
+}
+.aside a{
+    display: block;
+    width:121px;
+    height:21px;
+    line-height: 21px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 2px 1px 2px 0;
+
+}
+/*https://youtu.be/luT7zVSKGmg*/
+
+
+
+

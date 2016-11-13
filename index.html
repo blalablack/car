@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+        //判断手机端还是pc端
+        var ua = navigator.userAgent;
+        if(ua.indexOf("Windows NT")!=-1||ua.indexOf("Mac OS X 10")!=-1){
+            //这是pc端
+            $(function () {
+				links=$("head link");
+				$(links[0]).after("<link rel='stylesheet' type='text/css' media='screen and (min-width:1200px)' href='css/big.css'/>");
+				links=$("head link");
+				$(links[1]).after("<link rel='stylesheet' type='text/css' media='screen and (min-width:992px)and (max-width:1200px)' href='css/biglittle.css'/>");
+				links=$("head link");
+				$(links[2]).after("<link rel='stylesheet' type='text/css' media='screen and (max-width:992px)' href='css/biglittle2.css'/>");
+                navcar();
+                picturechange.t();
+                picturemouse();
+                limouse();
+                liclick();
+                imghover();
+            })
+
+        }else{
+            //这是手机,更改link
+            links=$("head link");
+            $(links[0]).after("<link rel='stylesheet' type='text/css' media='screen and (min-width:992px) ' href='css/middle1.css'/>")
+            links=$("head link");
+            //middle考虑用还是不用
+            $(links[1]).after("<link rel='stylesheet' type='text/css' media='screen and (min-width:730px) and (max-width:992px)' href='css/middle.css'/>");
+           links=$("head link");
+            $(links[2]).after("<link rel='stylesheet' type='text/css' media='screen and (min-width:480px )and (max-width:730px)' href='css/small.css'/>");
+            links=$("head link");
+            $(links[3]).after("<link rel='stylesheet' type='text/css' media='screen and (min-width:300px) and (max-width:480px)' href='css/xsmall.css'/>");
+            links=$("head link");
+            $(links[4]).after("<link rel='stylesheet' type='text/css' media='screen and (max-width:300px)' href='css/xsmall2.css'/>");
+            $(function () {
+                pictureChangePhone.t();
+                phoneNavcar();
+                PhoneLiClick()
+            })
+        }
+    </script>
+</head>
+<body>
+    <div class="kuang">
+        <div class="header">
+            <div ><div class="heading"></div></div>
+            <div class="nav">
+                <ul>
+                    <li id="ferrari">
+                        <img src="img/ferrari_hover1.png"  ><a href="#">Ferrari</a>
+                    </li>
+                    <li>
+                        <img src="img/porsche_hover1.png"  alt=""><a href="#">Porsche</a>
+
+                    </li>
+                    <li>
+                        <img src="img/bugatti_hover1.png"  alt=""> <a href="#">Bugatti</a>
+                    </li>
+                    <li>
+                        <img src="img/Lamborghini_hover1.png"  alt=""><a href="#">Ohters</a>
+                    </li>
+                    <li>
+                        <img src="img/others_hover1.png"  alt=""><a href="#">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <section id="top">
+                <div id="picture">
+                    <p id="hide"><img src="img/bujiadibig.jpg"></p>
+                    <div id="picture_1" style="visibility: visible;opacity: 1" class="active">
+                        <img src="img/bujiadibig.jpg" alt="">
+                        <div class="onpicture_1" > <h3>BUGATTI CHIRON</h3> <p>Know More About Bugatti Chrion</p><span onclick="location.href='page/chrion.html'">MORE</span></div>
+                    </div>
+                    <div id="picture_2" style="opacity: .8;visibility: hidden">
+                        <img src="img/laferraribig.jpg" alt="">
+                        <div class="onpicture_2"> <h3>FERRARI LAFERRARI</h3> <p>Know More About Ferrari Laferrari</p><span>MORE</span></div>
+                    </div>
+                    <div id="picture_3" style="opacity: .8;visibility: hidden">
+                        <img src="img/Lykan HyperSportbig.jpg" alt="">
+                        <div class="onpicture_3"> <h3>LYKAN HYPERSPORT</h3> <p>Know More About Lykan Hypersport</p><span>MORE</span></div>
+                    </div>
+                    <div id="picture_4" style="opacity: .8;visibility: hidden">
+                        <img src="img/roadsterbig.jpg"  alt="">
+                        <div class="onpicture_4"> <h3>LAMBORGHINI ROADSTER</h3> <p>Know More About Lamborghini Roadster</p><span>MORE</span></div>
+                    </div>
+                </div>
+                <div class="nav_content">
+                    <div id="back"></div>
+                    <ul style="display:block">
+                        <li data-id="picture_1"  >
+                            <a href="page/chrion.html"><h4>BUGATTI CHIRON</h4><p>这辆布加迪凯龙的轰鸣声足以让整个地球颤抖。</p></a>
+                        </li>
+                        <li data-id="picture_2" >
+                            <a><h4>LAFERRARI</h4><p>法拉利laferrari-----红色闪电在此来袭。</p></a>
+                        </li>
+                        <li data-id="picture_3" >
+                            <a><h4>HYPERSPORT</h4><p>Lykan Hypersport全球限量7辆，你值得拥有。</p></a>
+                        </li>
+                        <li data-id="picture_4" >
+                            <a><h4>ROADSTER</h4><p>Veneno Roadster，专为路面飞驰设计。</p></a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="middle">
+                <h3>The World Of Sports Car</h3>
+            </section>
+            <section id="bottom">
+                <div class="neirong middle0">
+                    <a href="#"><div><span><img src="img/bujiadis1.jpg"  alt="image"></span></div></a>
+                        <h4 onclick="location.href='page/chrion.html'">BUGATTI CHIRON<span><br>布加迪凯龙</span></h4>
+                        <p>布加迪（bugatti）作为最具特色的超级跑车制造商，以生产全球最快的跑车闻名于世。近日，布加迪公司宣布布加迪威龙正式更名为“凯龙（Chiron）”，并将在2016年日内瓦车展（geneva motor show）上亮相。</p>
+                    <p class="neirong_ft">
+                        <span>March 01, 2016</span> /
+                        <a href="page/chrion.html">Read »</a>
+                    </p>
+                    <div id="mask"></div>
+                </div>
+                <div class="neirong middle1" >
+                    <a href="page/chrion.html"><div><span><img src="img/ferrari-FXX-Ks1.jpg"  alt="image"></span></div></a>
+                    <h4>FERRARI FXX K <span><br>法拉利FXX K</span></h4>
+                    <p>2014年12月6日法拉利 FXX K赛道版超级跑车全球首发。这款车是来自意大利马拉内罗的LaFerrari首款混合动力车型.</p>
+                    <p class="neirong_ft">
+                        <span>March 01, 2016</span> /
+                        <a href="#">Read »</a>
+                    </p>
+                </div>
+                <div class="neirong middle2">
+                    <a href="#"><div><span><img src="img/roadsters1.jpg"  alt="image"></span></div></a>
+                    <h4>ROADSTER <span><br>兰博基尼roadster</span></h4>
+                    <p>兰博基尼发布了Centenario跑车的敞篷版roadster，该车是为纪念品牌创始人费鲁吉欧·兰博基尼诞辰100周年制造的，将仅限量发售20台，目前已全部售罄。</p>
+                    <p class="neirong_ft">
+                        <span>March 01, 2016</span> /
+                        <a href="#">Read »</a>
+                    </p>
+                </div>
+                <div class="neirong middle3">
+                    <a href="#"><div><span><img src="img/Lykan HyperSports1.jpg"  alt="image"></span></div></a><!--https://youtu.be/luT7zVSKGmg-->
+                    <h4>LYKAN HYPERSPORT <span><br>速度与激情7跑车</span></h4>
+                    <p>Lykan Hypersport是由成立于2012年的黎巴嫩的公司W Motors所限量生产的跑车，是中东地区所生产的第一个超级跑车。W Motor计划只生产7台车。第一辆预先生产的Lykan HyperSport于2013年11月的迪拜国际汽车展推出。</p>
+                    <p class="neirong_ft">
+                        <span>March 01, 2016</span> /
+                        <a href="#">Read »</a>
+                    </p>
+                </div>
+                <br>
+            </section>
+        </div>
+        <div class="aside">
+            <section>
+                <h4>MORE IDEA</h4>
+                <p>如果你有更好的想法赶快点击下边按钮让我们一起进步吧!</p>
+                <a href="https://github.com/"><span></span>I Need Your Idea</a>
+            </section>
+        </div>
+        <div class="footer">
+            <p><a href="#">自适应</a> | <a href="#">跑车</a> | <a href="#">科技</a> | <a href="#">瞎玩</a><br>More content is on the way</p>
+            <ul>
+                <li><a class="git" href="https://github.com/"></a></li>
+                <li><a class="qq" href=""></a></li>
+                <li><a class="wechat" href=""></a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

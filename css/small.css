@@ -1,0 +1,146 @@
+.kuang{
+    width:100%;
+}
+/*********字体*********/
+.nav ul li a{
+    font-size: 1em;
+}
+.nav_content ul li h4{
+    font-size:1em;
+}
+
+#bottom .neirong p{
+    font-size:1em;
+}
+#bottom .neirong h4{
+    font-size:1em;
+}
+#bottom .neirong span{
+    font-size:1em;
+}
+#picture div div h3{
+    font-size:1.2em;
+}
+#picture div div p{
+    font-size:1.2em;
+}
+#middle h3{
+    font-size:1.5em;
+}
+
+.header{
+    overflow: hidden;
+    width:100%;
+    margin-bottom:10px;
+}
+.heading{
+    width: 90px;
+    height: 90px;
+    background: url("../img/food-sense.png") no-repeat 0 0;
+    border:1px solid red;
+    float:left;
+}
+.nav{
+    text-align: left;
+    margin-top:20px;
+
+}
+.nav ul{
+    list-style: none;
+    padding:0;
+    overflow: hidden;
+    margin-right:5px;
+    float:right;
+}
+.nav ul li{
+    float: left;
+    margin-left:13px;//一会改成百分比
+
+}
+.nav ul li img{
+    display: none;
+}
+.nav ul li a{
+    display: block;
+    text-align: left;
+}
+/******************/
+.content{
+    width:100%;
+    padding-bottom:30px;
+}
+#picture img{
+    max-width:100%;
+}
+#picture div span{
+    display: none;
+}
+#picture div{
+    overflow: visible;
+    width:100%;
+    height:auto;
+    background:none;
+
+}
+#picture div div{
+    position: absolute;
+    bottom:-10px;
+    left:0;
+}
+#picture div h3{
+    margin:0 0 0 0;
+    text-align:left;
+    background:rgba(255,255,255,.5);
+    color: #141414;
+    padding:0 2% 0 2%;
+    width:40%;
+}
+#picture div p{
+    background:black;
+    margin:0;
+    text-align:left;
+    padding-left:2%;
+    color:#fff;
+
+}
+
+
+
+/****************/
+.nav_content{
+    display: none;
+}
+/****************/
+
+.neirong{
+    width:48%;
+}
+.middle0,.middle2{
+    margin-right:4%;
+}
+.middle3 span{
+    display:none;
+}
+.middle3,.middle2{
+    margin-top:10px;
+}
+.neirong{
+    //border: 1px solid #E5E5E5;
+    //box-shadow: 3px 3px 6px #F0F0F0;
+}
+.neirong>a>div{
+    margin:5px;
+}
+.neirong>a{
+    border:none;
+}
+.aside{
+    display: none;
+}
+#middle{
+    margin-top:35px;
+}
+.footer{
+    width: 100%;
+    margin:0 auto;
+}

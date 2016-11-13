@@ -1,0 +1,151 @@
+
+.kuang{
+    width:290px;
+}
+.nav ul li a{
+    font-size: 1.4em;
+}
+.content_header h1{
+    font-size:1.6em;
+    line-height: 20px;
+}
+#content .center h3{
+    font-size:1.4em;
+}
+.content_bottom>p{
+    font-size:1.5em;
+}
+.content_bottom div p{
+    font-size:1em;
+}
+.aside{
+    font-size: 1.4em;
+}
+.aside p{
+    font-size: .9em;
+}
+.footer
+.header{
+    overflow: hidden;
+    width:100%;
+    margin-bottom:10px;
+    height:130px;
+    position: relative;
+}
+.heading{
+    height: 90px;
+    width:90px;
+    background: url("../img/food-sense.png") no-repeat 0 0;
+    margin:40px auto 0px;
+    padding-top:20px;
+}
+
+.nav{
+    position: absolute;
+    width:90%;
+    top:0;
+    left:5%;
+    padding-bottom:13px;
+    border-bottom: 1px solid #E5E5E5;
+    box-shadow: 0 1px 0 #F5F5F5;
+
+}
+.nav ul{
+    list-style: none;
+    padding:0;
+    margin: 0;
+    overflow: hidden;
+}
+.nav ul li{
+    float: left;
+    width:20%;
+}
+.nav ul li img{
+    display: none;
+}
+.nav ul li a{
+    display: block;
+    text-align: center;
+}
+/****************/
+.content_header .meta{
+    display: none;
+}
+.content_header h1{
+    text-align: center;
+}
+#content{
+    margin:0 auto;
+}
+#content .no{
+    display: none;
+}
+#content .center{
+    margin-bottom:0px;
+}
+#content .center span{
+    display: none;
+}
+#content .center2 h3{
+    margin-bottom:0;
+    line-height: 15px;
+    text-align: center;
+}
+#content .content_bottom div p{
+//width:100%;
+// box-sizing: border-box;
+    border: 1px solid #E5E5E5;
+    border-top:transparent;
+//
+padding-bottom: 5px;
+    margin-top:3px;
+    margin-bottom:3px;
+    padding-top:3px;
+    padding-left:5px;
+}
+#content .content_bottom  .last_p{
+    border-bottom: 1px solid #E5E5E5;
+    box-shadow: 3px 3px 6px #F0F0F0;
+    padding-bottom:10px;
+}
+#content .content_bottom div{
+    padding-left:5%;
+    padding-right:5%;
+    margin-top:25px;
+}
+#content .content_bottom .content_bottom_first{
+    margin-top:5px;
+}
+#content .center{
+    padding-left:5%;
+    padding-right:5%;
+}
+#content .content_bottom p{
+    padding-left:5%;
+    padding-right:5%;
+}
+.aside h4{
+    margin-bottom: 5px;
+}
+.aside p{
+    font-family:"微软雅黑 Light","微软雅黑";
+    line-height:25px;
+    margin-top:0;
+}
+.aside a{
+    display: block;
+    width:136px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 4px 2px 5px 0;
+}
+.aside a:hover{
+    background-color:#EFF8F7;
+}
+.aside a span {
+    float: left;
+    width: 19px;
+    height: 19px;
+    margin: 1px 5px 0 3px;
+    background: url("../img/tubiao.png") -83px 0 no-repeat;
+}
