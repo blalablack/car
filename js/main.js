@@ -192,9 +192,7 @@ function imghover(){
         var div=$(this).parent();
         $(this).mouseenter(function () {
             div.css("height",div.height());
-            console.log(div.height())
             var w=div.width();//190
-            console.log(w);
             var h=div.height();//105
             var l=(w*1.1-w)/2
             var t=(h*1.1-h)/2

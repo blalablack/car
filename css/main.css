@@ -81,6 +81,9 @@ body{
     cursor: pointer;
     border-right:1px solid #D3EDE9;
 }
+.nav_content ul li a:hover{
+    color: #34AC98;
+}
 .nav_content{
     color: #34AC98;
     background-color:#EFF8F7;
