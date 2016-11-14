@@ -74,7 +74,9 @@
     width:80%;
     margin-bottom: 30px;
 }
-
+.content_header{
+    margin-bottom:-10px;
+}
 .content_content .content_img img{
     max-width: 100%;
 

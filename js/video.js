@@ -351,16 +351,16 @@ var aa=(function current_time(){
         p:stop
     }
 })();
-//视频准备好以后才绑定开始事件
-// $(function () {
-//     $("#control").css("display","block");
-//     $("#poster_on").css("display","block");
-//     $("#pause_on").css("display","block");
-//     $("#media").removeAttr("controls");
-// })
+
+
+//每次点击进度条是会触发canplaythrough 会重复绑定事件所以该为$()初始化绑定;
 $("video").get(0).addEventListener("canplaythrough",allTime,false);
 $(function () {
     initial();
+    $("#control").css("display","block");
+    $("#poster_on").css("display","block");
+    $("#pause_on").css("display","block");
+    $("#media").removeAttr("controls");
 });
 
 
