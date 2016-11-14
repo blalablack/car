@@ -5,47 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
     <title>首页</title>
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
-    <script src="js/jquery-1.11.3.js"></script>
     <script>
         //判断手机端还是pc端
         var ua = navigator.userAgent;
+        function f(e){
+            return document.querySelectorAll(e);
+        }
         if(ua.indexOf("Windows NT")!=-1||ua.indexOf("Mac OS X 10")!=-1){
             //这是pc端
-            $(function () {
-				links=$("head link");
-				$(links[0]).after("<link rel='stylesheet' type='text/css' media='screen and (min-width:1200px)' href='css/big.css'/>");
-				links=$("head link");
-				$(links[1]).after("<link rel='stylesheet' type='text/css' media='screen and (min-width:992px)and (max-width:1200px)' href='css/biglittle.css'/>");
-				links=$("head link");
-				$(links[2]).after("<link rel='stylesheet' type='text/css' media='screen and (max-width:992px)' href='css/biglittle2.css'/>");
+            f("head link")[0].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:1200px)' href='css/big.css'/>");
+            f("head link")[1].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:992px) and (max-width:1200px)' href='css/biglittle.css'/>");
+            f("head link")[2].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (max-width:992px)' href='css/biglittle2.css'/>");
+            window.onload=function () {
                 navcar();
                 picturechange.t();
                 picturemouse();
                 limouse();
                 liclick();
                 imghover();
-            })
-
+            };
         }else{
             //这是手机,更改link
-            links=$("head link");
-            $(links[0]).after("<link rel='stylesheet' type='text/css' media='screen and (min-width:992px) ' href='css/middle1.css'/>")
-            links=$("head link");
-            //middle考虑用还是不用
-            $(links[1]).after("<link rel='stylesheet' type='text/css' media='screen and (min-width:730px) and (max-width:992px)' href='css/middle.css'/>");
-           links=$("head link");
-            $(links[2]).after("<link rel='stylesheet' type='text/css' media='screen and (min-width:480px )and (max-width:730px)' href='css/small.css'/>");
-            links=$("head link");
-            $(links[3]).after("<link rel='stylesheet' type='text/css' media='screen and (min-width:300px) and (max-width:480px)' href='css/xsmall.css'/>");
-            links=$("head link");
-            $(links[4]).after("<link rel='stylesheet' type='text/css' media='screen and (max-width:300px)' href='css/xsmall2.css'/>");
-            $(function () {
+            f("head link")[0].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:992px) ' href='css/middle1.css'/>");
+            f("head link")[1].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:730px) and (max-width:992px)' href='css/middle.css'/>");
+            f("head link")[2].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:480px )and (max-width:730px)' href='css/small.css'/>' href='css/xsmall.css'/>")
+            f("head link")[3].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:300px) and (max-width:480px)' href='css/xsmall.css'/>");
+            f("head link")[4].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (max-width:300px)' href='css/xsmall2.css'/>");
+            window.onload=function () {
                 pictureChangePhone.t();
                 phoneNavcar();
                 PhoneLiClick()
-            })
+            }
         }
     </script>
+    <script src="js/jquery-1.11.3.js"></script>
 </head>
 <body>
     <div class="kuang">
