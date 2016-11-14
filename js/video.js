@@ -359,8 +359,10 @@ var aa=(function current_time(){
 //     $("#media").removeAttr("controls");
 // })
 $("video").get(0).addEventListener("canplaythrough",allTime,false);
-window.onload=function(){
+$(function () {
     initial();
-}
+});
+
+
 
 
