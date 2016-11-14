@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3e09124a-aa1f-485c-a94b-a5dec1085ffa" name="Default" comment="" />
+    <list default="true" id="3e09124a-aa1f-485c-a94b-a5dec1085ffa" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/video.js" afterPath="$PROJECT_DIR$/js/video.js" />
+    </list>
     <ignored path="自适应网站.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -62,8 +65,8 @@
       <file leaf-file-name="video.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/video.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="360" column="0" selection-start-line="360" selection-start-column="0" selection-end-line="360" selection-end-column="0" />
+            <state relative-caret-position="278">
+              <caret line="359" column="5" selection-start-line="359" selection-start-column="5" selection-end-line="359" selection-end-column="5" />
               <folding>
                 <element signature="e#1518#2587#0" expanded="false" />
                 <element signature="n#!!block;n#screenchange#0" expanded="false" />
@@ -321,15 +324,15 @@
       <workItem from="1478759153875" duration="5316000" />
       <workItem from="1479047771518" duration="5002000" />
       <workItem from="1479054604441" duration="564000" />
-      <workItem from="1479086757635" duration="19704000" />
+      <workItem from="1479086757635" duration="20054000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="373089000" />
+    <option name="totallyTimeSpent" value="373439000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.034407027" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -768,8 +771,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/video.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="360" column="0" selection-start-line="360" selection-start-column="0" selection-end-line="360" selection-end-column="0" />
+        <state relative-caret-position="278">
+          <caret line="359" column="5" selection-start-line="359" selection-start-column="5" selection-end-line="359" selection-end-column="5" />
           <folding>
             <element signature="e#1518#2587#0" expanded="false" />
             <element signature="n#!!block;n#screenchange#0" expanded="false" />
