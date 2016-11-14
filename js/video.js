@@ -358,7 +358,6 @@ var aa=(function current_time(){
 //     $("#pause_on").css("display","block");
 //     $("#media").removeAttr("controls");
 // })
-
 $("video").get(0).addEventListener("canplaythrough",allTime,false);
 window.onload=function(){
     initial();
