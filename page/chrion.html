@@ -6,6 +6,7 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="../css/main.css"/>
     <link rel="stylesheet" href="../css/pagemain.css"/>
+    <script src="../js/jquery-1.11.3.js"></script>
     <script>
         //判断手机端还是pc端
         var ua = navigator.userAgent;
@@ -15,6 +16,10 @@
         if(ua.indexOf("Windows NT")!=-1||ua.indexOf("Mac OS X 10")!=-1){
             //这是pc端
             f("head link")[1].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/pc.css'/>");
+            f("head link")[2].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/video.css'/>");
+            var elment1=document.createElement("script");
+            elment1.src="../js/video.js";
+            f("head")[0].appendChild(elment1);
             window.onload=function () {
                 navcar();
             };
@@ -25,8 +30,7 @@
             f("head link")[4].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (max-width:300px)' href='../css/phone1.css'/>")
         }
     </script>
-    <link rel="stylesheet" href="../css/video.css"/>
-    <script src="../js/jquery-1.11.3.js"></script>
+
 </head>
 <body>
 <div class="kuang">
@@ -39,7 +43,6 @@
                 </li>
                 <li>
                     <img src="../img/porsche_hover1.png"  alt=""><a href="#">Porsche</a>
-
                 </li>
                 <li>
                     <img src="../img/bugatti_hover1.png"  alt=""> <a href="#">Bugatti</a>
@@ -61,9 +64,9 @@
         </div>
         <div class="content_content">
             <section id="player">
-                <div id="pause_on"><span></span></div>
-                <div id="poster_on"><img src="../img/bujiadi_poster.jpg" alt=""></div>
-                <video id="media" width="100%" poster="../img/bujiadi_poster.jpg" preload="metadata"
+                <div id="pause_on" ><span></span></div>
+                <div id="poster_on" ><img src="../img/bujiadi_poster.jpg" alt=""></div>
+                <video  id="media" width="100%" poster="../img/bujiadi_poster.jpg" preload="metadata"
                        src="../video/Ultimate_Final_h264_v02.mp4">您的浏览器不支持video</video>
                 <div id="control" onselectstart="return false;" style="-moz-user-select:none;">
                     <div class="neirong">
@@ -145,7 +148,13 @@
         </ul>
     </div>
 </div>
-<script src="../js/video.js"></script>
+<div class="mask">
+    <div class="wrap">
+        <div class="wrap_item"><img src="../chriontupian/0.jpg" alt=""></div>
+        <div class="wrap_item"><img src="../chriontupian/1.jpg" alt=""></div>
+        <div class="wrap_item"><img src="../chriontupian/3.jpg" alt=""></div>
+    </div>
+</div>
 <script src="../js/main.js"></script>
 </body>
 </html>

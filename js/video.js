@@ -1,7 +1,8 @@
 
 function initial(){
-    allTime();
+
     var bar_parent=$("#bar_parent");
+    bar_parent.bind("click",bar_click);
     var tops=$("#tops");
     /*************播放事件**********************/
     var btn=$("#buttons .btn");
@@ -12,7 +13,7 @@ function initial(){
     //播放按钮绑定暂停播放事件
     btn.bind("click",btn_click);
     //整个播放器绑定暂停播放事件
-    media.bind("click",btn_click);
+     media.bind("click",btn_click);
     //大暂停按钮绑定暂停播放事件
     pause_on.bind("click",btn_click);
     //播放完图片绑定播放事件
@@ -21,7 +22,7 @@ function initial(){
     //播放器绑定结束事件
     media.bind("ended",media_ended);
     //播放进度条绑定click事件
-    bar_parent.bind("click",bar_click);
+
     //声音条事件
     tops.bind("mousedown",tops_mousedown);
     $("body").bind("mouseup",tops_mouseup);
@@ -286,13 +287,17 @@ function shijian(){
 }
 
 function media_ended(){
+    var media=$("#media").get(0);
     aa.p();
+    media.pause();
+    media.currentTime=0;
     $("#poster_on").css("display","block");
     $("#pause_on").css("display","block");
     $("#bar_parent .progress").css("width","0%");
 }
 /**********播放进度********/
 function bar_click(e){
+    console.log(1);
     var distance=e.offsetX;
     var wid=distance/$("#bar_parent").width()*100+"%";
     $("#bar_parent .progress").css("width",wid);
@@ -347,5 +352,16 @@ var aa=(function current_time(){
     }
 })();
 //视频准备好以后才绑定开始事件
-$("video").get(0).addEventListener("canplaythrough",initial,false);
+// $(function () {
+//     $("#control").css("display","block");
+//     $("#poster_on").css("display","block");
+//     $("#pause_on").css("display","block");
+//     $("#media").removeAttr("controls");
+// })
+
+$("video").get(0).addEventListener("canplaythrough",allTime,false);
+window.onload=function(){
+    initial();
+}
+
 

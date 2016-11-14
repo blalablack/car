@@ -29,3 +29,23 @@ body{
 #content .content_bottom div p{
     color:#505050;
 }
+.mask{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,.6);
+    display: none;
+}
+.mask .wrap_item{
+    float:left;
+    width:10%;
+    display: none;
+}
+.mask .wrap_item img{
+    max-width: 100%;
+}
+.mask .wrap{
+    width:8800px;
+}
