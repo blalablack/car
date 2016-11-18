@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title>lykan</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css"/>
+    <link rel="stylesheet" href="../css/pagemain.css"/>
+    <script>
+        //判断手机端还是pc端
+        var ua = navigator.userAgent;
+        function f(e){
+            return document.querySelectorAll(e);
+        }
+        if(ua.indexOf("Windows NT")!=-1||ua.indexOf("Mac OS X 10")!=-1){
+            //这是pc端
+            f("head link")[1].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/pc.css'/>");
+            f("head link")[2].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/video.css'/>");
+            //每次点击进度条是会触发canplaythrough 会重复绑定事件所以该为$()初始化绑定;
+            window.onload=function () {
+                navcar();
+                var sp=$(".center span");
+                sp.get(0).onclick=showPicture;
+            };
+        }else{
+            f("head link")[1].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:992px)' href='../css/ipad1.css'/>");
+            f("head link")[2].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:480px) and (max-width:992px)' href='../css/ipad.css'/>");
+            f("head link")[3].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:300px) and (max-width:480px)' href='../css/phone.css'/>");
+            f("head link")[4].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (max-width:300px)' href='../css/phone1.css'/>");
+        }
+    </script>
+    <script src="../js/jquery-1.11.3.js"></script>
+</head>
+<body>
+<div class="kuang">
+    <div class="header">
+        <div><div onclick="location.href='../index.html'" class="heading"></div></div>
+        <div class="nav">
+            <ul>
+                <li id="ferrari">
+                    <img src="../img/ferrari_hover1.png"><a href="#">Ferrari</a>
+                </li>
+                <li>
+                    <img src="../img/porsche_hover1.png"  alt=""><a href="#">Porsche</a>
+                </li>
+                <li>
+                    <img src="../img/bugatti_hover1.png"  alt=""> <a href="#">Bugatti</a>
+                </li>
+                <li>
+                    <img src="../img/Lamborghini_hover1.png"  alt=""><a href="#">Ohters</a>
+                </li>
+                <li>
+                    <img src="../img/others_hover1.png"  alt=""><a href="#">Contact</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content_header">
+            <p class="meta"><span>Wednesday, May 23, 2012</span></p>
+            <h1>
+                The car of Fast & Furious 7.
+            </h1>
+        </div>
+        <div class="content_content">
+            <section id="player">
+                <div id="pause_on" style="display: none"><span></span></div>
+                <div id="poster_on" style="display: none"><img src="../img/lykan/poster_1.jpg" alt=""></div>
+                <video controls id="media" width="100%" poster="../img/lykan/poster_1.jpg" preload="metadata"
+                       src="../video/Lykan Hypersport.mp4">您的浏览器不支持video</video>
+                <div  id="control" onselectstart="return false;" style="display: none">
+                    <div class="neirong">
+                        <div id="buttons">
+                            <span class="btn"></span>
+                        </div >
+                        <div id="time_now">
+                            <span class="now">0:00</span>
+                        </div>
+                        <div id="bar_parent">
+                            <div class="bar">
+                                <div class="buffer"></div>
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                        <div id="time_all" >
+                            <span class="all">0:00</span>
+                        </div>
+                        <div id="fullscreen">
+                            <span class="screen_btn"></span>
+                        </div>
+                        <div id="voice">
+                            <div class="volume"></div>
+                            <div class="voice_bar_parent">
+                                <span class="cicle"></span>
+                                <div id="tops" ></div>
+                                <div class="voice_bar">
+                                    <div class="voice_progress">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section id="content">
+                <div class="center">
+                    <span>MORE PICTURE</span>
+                    <div class="center2"><h3>Lykan Hypersport is produced by W Motors limited edition sports car, the world's limited production of 7.
+                    </h3></div>
+                </div>
+                <div class="content_bottom">
+                    <div class="content_bottom_first"><img src="../img/lykan/lykan1.jpg" alt=""><p >The $ 3.4 million Lykan HyperSport is the third most expensive car.</p></div>
+                    <div class="content_bottom_first no"><img src="../img/lykan/lykan2.jpg" alt=""><p >The $ 3.4 million Lykan HyperSport is the third most expensive car.</p></div>
+                    <p><strong>PRICE:</strong>
+                        The $ 3.4 million Lykan HyperSport is the third most expensive car, after the very rare Sapphire Veneno ($ 4.5 million) and the only one Maybach Exelero ($ 8 million). Lykan Hypersport is $ 1 million more expensive than Bugatti Veyron Supersport, so it has the world's most expensive production car title.
+                        The price of this car is expensive because it contains the optional. This is the first car in the headlights with a diamond car, headlamps from titanium light LED with 420 diamonds (15 kt) formed. Buyers can choose which ruby ​​and diamonds they want to embed headlamps. In addition, customers can choose between a range of rubies, diamonds, yellow diamonds or sapphires for use in vehicles.</p>
+                    <p class="last_p"><strong>ORIGIN:</strong>
+                        Lykan Hypersport was founded in 2012 by the Lebanese company W Motors limited production of sports car, is the Middle East produced the first super sports car. </p>
+                    <div><img src="../img/lykan/lykan3.jpg" alt=""> <p>W Motors is an important milestone in the region and the world automotive industry.</p></div>
+                    <div class="no"><img src="../img/lykan/lykan4.jpg" alt=""> <p>W Motors is an important milestone in the region and the world automotive industry.</p></div>
+                    <p><strong>POWER:</strong>
+                        Lykan HyperSport is powered by a six-cylinder twin-turbo engine (3746 ml) from Porsche with output horsepower of up to 552 kW (740 bhp; 751 PS) and 960 N·m (98 kg·m) of peak torque. The car claims a maximum speed of 385 km/h (239 mph) and an acceleration time of 0 to 100 km/h (0 to 62 mph) in just 2.8 seconds.
+                    <p class="last_p"><strong>W MTORS:</strong>
+                    W Motors is an important milestone in the region and the world automotive industry, W car will be the Premiere Arab development of high-performance luxury sports car, launched in July 11, 2012 in high-end wedding luxury Sursock Palace Beirut.</p>
+                    <div><img src="../img/lykan/lykan5.jpg" alt=""><p>In addition, W Motors in the build when this car with a number of internationally renowned auto parts manufacturers.</p></div>
+                    <div class="no"><img src="../img/lykan/lykan6.jpg" alt=""><p>In addition, W Motors in the build when this car with a number of internationally renowned auto parts manufacturers</p></div>
+                    <p class="last_p"><strong>INTRODUCTION: </strong>
+                        July 28, 2013 Qatar Motor Show W Motors released a limited 7 units of Lykan HyperSport. More than 150,000 visitors took part in the auto show, won the regional and international media coverage of this historical event and exposure in the world. After the launch of Qatar in January 2013, W Motors was on tour, exhibited in Dubai, Abu Dhabi, Kuwait, Belgium and Spain, Lykan HyperSport.
+                    </p>
+                </div>
+            </section>
+
+        </div>
+        <div></div>
+    </div>
+    <div class="aside">
+        <section>
+            <h4>MORE IDEA</h4>
+            <p>如果你有更好的想法赶快点击下边按钮让我们一起进步吧!</p>
+            <a href="https://github.com/"><span></span>I Need Your Idea</a>
+        </section>
+    </div>
+    <div class="footer">
+        <p><a href="#">自适应</a> | <a href="#">跑车</a> | <a href="#">科技</a> | <a href="#">瞎玩</a><br>More content is on the way</p>
+        <ul>
+            <li><a class="git" href="https://github.com/"></a></li>
+            <li><a class="qq" href=""></a></li>
+            <li><a class="wechat" href=""></a></li>
+        </ul>
+    </div>
+</div>
+<div class="mask" data_class="../img/lykan/">
+    <div class="quit"></div>
+    <div class="wrap_out">
+        <div class="wrap_inner">
+            <div class="wrap_item out">
+                <img  alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>five</p>
+            </div>
+            <div class="wrap_item middle_left">
+                <img  alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>six</p>
+            </div>
+            <div class="wrap_item show">
+                <img src="" alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>one</p>
+            </div>
+            <div class="wrap_item middle_right">
+                <img  alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>two</p>
+            </div>
+            <div class="wrap_item out">
+                <img  alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>three</p>
+            </div>
+            <div class="wrap_item out">
+                <img  alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>four</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/main.js"></script>
+<script>//有视频的就加一句这个
+$("video").get(0).addEventListener("canplaythrough",allTime,false);
+Video();
+</script>
+</body>
+</html>
+

@@ -31,73 +31,77 @@ function navcar(){
     });
 }
 /******轮播图切换*****/
-var i=0;
-var picturechange=(function (){
-    var timer;
-    var pictures = $("#picture>div");
+    var i=0;
+    var picturechange=(function (){
+        var timer;
+        var pictures=$("#picture>div");
 //要想动画依次执行只能用回调函数，无论是for循环还是依次绑定都不行（会一块执行）
-    function ha() {
-        //把上一次的图片上的文字回归原处
-        var h=$("#picture").height()*8/100;
-        var w=$("#picture").width()*4/100;
-        var w2=$(".onpicture_1").width();
-        if(i==1){
-            $(".onpicture_2").animate({"bottom":h,right:-w2},200);
-        }else if(i==2){
+        function ha() {
+            //把上一次的图片上的文字回归原处
+            var h=$("#picture").height()*8/100;
+            var w=$("#picture").width()*4/100;
+            var w2=$(".onpicture_1").width();
+            if(i==1){
+                $(".onpicture_2").animate({"bottom":h,right:-w2},200);
+            }else if(i==2){
 
-            $(".onpicture_3").animate({"top":h,right:-w2},200);
-        }else if(i==3){
+                $(".onpicture_3").animate({"top":h,right:-w2},200);
+            }else if(i==3){
 
-            $(".onpicture_4").animate({"top":h,left:-w2},200);
-        }else if(i==0){
+                $(".onpicture_4").animate({"top":h,left:-w2},200);
+            }else if(i==0){
 
-            $(".onpicture_1").animate({"bottom":h,left:-w2},200);
-        }
-        //上一次显示的图片hidden，这一次的visible
-        $(pictures[i]).animate({"opacity": 0.8}, 600, function () {
-            if(i==3){
-                i=-1;
+                $(".onpicture_1").animate({"bottom":h,left:-w2},200);
             }
-            var next=$(pictures[i+1])
-            next.css("visibility","visible");//先把下一次的visible防止切换空白
-            $(this).css("visibility","hidden");
-            $(this).attr("class","");
-            next.attr("class","active");//加一个active属性方便后面选取
-            next.animate({"opacity": 1}, 100, function () {
-                i++;
-                //图片上的文字显示
-                if(i==1){
-                    $(".onpicture_2").animate({"right":w,"bottom":h},400);//TODO:全部数据调成百分比除了外框
-                }else if(i==2){
-                     $(".onpicture_3").animate({"right":w,"top":h},400);
-                }else if(i==3){
-                    $(".onpicture_4").animate({"left":w,"top":h},400);
-                }else if(i==0){
-                    $(".onpicture_1").animate({"left":w,"bottom":h},400);
+
+            //上一次显示的图片hidden，这一次的visible
+
+            $(pictures[i]).animate({"opacity": 0.8}, 600, function () {
+                if(i==3){
+
+                    i=-1;
                 }
+                var next=$(pictures[i+1])
+                next.css("visibility","visible");//先把下一次的visible防止切换空白
+                $(this).css("visibility","hidden");
+                $(this).attr("class","");
+                next.attr("class","active");//加一个active属性方便后面选取
+                next.animate({"opacity": 1}, 100, function () {
+                    i++;
+                    //图片上的文字显示
+                    if(i==1){
+                        $(".onpicture_2").animate({"right":w,"bottom":h},400);//TODO:全部数据调成百分比除了外框
+                    }else if(i==2){
+                        $(".onpicture_3").animate({"right":w,"top":h},400);
+                    }else if(i==3){
+                        $(".onpicture_4").animate({"left":w,"top":h},400);
+                    }else if(i==0){
+                        $(".onpicture_1").animate({"left":w,"bottom":h},400);
+                    }
+                })
             })
-        })
-        //定义m控制li背景的切换
-        var m=i;
-        if(m==3){
-            m=-1
+            //定义m控制li背景的切换
+            var m=i;
+            if(m==3){
+                m=-1
+            }
+            var width= ($(".nav_content ul").width())*(m+1)/4;
+            $("#back").animate({"left":width},800)
         }
-        var width= ($(".nav_content ul").width())*(m+1)/4;
-        $("#back").animate({"left":width},800)
-    }
-    function start(){
-        timer=setInterval(ha,3000);
-        //interval的间隔时间要大于上面走的时间才能控制住
-    }
-    function stop(){
-        clearInterval(timer);
-        timer=null;
-    }
-    return{
-        t:start,
-        p:stop
-    }
-})();
+        function start(){
+            timer=setInterval(ha,3000);
+            //interval的间隔时间要大于上面走的时间才能控制住
+        }
+        function stop(){
+            clearInterval(timer);
+            timer=null;
+        }
+        return{
+            t:start,
+            p:stop
+        }
+    })();
+
 /********鼠标移入轮播图停止轮播********/
 function picturemouse(){
     var pictures = $("#picture>div");
@@ -374,6 +378,8 @@ function screenchange() {
     var voice_voice_bar=$("#voice .voice_bar");
     var cicle_class=$(".cicle");
     var bar_parent=$("#bar_parent");
+    var poster_on_img=$("#poster_on img");
+    var img_src=poster_on_img.attr("src");
     if(document.FullScreen===true||document.webkitIsFullScreen===true||document.mozFullScreen){
         control.css({"height":"55px","padding-top":"5px","z-index":"2147483648","bottom":"25px"});
         bar_parent_bar.css({"height":"3px"});
@@ -381,6 +387,9 @@ function screenchange() {
         cicle_class.css({"top":"3px"});
         fullscreen_span.css({"backgroundPosition":"-191px 0"});
         bar_parent.animate({"width":"68%"},10,ziShiYong);
+        //poster切换
+        img_new_src=img_src.slice(0,img_src.length-5)+"2.jpg";
+        poster_on_img.attr("src",img_new_src);
         //全屏fullscreen的hover事件
         fullscreen_span.unbind("mouseenter mouseleave");
         fullscreen_span.mouseenter(function () {
@@ -594,8 +603,11 @@ function bar_click(e){
 function allTime() {
     var media = $("#media").get(0);
     var allTime = parseInt(media.duration);
-    var shi = Math.floor(allTime / 60);
+    var shi = Math.floor(allTime/60);
     var miao = allTime % 60;
+    if(miao<10){
+        miao="0"+miao;
+    }
     var all = $("#time_all").get(0);
     all.innerHTML = shi + ":" + miao;
 }
@@ -632,7 +644,6 @@ var aa=(function current_time(){
     }
 })();
 function Video() {
-    $("video").get(0).addEventListener("canplaythrough",allTime,false);
     $(function () {
         initial();
         $("#control").css("display","block");

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title>fenyr</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css"/>
+    <link rel="stylesheet" href="../css/pagemain.css"/>
+    <script>
+        //判断手机端还是pc端
+        var ua = navigator.userAgent;
+        function f(e){
+            return document.querySelectorAll(e);
+        }
+        if(ua.indexOf("Windows NT")!=-1||ua.indexOf("Mac OS X 10")!=-1){
+            //这是pc端
+            f("head link")[1].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/pc.css'/>");
+            f("head link")[2].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/video.css'/>");
+            //每次点击进度条是会触发canplaythrough 会重复绑定事件所以该为$()初始化绑定;
+            window.onload=function () {
+                navcar();
+                var sp=$(".center span");
+                sp.get(0).onclick=showPicture;
+            };
+        }else{
+            f("head link")[1].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:992px)' href='../css/ipad1.css'/>");
+            f("head link")[2].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:480px) and (max-width:992px)' href='../css/ipad.css'/>");
+            f("head link")[3].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:300px) and (max-width:480px)' href='../css/phone.css'/>");
+            f("head link")[4].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (max-width:300px)' href='../css/phone1.css'/>");
+        }
+    </script>
+    <script src="../js/jquery-1.11.3.js"></script>
+</head>
+<body>
+<div class="kuang">
+    <div class="header">
+        <div><div onclick="location.href='../index.html'" class="heading"></div></div>
+        <div class="nav">
+            <ul>
+                <li id="ferrari">
+                    <img src="../img/ferrari_hover1.png"><a href="#">Ferrari</a>
+                </li>
+                <li>
+                    <img src="../img/porsche_hover1.png"  alt=""><a href="#">Porsche</a>
+                </li>
+                <li>
+                    <img src="../img/bugatti_hover1.png"  alt=""> <a href="#">Bugatti</a>
+                </li>
+                <li>
+                    <img src="../img/Lamborghini_hover1.png"  alt=""><a href="#">Ohters</a>
+                </li>
+                <li>
+                    <img src="../img/others_hover1.png"  alt=""><a href="#">Contact</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content_header">
+            <p class="meta"><span>Wednesday, May 23, 2012</span></p>
+            <h1>
+                After Lykan, W Motors introduced the model Fenyr SuperSport.
+                </h1>
+        </div>
+        <div class="content_content">
+            <section id="player">
+                <div id="pause_on" style="display: none"><span></span></div>
+                <div id="poster_on" style="display: none"><img src="../img/fenyr/poster_1.jpg" alt=""></div>
+                <video controls id="media" width="100%" poster="../img/fenyr/poster_1.jpg" preload="metadata"
+                       src="../video/Fenyr SuperSport.mp4">您的浏览器不支持video</video>
+                <div  id="control" onselectstart="return false;" style="display: none">
+                    <div class="neirong">
+                        <div id="buttons">
+                            <span class="btn"></span>
+                        </div >
+                        <div id="time_now">
+                            <span class="now">0:00</span>
+                        </div>
+                        <div id="bar_parent">
+                            <div class="bar">
+                                <div class="buffer"></div>
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                        <div id="time_all" >
+                            <span class="all">0:00</span>
+                        </div>
+                        <div id="fullscreen">
+                            <span class="screen_btn"></span>
+                        </div>
+                        <div id="voice">
+                            <div class="volume"></div>
+                            <div class="voice_bar_parent">
+                                <span class="cicle"></span>
+                                <div id="tops" ></div>
+                                <div class="voice_bar">
+                                    <div class="voice_progress">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section id="content">
+                <div class="center">
+                    <span>MORE PICTURE</span>
+                    <div class="center2"><h3>The earth will shake violently, trees will be uprooted, mountains will fall, and all binds will snap – Fenyr will be free.
+                        </h3></div>
+                </div>
+                <div class="content_bottom">
+                    <div class="content_bottom_first"><img src="../img/fenyr/fenyr1.jpg" alt=""><p >Fenyr SuperSport front face shape very sharp</p></div>
+                    <div class="content_bottom_first no"><img src="../img/fenyr/fenyr2.jpg" alt=""><p >Fenyr SuperSport front face shape very sharp</p></div>
+                    <p><strong>APPEARANCE:</strong>
+                        Fenyr SuperSport in the modeling design with reference to the Lykan HyperSport model design language, the overall shape is extremely sharp, the body is full of complex lines and sharp edges and corners, as if covered with a layer of armor.
+                        New car front face shape is very sharp, the headlamp group V-shaped design, and the use of LED light source, with exaggerated front bumper shape and a very muscular front engine compartment lines, so that the new car looks very aggressive.</p>
+                    <p class="last_p"><strong>APPEARANCE:</strong>
+                        Side view, the new car side with a more complex line design language, sharp corners and very layered surrounded by the suite, so that the new car to create a full sense of the future. In addition, the car is also equipped with double five-spoke lightweight wheels, to further enhance the vehicle's mobility.
+                    </p>
+                    <div><img src="../img/fenyr/fenyr3.jpg" alt=""> <p>Fenyr SuperSport based on lightweight alum chassis to build.</p></div>
+                    <div class="no"><img src="../img/fenyr/fenyr4.jpg" alt=""> <p> Fenyr SuperSport based on lightweight alum chassis to build.</p></div>
+                    <p><strong>DESIGN ELEMENTS:</strong>
+                        In contrast, Fenyr SuperSport tail design is more exaggerated, the tail of the overall use of sharp lines, and as active aerodynamic package also incorporates them, including an adjustable large-size spoiler, and bumper below the large size Underbody spoiler. In addition the car taillight group with LED light band design, visual effect is very sharp.</p>
+                    <p class="last_p"><strong>TECHNICAL:</strong>
+                        According to the official said, Fenyr SuperSport based on lightweight aluminum chassis to build, the body is made of carbon fiber material, making the weight of the vehicle can be reduced. In addition, W Motors in the build when this super sports car with a number of internationally renowned auto parts manufacturers, including Magna Stahl companies and RUF (such as Tiger) company.</p>
+                    <div><img src="../img/fenyr/fenyr5.jpg" alt=""><p>In addition, W Motors in the build when this car with a number of internationally renowned auto parts manufacturers.</p></div>
+                    <div class="no"><img src="../img/fenyr/fenyr6.jpg" alt=""><p>In addition, W Motors in the build when this car with a number of internationally renowned auto parts manufacturers</p></div>
+                    <p class="last_p"><strong>POWER: </strong>
+                        The new car equipped with a 4.0L horizontal twin-turbocharged six-cylinder engine, the engine provided by the German company RUF, the maximum power of 913 horsepower, peak torque 1200 Nm. Transmission, and the engine match is a 7-speed dual-clutch gearbox. The new car 0-100km / h acceleration time will be less than 2.7 seconds, the maximum speed will exceed 400km / h.</p>
+                </div>
+            </section>
+
+        </div>
+        <div></div>
+    </div>
+    <div class="aside">
+        <section>
+            <h4>MORE IDEA</h4>
+            <p>如果你有更好的想法赶快点击下边按钮让我们一起进步吧!</p>
+            <a href="https://github.com/"><span></span>I Need Your Idea</a>
+        </section>
+    </div>
+    <div class="footer">
+        <p><a href="#">自适应</a> | <a href="#">跑车</a> | <a href="#">科技</a> | <a href="#">瞎玩</a><br>More content is on the way</p>
+        <ul>
+            <li><a class="git" href="https://github.com/"></a></li>
+            <li><a class="qq" href=""></a></li>
+            <li><a class="wechat" href=""></a></li>
+        </ul>
+    </div>
+
+</div>
+<div class="mask" data_class="../img/fenyr/">
+    <div class="quit"></div>
+    <div class="wrap_out">
+        <div class="wrap_inner">
+            <div class="wrap_item out">
+                <img  alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>six</p>
+            </div>
+            <div class="wrap_item middle_left">
+                <img  alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>seven</p>
+            </div>
+            <div class="wrap_item show">
+                <img src="" alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>one</p>
+            </div>
+            <div class="wrap_item middle_right">
+                <img  alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>two</p>
+            </div>
+            <div class="wrap_item out">
+                <img  alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>three</p>
+            </div>
+            <div class="wrap_item out">
+                <img  alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>four</p>
+            </div>
+            <div class="wrap_item out">
+                <img  alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>five</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/main.js"></script>
+<script>//有视频的就加一句这个
+$("video").get(0).addEventListener("canplaythrough",allTime,false);
+Video();
+</script>
+</body>
+</html>
+
