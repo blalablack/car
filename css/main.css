@@ -5,7 +5,8 @@ body{
 }
 
 .kuang{
-    margin:30px auto;
+    margin:0 auto;
+    padding-top:30px;
     position: relative;
     overflow: hidden;
 }

@@ -92,12 +92,9 @@
     text-align: center;
 }
 #content .content_bottom div p{
-//width:100%;
-// box-sizing: border-box;
     border: 1px solid #E5E5E5;
     border-top:transparent;
-//
-padding-bottom: 5px;
+    padding-bottom: 5px;
     margin-top:3px;
     margin-bottom:3px;
     padding-top:3px;
@@ -123,6 +120,9 @@ padding-bottom: 5px;
 #content .content_bottom p{
     padding-left:5%;
     padding-right:5%;
+}
+.aside{
+    padding-left:5%;
 }
 .aside h4{
     margin-bottom: 5px;

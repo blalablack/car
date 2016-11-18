@@ -125,6 +125,9 @@ padding-bottom: 5px;
     padding-left:5%;
     padding-right:5%;
 }
+.aside{
+    padding-left:5%;
+}
 .aside h4{
     margin-bottom: 5px;
 }

@@ -16,6 +16,18 @@
 .content_bottom div p{
     font-size:.8em;
 }
+.center span{
+    font-size:1.4em;
+    font-weight:600;
+    border:1px solid #000;
+    display: block;
+    padding:3px 5px;
+    cursor: pointer;
+}
+.center span:hover{
+    color:#666;
+    border-color:#666;
+}
 .aside{
     font-size: 1.2em;
 }

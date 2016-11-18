@@ -27,9 +27,10 @@
     position: absolute;
     z-index:9;
     display: none;
+    width: 100%;
 }
 #poster_on img{
-//display: block;
+
     max-width:100%;
 
 }

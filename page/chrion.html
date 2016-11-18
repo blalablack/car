@@ -16,26 +16,27 @@
             //这是pc端
             f("head link")[1].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/pc.css'/>");
             f("head link")[2].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/video.css'/>");
-            var elment1=document.createElement("script");
-            elment1.src="../js/video.js";
-            f("head")[0].appendChild(elment1);
-           window.onload=function(){
+            //每次点击进度条是会触发canplaythrough 会重复绑定事件所以该为$()初始化绑定;
+           window.onload=function () {
                navcar();
-            }
+               /*****有视频的就调用这个*****/
+               Video();
+               var sp=$(".center span");
+               sp.get(0).onclick=showPicture;
+           };
         }else{
             f("head link")[1].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:992px)' href='../css/ipad1.css'/>");
-            f("head link")[2].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:480px) and (max-width:992px)' href='../css/ipad.css'/>")
-            f("head link")[3].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:300px) and (max-width:480px)' href='../css/phone.css'/>")
-            f("head link")[4].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (max-width:300px)' href='../css/phone1.css'/>")
+            f("head link")[2].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:480px) and (max-width:992px)' href='../css/ipad.css'/>");
+            f("head link")[3].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:300px) and (max-width:480px)' href='../css/phone.css'/>");
+            f("head link")[4].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (max-width:300px)' href='../css/phone1.css'/>");
         }
-
     </script>
     <script src="../js/jquery-1.11.3.js"></script>
 </head>
 <body>
 <div class="kuang">
     <div class="header">
-        <div ><div class="heading"></div></div>
+        <div><div onclick="location.href='../index.html'" class="heading"></div></div>
         <div class="nav">
             <ul>
                 <li id="ferrari">
@@ -105,7 +106,7 @@
             </section>
             <section id="content">
                 <div class="center">
-                    <span>NEXT DETAILS</span>
+                    <span>MORE PICTURE</span>
                     <div class="center2"><h3>
                        Recently the company announced the Bugatti Veyron Bugatti officially renamed "Chiron".</h3></div>
                 </div>
@@ -147,13 +148,86 @@
             <li><a class="wechat" href=""></a></li>
         </ul>
     </div>
+
 </div>
-<div class="mask">
-    <div class="wrap">
-        <div class="wrap_item"><img src="../chriontupian/0.jpg" alt=""></div>
-        <div class="wrap_item"><img src="../chriontupian/1.jpg" alt=""></div>
-        <div class="wrap_item"><img src="../chriontupian/3.jpg" alt=""></div>
-    </div>
+<div class="mask" data_class="../img/chrion/">
+        <div class="quit"></div>
+        <div class="wrap_out">
+            <div class="wrap_inner">
+                <div class="wrap_item out">
+                    <img  alt="">
+                    <div class="line_t"></div>
+                    <div class="line_r"></div>
+                    <div class="line_b"></div>
+                    <div class="line_l"></div>
+                    <p>eight</p>
+                </div>
+                <div class="wrap_item middle_left">
+                    <img  alt="">
+                    <div class="line_t"></div>
+                    <div class="line_r"></div>
+                    <div class="line_b"></div>
+                    <div class="line_l"></div>
+                    <p>nine</p>
+                </div>
+                <div class="wrap_item show">
+                    <img src="" alt="">
+                    <div class="line_t"></div>
+                    <div class="line_r"></div>
+                    <div class="line_b"></div>
+                    <div class="line_l"></div>
+                    <p>one</p>
+                </div>
+                <div class="wrap_item middle_right">
+                    <img  alt="">
+                    <div class="line_t"></div>
+                    <div class="line_r"></div>
+                    <div class="line_b"></div>
+                    <div class="line_l"></div>
+                    <p>two</p>
+                </div>
+                <div class="wrap_item out">
+                    <img  alt="">
+                    <div class="line_t"></div>
+                    <div class="line_r"></div>
+                    <div class="line_b"></div>
+                    <div class="line_l"></div>
+                    <p>three</p>
+                </div>
+                <div class="wrap_item out">
+                    <img  alt="">
+                    <div class="line_t"></div>
+                    <div class="line_r"></div>
+                    <div class="line_b"></div>
+                    <div class="line_l"></div>
+                    <p>four</p>
+                </div>
+                <div class="wrap_item out">
+                    <img  alt="">
+                    <div class="line_t"></div>
+                    <div class="line_r"></div>
+                    <div class="line_b"></div>
+                    <div class="line_l"></div>
+                    <p>five</p>
+                </div>
+                <div class="wrap_item out">
+                    <img  alt="">
+                    <div class="line_t"></div>
+                    <div class="line_r"></div>
+                    <div class="line_b"></div>
+                    <div class="line_l"></div>
+                    <p>six</p>
+                </div>
+                <div class="wrap_item out">
+                    <img  alt="">
+                    <div class="line_t"></div>
+                    <div class="line_r"></div>
+                    <div class="line_b"></div>
+                    <div class="line_l"></div>
+                    <p>seven</p>
+                </div>
+            </div>
+        </div>
 </div>
 <script src="../js/main.js"></script>
 </body>
