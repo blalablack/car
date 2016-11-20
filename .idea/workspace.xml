@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e09124a-aa1f-485c-a94b-a5dec1085ffa" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/veneno/veneno/047113ad72b5b6c6a80cf5f5f2a6b1fa2c9970a9618.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/veneno/veneno/10291686_10152126176396931_4349506276093571593_n1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/veneno/veneno/14932910349_7c20a9a46e_b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/veneno/veneno/2013-lamborghini-veneno-33_600x0w.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/veneno/veneno/2015-lamborghini-veneno-r-4_1600x0w.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/veneno/veneno/222988-super-cars-lamborghini-veneno-2013.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/veneno/veneno/4-7-Million-Lamborghini-Veneno-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/veneno/veneno/Lamborghini-Veneno-Red-Art-HD-Wallpaper.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/veneno/veneno/Lamborghini-Veneno-Roadster-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/veneno/veneno/Monster-Lamborghini-Veneno-front.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/veneno/veneno/NI9Ad4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/veneno/veneno/b4c6d7b30d910a5ac16a9ca1f49c69ad.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/veneno/veneno/dbbac8814506a2b52d5395e0498b8e5d.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/veneno/veneno/lamborghini-08.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/veneno/veneno/lamborghini-Veneno (10).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/veneno/veneno/lamborghini-aventador-lp700-4-roadster-c289410032015155205_1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/veneno/veneno/lamborghini-veneno-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/veneno/veneno/lamborghini-veneno-roadster-c388531082015175657_1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/veneno/veneno/lamborghini-veneno-roadster-flying-low-over-the-streets-of-los-angeles-video-99757_1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/veneno/veneno/maxresdefault.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/video/enzo.mp4" afterPath="$PROJECT_DIR$/video/enzo.mp4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/ipad.css" afterPath="$PROJECT_DIR$/css/ipad.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/chrion.html" afterPath="$PROJECT_DIR$/page/chrion.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/enzo.html" afterPath="$PROJECT_DIR$/page/enzo.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/fenyr.html" afterPath="$PROJECT_DIR$/page/fenyr.html" />
@@ -57,8 +35,8 @@
       <file leaf-file-name="chrion.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page/chrion.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="230" column="0" selection-start-line="230" selection-start-column="0" selection-end-line="232" selection-end-column="9" />
+            <state relative-caret-position="69">
+              <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
               <folding>
                 <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -71,8 +49,8 @@
       <file leaf-file-name="fenyr.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page/fenyr.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-56">
-              <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+            <state relative-caret-position="69">
+              <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -81,8 +59,8 @@
       <file leaf-file-name="ferrari458.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page/ferrari458.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+            <state relative-caret-position="275">
+              <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -91,8 +69,8 @@
       <file leaf-file-name="laferrari.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page/laferrari.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="222" column="9" selection-start-line="222" selection-start-column="9" selection-end-line="222" selection-end-column="9" />
+            <state relative-caret-position="174">
+              <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -113,8 +91,8 @@
       <file leaf-file-name="lykan.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page/lykan.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+            <state relative-caret-position="276">
+              <caret line="60" column="40" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -123,8 +101,8 @@
       <file leaf-file-name="veneno.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page/veneno.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="70" column="55" selection-start-line="70" selection-start-column="55" selection-end-line="70" selection-end-column="55" />
+            <state relative-caret-position="197">
+              <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -133,8 +111,8 @@
       <file leaf-file-name="enzo.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/page/enzo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="63" column="37" selection-start-line="63" selection-start-column="37" selection-end-line="63" selection-end-column="37" />
+            <state relative-caret-position="312">
+              <caret line="60" column="40" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#2;n#section#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -202,13 +180,13 @@
         <option value="$PROJECT_DIR$/css/small.css" />
         <option value="$PROJECT_DIR$/css/ipad.css" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/page/chrion.html" />
         <option value="$PROJECT_DIR$/page/fenyr.html" />
-        <option value="$PROJECT_DIR$/page/ferrari458.html" />
-        <option value="$PROJECT_DIR$/page/laferrari.html" />
         <option value="$PROJECT_DIR$/page/lykan.html" />
-        <option value="$PROJECT_DIR$/page/enzo.html" />
+        <option value="$PROJECT_DIR$/page/chrion.html" />
+        <option value="$PROJECT_DIR$/page/ferrari458.html" />
         <option value="$PROJECT_DIR$/page/veneno.html" />
+        <option value="$PROJECT_DIR$/page/laferrari.html" />
+        <option value="$PROJECT_DIR$/page/enzo.html" />
       </list>
     </option>
   </component>
@@ -219,10 +197,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="19" />
-    <option name="y" value="6" />
+    <option name="x" value="-284" />
+    <option name="y" value="170" />
     <option name="width" value="1378" />
-    <option name="height" value="744" />
+    <option name="height" value="682" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -388,15 +366,15 @@
       <workItem from="1479520840249" duration="3086000" />
       <workItem from="1479555150203" duration="11103000" />
       <workItem from="1479609391851" duration="7125000" />
-      <workItem from="1479627484523" duration="4088000" />
+      <workItem from="1479627484523" duration="5061000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="474320000" />
+    <option name="totallyTimeSpent" value="475293000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="19" y="6" width="1378" height="744" extended-state="0" />
+    <frame x="-284" y="170" width="1378" height="682" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12079063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -683,10 +661,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/page/fenyr.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/lykan.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="60" column="40" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/page/chrion.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="230" column="0" selection-start-line="230" selection-start-column="0" selection-end-line="232" selection-end-column="9" />
+        <state relative-caret-position="69">
+          <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
           <folding>
             <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -695,26 +689,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page/fenyr.html">
+    <entry file="file://$PROJECT_DIR$/page/ferrari458.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-56">
-          <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+        <state relative-caret-position="275">
+          <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page/ferrari458.html">
+    <entry file="file://$PROJECT_DIR$/page/veneno.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+        <state relative-caret-position="197">
+          <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/page/laferrari.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="222" column="9" selection-start-line="222" selection-start-column="9" selection-end-line="222" selection-end-column="9" />
+        <state relative-caret-position="174">
+          <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
           <folding>
             <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -731,26 +725,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page/lykan.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/veneno.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="70" column="55" selection-start-line="70" selection-start-column="55" selection-end-line="70" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/page/enzo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="63" column="37" selection-start-line="63" selection-start-column="37" selection-end-line="63" selection-end-column="37" />
+        <state relative-caret-position="312">
+          <caret line="60" column="40" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
           <folding>
             <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#section#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
