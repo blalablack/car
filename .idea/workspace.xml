@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3e09124a-aa1f-485c-a94b-a5dec1085ffa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/enzo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/ferrari458.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/laferrari.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ChMkJ1aYwl6ILaIFACUWdB9pa_4AAHU8QICwwQAJRaM886.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ChMkJ1aYwm6IQQSOAAX-OuJOt7kAAHU8wJeHM0ABf5S492.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ChMkJlaYwmaISRnAABnwtBDknW0AAHU8gHPbRYAGfDM679.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/Fenyr SuperSports1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/Lykan HyperSports1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/bugatti/bujiadis1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ferrari-FXX-Kbig.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ferrari-FXX-Ks1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/laferraribig1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/roadsters1.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/big.css" afterPath="$PROJECT_DIR$/css/big.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/biglittle.css" afterPath="$PROJECT_DIR$/css/biglittle.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/biglittle2.css" afterPath="$PROJECT_DIR$/css/biglittle2.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/middle.css" afterPath="$PROJECT_DIR$/css/middle.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/middle1.css" afterPath="$PROJECT_DIR$/css/middle1.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/small.css" afterPath="$PROJECT_DIR$/css/small.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/veneno.html" afterPath="$PROJECT_DIR$/page/veneno.html" />
-    </list>
+    <list default="true" id="3e09124a-aa1f-485c-a94b-a5dec1085ffa" name="Default" comment="" />
     <ignored path="自适应网站.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -376,15 +352,15 @@
       <workItem from="1479520840249" duration="3086000" />
       <workItem from="1479555150203" duration="11103000" />
       <workItem from="1479609391851" duration="7125000" />
-      <workItem from="1479627484523" duration="135000" />
+      <workItem from="1479627484523" duration="438000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="470367000" />
+    <option name="totallyTimeSpent" value="470670000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.03513909" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
