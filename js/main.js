@@ -193,16 +193,16 @@ function imghover(){
         $(this).mouseenter(function () {
             div.css("height",div.height());
             var w=div.width();//190
-            var h=div.height();//105
+            var h=div.height();
             var l=(w*1.1-w)/2
             var t=(h*1.1-h)/2
             $(this).stop();
-            $(this).animate({width:w*1.1,left:-l,top:-t},600,'linear');
+            $(this).animate({width:w*1.1,left:-l,top:-t},400,'linear');
         });
         $(this).mouseleave(function () {
             var w=div.width();//190
             $(this).stop();
-            $(this).animate({width:w,left:0,top:0},600,function () {
+            $(this).animate({width:w,left:0,top:0},200,function () {
                 $(this).css({width:""});//清除内部样式，保证图片大小是外部定义的，保证自适应
                 div.css("height","");//同上
             });
@@ -653,6 +653,9 @@ function Video() {
     });
 }
 /**************滚轮禁用************/
+function wheel(e) {
+    e.preventDefault();
+}
 function jinyong(e){
     var isFF=/FireFox/i.test(navigator.userAgent);
     if(e){

@@ -154,7 +154,9 @@
     margin:4px;
 
 }
-
+.middle4{
+    clear:both;
+}
 /***************************/
 .aside{
     position: absolute;

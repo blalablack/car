@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title>enzo</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css"/>
+    <link rel="stylesheet" href="../css/pagemain.css"/>
+    <script>
+        //判断手机端还是pc端
+        var ua = navigator.userAgent;
+        function f(e){
+            return document.querySelectorAll(e);
+        }
+        if(ua.indexOf("Windows NT")!=-1||ua.indexOf("Mac OS X 10")!=-1){
+            //这是pc端
+            f("head link")[1].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/pc.css'/>");
+            f("head link")[2].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/video.css'/>");
+            //每次点击进度条是会触发canplaythrough 会重复绑定事件所以该为$()初始化绑定;
+            window.onload=function () {
+                navcar();
+                var sp=$(".center span");
+                sp.get(0).onclick=showPicture;
+            };
+        }else{
+            f("head link")[1].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:992px)' href='../css/ipad1.css'/>");
+            f("head link")[2].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:480px) and (max-width:992px)' href='../css/ipad.css'/>");
+            f("head link")[3].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:300px) and (max-width:480px)' href='../css/phone.css'/>");
+            f("head link")[4].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (max-width:300px)' href='../css/phone1.css'/>");
+        }
+    </script>
+</head>
+<body>
+<div class="kuang">
+    <div class="header">
+        <div><div onclick="location.href='../index.html'" class="heading"></div></div>
+        <div class="nav">
+            <ul>
+                <li id="ferrari">
+                    <img src="../img/ferrari_hover1.png"><a href="#">Ferrari</a>
+                </li>
+                <li>
+                    <img src="../img/porsche_hover1.png"  alt=""><a href="#">Porsche</a>
+                </li>
+                <li>
+                    <img src="../img/bugatti_hover1.png"  alt=""> <a href="#">Bugatti</a>
+                </li>
+                <li>
+                    <img src="../img/Lamborghini_hover1.png"  alt=""><a href="#">Ohters</a>
+                </li>
+                <li>
+                    <img src="../img/others_hover1.png"  alt=""><a href="#">Contact</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content_header">
+            <p class="meta"><span>Wednesday, May 23, 2012</span></p>
+            <h1>Enzo was built in 2002 using Formula One technology</h1>
+        </div>
+        <div class="content_content">
+            <section id="player">
+                <div id="pause_on" style="display: none"><span></span></div>
+                <div id="poster_on" style="display: none"><img src="../img/enzo/poster_1.jpg" alt=""></div>
+                <video controls id="media" width="100%" poster="../img/enzo/poster_1.jpg" preload="metadata"
+                       src="../video/Ultimate_Final_h264_v02.mp4">您的浏览器不支持video</video>
+                <div  id="control" onselectstart="return false;" style="display: none">
+                    <div class="neirong">
+                        <div id="buttons">
+                            <span class="btn"></span>
+                        </div >
+                        <div id="time_now">
+                            <span class="now">0:00</span>
+                        </div>
+                        <div id="bar_parent">
+                            <div class="bar">
+                                <div class="buffer"></div>
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                        <div id="time_all" >
+                            <span class="all">0:00</span>
+                        </div>
+                        <div id="fullscreen">
+                            <span class="screen_btn"></span>
+                        </div>
+                        <div id="voice">
+                            <div class="volume"></div>
+                            <div class="voice_bar_parent">
+                                <span class="cicle"></span>
+                                <div id="tops" ></div>
+                                <div class="voice_bar">
+                                    <div class="voice_progress">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section id="content">
+                <div class="center">
+                    <span>MORE PICTURE</span>
+                    <div class="center2"><h3>
+                        American magazine Sports Car International named the Enzo Ferrari number three on their list of Top Sports Cars of the 2000s.</h3></div>
+                </div>
+                <div class="content_bottom">
+                    <div class="content_bottom_first"><img src="../img/enzo/enzo1.jpg" alt=""><p > The Enzo is a rear mid-engined vehicle with a 43.9/56.1 front/rear weight distribution.</p></div>
+                    <div class="content_bottom_first no"><img src="../img/enzo/enzo2.jpg" alt=""><p > The Enzo is a rear mid-engined vehicle with a 43.9/56.1 front/rear weight distribution.</p></div>
+                    <p><strong>ENGINE:</strong>
+                        The Enzo is a rear mid-engined vehicle with a 43.9/56.1 front/rear weight distribution. The engine is Ferrari's F140B 65° V12 with 4 valves per cylinder, dual overhead cams and variable valve timing. Bosch Motronic ME7 fuel injection is used and the engine is naturally aspirated. It displaces 5998 cc (366 in³) and produces 660 PS (485 kW; 651 hp) at 7800 rpm and 657 N·m (485 lb·ft) at 5500 rpm.[3] The redline is 8,200 rpm.
+                    <p class="last_p"><strong>PRODUCTION:</strong>
+                        The Enzo, named after the founder, was established to commemorate Ferrari's first formula one title of the new millennium.
+                    </p>
+                    <div><img src="../img/enzo/enzo3.jpg" alt=""> <p>Art specifications Chiron will four-turbocharged W16 8.0-liter engine, maximum power will reach 1103kW maximum torque 1500N·m.</p></div>
+                    <div class="no"><img src="../img/enzo/enzo4.jpg" alt=""> <p>Art specifications Chiron will four-turbocharged W16 8.0-liter engine, maximum power will reach 1103kW maximum torque 1500N·m.</p></div>
+                    <p><strong>ACCOLADES:</strong>
+                        In 2004, American magazine Sports Car International named the Enzo Ferrari number three on their list of Top Sports Cars of the 2000s. American magazine Motor Trend Classic named the Enzo as number four in their list of the ten "Greatest Ferraris of all time".
+                        However, the Enzo was described as one of the "Fifty Ugliest Cars of the Past 50 Years", as Bloomberg Businessweek cited its superfluous curves and angles as too flashy, particularly the V-shaped hood, scooped-out doors, and bulbous windshield.
+                    <p class="last_p"><strong>TECHNICAL SPECIFICATIONS:</strong>
+                        Enzo will use four turbocharged W16 8.0-liter engine. The match will be a 7-speed dual-clutch gearbox, 0-100km/h acceleration time of just 2.3s, 0-300km h acceleration time is less than 15s, will reach a top speed of 480km/h.The new Bugatti models released tremendous technological innovation handling combination orders are improved a lot.</p>
+                    <div><img src="../img/enzo/enzo5.jpg" alt=""><p>Enzo using sharp LED headlamps, signature front grille.</p></div>
+                    <div class="no"><img src="../img/enzo/enzo6.jpg" alt=""><p>Enzo using sharp LED headlamps, signature front grille.</p></div>
+                    <p class="last_p"><strong>BODY DESIGN: </strong>
+                        Enzo using sharp LED headlamps, signature front grille. In addition his sports PAX tires. Brake side will use 420mm front brake discs 400mm diameter.The future is not only on the speed champion, will be second to none in terms of innovation.</p>
+                </div>
+            </section>
+
+        </div>
+        <div></div>
+    </div>
+    <div class="aside">
+        <section>
+            <h4>MORE IDEA</h4>
+            <p>如果你有更好的想法赶快点击下边按钮让我们一起进步吧!</p>
+            <a href="https://github.com/"><span></span>I Need Your Idea</a>
+        </section>
+    </div>
+    <div class="footer">
+        <p><a href="#">自适应</a> | <a href="#">跑车</a> | <a href="#">科技</a> | <a href="#">瞎玩</a><br>More content is on the way</p>
+        <ul>
+            <li><a class="git" href="https://github.com/"></a></li>
+            <li><a class="qq" href=""></a></li>
+            <li><a class="wechat" href=""></a></li>
+        </ul>
+    </div>
+</div>
+<div class="mask" data_class="../img/enzo/">
+    <div class="quit"></div>
+    <div class="wrap_out">
+        <div class="wrap_inner">
+            <div class="wrap_item out">
+                <img  alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>five</p>
+            </div>
+            <div class="wrap_item middle_left">
+                <img  alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>six</p>
+            </div>
+            <div class="wrap_item show">
+                <img src="" alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>one</p>
+            </div>
+            <div class="wrap_item middle_right">
+                <img  alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>two</p>
+            </div>
+            <div class="wrap_item out">
+                <img  alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>three</p>
+            </div>
+            <div class="wrap_item out">
+                <img  alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>four</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/jquery-1.11.3.js"></script>
+<script src="../js/main.js"></script>
+<script>//有视频的就加一句这个
+$("video").get(0).addEventListener("canplaythrough",allTime,false);
+Video();
+</script>
+</body>
+</html>
+

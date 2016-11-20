@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title>ferrari458</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css"/>
+    <link rel="stylesheet" href="../css/pagemain.css"/>
+    <script>
+        //判断手机端还是pc端
+        var ua = navigator.userAgent;
+        function f(e){
+            return document.querySelectorAll(e);
+        }
+        if(ua.indexOf("Windows NT")!=-1||ua.indexOf("Mac OS X 10")!=-1){
+            //这是pc端
+            f("head link")[1].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/pc.css'/>");
+            f("head link")[2].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/video.css'/>");
+            //每次点击进度条是会触发canplaythrough 会重复绑定事件所以该为$()初始化绑定;
+            window.onload=function () {
+                navcar();
+                var sp=$(".center span");
+                sp.get(0).onclick=showPicture;
+            };
+        }else{
+            f("head link")[1].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:992px)' href='../css/ipad1.css'/>");
+            f("head link")[2].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:480px) and (max-width:992px)' href='../css/ipad.css'/>");
+            f("head link")[3].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:300px) and (max-width:480px)' href='../css/phone.css'/>");
+            f("head link")[4].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (max-width:300px)' href='../css/phone1.css'/>");
+        }
+    </script>
+    <script src="../js/jquery-1.11.3.js"></script>
+</head>
+<body>
+<div class="kuang">
+    <div class="header">
+        <div><div onclick="location.href='../index.html'" class="heading"></div></div>
+        <div class="nav">
+            <ul>
+                <li id="ferrari">
+                    <img src="../img/ferrari_hover1.png"><a href="#">Ferrari</a>
+                </li>
+                <li>
+                    <img src="../img/porsche_hover1.png"  alt=""><a href="#">Porsche</a>
+                </li>
+                <li>
+                    <img src="../img/bugatti_hover1.png"  alt=""> <a href="#">Bugatti</a>
+                </li>
+                <li>
+                    <img src="../img/Lamborghini_hover1.png"  alt=""><a href="#">Ohters</a>
+                </li>
+                <li>
+                    <img src="../img/others_hover1.png"  alt=""><a href="#">Contact</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content_header">
+            <p class="meta"><span>Wednesday, May 23, 2012</span></p>
+            <h1>
+                The Ferrari 458 Italia is a mid-engined sports car produced by  Ferrari.
+            </h1>
+        </div>
+        <div class="content_content">
+            <section id="player">
+                <div id="pause_on" style="display: none"><span></span></div>
+                <div id="poster_on" style="display: none"><img src="../img/458/poster_1.jpg" alt=""></div>
+                <video controls id="media" width="100%" poster="../img/458/poster_1.jpg" preload="metadata"
+                       src="../video/458.mp4">您的浏览器不支持video</video>
+                <div  id="control" onselectstart="return false;" style="display: none">
+                    <div class="neirong">
+                        <div id="buttons">
+                            <span class="btn"></span>
+                        </div >
+                        <div id="time_now">
+                            <span class="now">0:00</span>
+                        </div>
+                        <div id="bar_parent">
+                            <div class="bar">
+                                <div class="buffer"></div>
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                        <div id="time_all" >
+                            <span class="all">0:00</span>
+                        </div>
+                        <div id="fullscreen">
+                            <span class="screen_btn"></span>
+                        </div>
+                        <div id="voice">
+                            <div class="volume"></div>
+                            <div class="voice_bar_parent">
+                                <span class="cicle"></span>
+                                <div id="tops" ></div>
+                                <div class="voice_bar">
+                                    <div class="voice_progress">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section id="content">
+                <div class="center">
+                    <span>MORE PICTURE</span>
+                    <div class="center2"><h3>Ferrari 458 was first officially unveiled at the 2009 Frankfurt Motor Show.
+                    </h3></div>
+                </div>
+                <div class="content_bottom">
+                    <div class="content_bottom_first"><img src="../img/458/ferrari458_1.jpg" alt=""><p >When introduced in 2013, it was the most expensive production car in the world.</p></div>
+                    <div class="content_bottom_first no"><img src="../img/458/ferrari458_2.jpg" alt=""><p >When introduced in 2013, it was the most expensive production car in the world.</p></div>
+                    <p><strong>SPECIFICATIONS:</strong>Specifications
+                        In Ferrari's first official announcement of the car, the 458 was described as the successor to the F430 but arising from an entirely new design, incorporating technologies developed from the company's experience in Formula 1.
+                        The body computer system was developed by Magneti Marelli Automotive Lighting.
+                    <p class="last_p"><strong>ENGINE:</strong>
+                    The 458 is powered by a 4,499 cc (274.5 cu in) V8 engine of the "Ferrari/Maserati" F136 engine family, producing 578 PS (425 kW; 570 hp) at 9,000 rpm (redline) and 540 N·m (398 lb·ft) at 6,000 rpm with 80% torque available at 3,250 rpm. The engine features direct fuel injection, which is a first for Ferrari mid-engine setups in its road cars.</p>
+                    <div><img src="../img/458/ferrari458_3.jpg" alt=""> <p> The Veneno Roadster is a limited (maximum 9 units during 2014) version of the Lamborghini Veneno.</p></div>
+                    <div class="no"><img src="../img/458/ferrari458_4.jpg" alt=""> <p> The Veneno Roadster is a limited (maximum 9 units during 2014) version of the Lamborghini Veneno.</p></div>
+                    <p><strong>TRANSMISSION:</strong>
+                        The only transmission available on the 458 is a dual-clutch 7-speed Getrag gearbox, in a different state of tune shared with the Mercedes-Benz SLS AMG. There is no traditional manual option, making this the fourth road-car after the Enzo, Challenge Stradale and 430 Scuderia not to be offered with Ferrari's classic gated manual. It is the first mainstream model to not be offered with a manual transmission.
+                    </p>
+                    <p class="last_p"><strong>HANDLING:</strong>
+                        The car's suspension features double wishbones at the front and a multi-link setup at the rear, coupled with E-Diff and F1-Trac traction control systems, designed to improve the car's cornering and longitudinal acceleration by 32% when compared with its predecessors.
+                    </p>
+                    <div><img src="../img/458/ferrari458_5.jpg" alt=""><p>When introduced in 2013, it was the most expensive production car in the world.</p></div>
+                    <div class="no"><img src="../img/458/ferrari458_6.jpg" alt=""><p>When introduced in 2013, it was the most expensive production car in the world.</p></div>
+                    <p class="last_p"><strong>PERFORMANCE: </strong>
+                        Ferrari's official 0–100 km/h (62 mph) acceleration is 2.9–3.0 seconds.[10] The top speed is 340 km/h (210 mph).[11] It has fuel consumption in combined cycle (ECE+EUDC) of 13.3 L/100 km (21.2 mpg-imp; 17.7 mpg-US) while producing 307 g/km of CO2.
+                    </p>
+                </div>
+            </section>
+
+        </div>
+        <div></div>
+    </div>
+    <div class="aside">
+        <section>
+            <h4>MORE IDEA</h4>
+            <p>如果你有更好的想法赶快点击下边按钮让我们一起进步吧!</p>
+            <a href="https://github.com/"><span></span>I Need Your Idea</a>
+        </section>
+    </div>
+    <div class="footer">
+        <p><a href="#">自适应</a> | <a href="#">跑车</a> | <a href="#">科技</a> | <a href="#">瞎玩</a><br>More content is on the way</p>
+        <ul>
+            <li><a class="git" href="https://github.com/"></a></li>
+            <li><a class="qq" href=""></a></li>
+            <li><a class="wechat" href=""></a></li>
+        </ul>
+    </div>
+</div>
+<div class="mask" data_class="../img/458/">
+    <div class="quit"></div>
+    <div class="wrap_out">
+        <div class="wrap_inner">
+            <div class="wrap_item out">
+                <img  alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>five</p>
+            </div>
+            <div class="wrap_item middle_left">
+                <img  alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>seven</p>
+            </div>
+            <div class="wrap_item show">
+                <img src="" alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>one</p>
+            </div>
+            <div class="wrap_item middle_right">
+                <img  alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>two</p>
+            </div>
+            <div class="wrap_item out">
+                <img  alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>three</p>
+            </div>
+            <div class="wrap_item out">
+                <img  alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>four</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/main.js"></script>
+<script>//有视频的就加一句这个
+$("video").get(0).addEventListener("canplaythrough",allTime,false);
+Video();
+</script>
+</body>
+</html>
+

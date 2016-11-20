@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title>laferrari</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css"/>
+    <link rel="stylesheet" href="../css/pagemain.css"/>
+    <script>
+        //判断手机端还是pc端
+        var ua = navigator.userAgent;
+        function f(e){
+            return document.querySelectorAll(e);
+        }
+        if(ua.indexOf("Windows NT")!=-1||ua.indexOf("Mac OS X 10")!=-1){
+            //这是pc端
+            f("head link")[1].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/pc.css'/>");
+            f("head link")[2].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/video.css'/>");
+            //每次点击进度条是会触发canplaythrough 会重复绑定事件所以该为$()初始化绑定;
+            window.onload=function () {
+                navcar();
+                var sp=$(".center span");
+                sp.get(0).onclick=showPicture;
+            };
+        }else{
+            f("head link")[1].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:992px)' href='../css/ipad1.css'/>");
+            f("head link")[2].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:480px) and (max-width:992px)' href='../css/ipad.css'/>");
+            f("head link")[3].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:300px) and (max-width:480px)' href='../css/phone.css'/>");
+            f("head link")[4].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (max-width:300px)' href='../css/phone1.css'/>");
+        }
+    </script>
+    <script src="../js/jquery-1.11.3.js"></script>
+</head>
+<body>
+<div class="kuang">
+    <div class="header">
+        <div><div onclick="location.href='../index.html'" class="heading"></div></div>
+        <div class="nav">
+            <ul>
+                <li id="ferrari">
+                    <img src="../img/ferrari_hover1.png"><a href="#">Ferrari</a>
+                </li>
+                <li>
+                    <img src="../img/porsche_hover1.png"  alt=""><a href="#">Porsche</a>
+                </li>
+                <li>
+                    <img src="../img/bugatti_hover1.png"  alt=""> <a href="#">Bugatti</a>
+                </li>
+                <li>
+                    <img src="../img/Lamborghini_hover1.png"  alt=""><a href="#">Ohters</a>
+                </li>
+                <li>
+                    <img src="../img/others_hover1.png"  alt=""><a href="#">Contact</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content_header">
+            <p class="meta"><span>Wednesday, May 23, 2012</span></p>
+            <h1>
+                LaFerrari is a limited production hybrid sports car built by Ferrari.
+            </h1>
+        </div>
+        <div class="content_content">
+            <section id="player">
+                <div id="pause_on" style="display: none"><span></span></div>
+                <div id="poster_on" style="display: none"><img src="../img/laferrari/poster_1.jpg" alt=""></div>
+                <video controls id="media" width="100%" poster="../img/laferrari/poster_1.jpg" preload="metadata"
+                       src="../video/laFerrari.mp4">您的浏览器不支持video</video>
+                <div  id="control" onselectstart="return false;" style="display: none">
+                    <div class="neirong">
+                        <div id="buttons">
+                            <span class="btn"></span>
+                        </div >
+                        <div id="time_now">
+                            <span class="now">0:00</span>
+                        </div>
+                        <div id="bar_parent">
+                            <div class="bar">
+                                <div class="buffer"></div>
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                        <div id="time_all" >
+                            <span class="all">0:00</span>
+                        </div>
+                        <div id="fullscreen">
+                            <span class="screen_btn"></span>
+                        </div>
+                        <div id="voice">
+                            <div class="volume"></div>
+                            <div class="voice_bar_parent">
+                                <span class="cicle"></span>
+                                <div id="tops" ></div>
+                                <div class="voice_bar">
+                                    <div class="voice_progress">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section id="content">
+                <div class="center">
+                    <span>MORE PICTURE</span>
+                    <div class="center2"><h3> LaFerrari, the most ambitious project yet, finest expression of the brands's technical capabilities in both GT and F1 engineering.
+                    </h3></div>
+                </div>
+                <div class="content_bottom">
+                    <div class="content_bottom_first"><img src="../img/laferrari/laferrari1.jpg" alt=""><p >When introduced in 2013, it was the most expensive production car in the world.</p></div>
+                    <div class="content_bottom_first no"><img src="../img/laferrari/laferrari2.jpg" alt=""><p >When introduced in 2013, it was the most expensive production car in the world.</p></div>
+                    <p><strong>DESIGN:</strong>
+                        LaFerrari is the first fully developed by the Ferrari models, Pininfarina did not provide any technical support. This also marks the Pininfarina and Ferrari since the beginning of the 1951 continuous cooperation came to an end. However, Ferrari has stated that there are two models by the company involved in the design of the sports car is not released, so it will not cut off the partnership with Pininfarina.</p>
+                    <p class="last_p"><strong>AERODYNAMIC:</strong>
+                        In the design of LaFerrari, because of its positioning for the previous generation supercar Enzo's successor models, Ferrari for its unique aerodynamic design, the wind resistance is only 0.3. In addition, the LaFerrari is equipped with a variable telescopic tail in order to give the vehicle a better stability when running at extreme speeds. A rear spoiler is also fitted to the rear chassis that automatically adjusts to the vehicle speed.</p>
+                    <div><img src="../img/laferrari/laferrari3.jpg" alt=""> <p> The Veneno Roadster is a limited (maximum 9 units during 2014) version of the Lamborghini Veneno.</p></div>
+                    <div class="no"><img src="../img/laferrari/laferrari4.png" alt=""> <p> The Veneno Roadster is a limited (maximum 9 units during 2014) version of the Lamborghini Veneno.</p></div>
+                    <p><strong>POWER:</strong>
+                        Ferrari test its top speed of 350 km (220 miles). 100 km acceleration within 3 seconds, 300 km acceleration time in less than 15 seconds.
+                    </p>
+                    <p class="last_p"><strong>TRACK VERSION:</strong>
+                        Like Enzo's track version FXX, Ferrari will also launch LaFerrari's track version, the FXX-K, with a special engine and aerodynamic package priced at $ 4.7 million ($ 4.7 million) .
+                    </p>
+                    <div><img src="../img/laferrari/laferrari5.jpg" alt=""><p>When introduced in 2013, it was the most expensive production car in the world.</p></div>
+                    <div class="no"><img src="../img/laferrari/laferrari6.jpg" alt=""><p>When introduced in 2013, it was the most expensive production car in the world.</p></div>
+                    <p class="last_p"><strong>THE DOOR: </strong>
+                        In the door design, LaFerrari Enzo's butterfly-style doors follow the use of the vehicle more dynamic. LaFerrari door hinge installed in the A-pillar and the body of the junction, allowing the driver out of the sports car, switch the door more convenient.
+                    </p>
+                </div>
+            </section>
+
+        </div>
+        <div></div>
+    </div>
+    <div class="aside">
+        <section>
+            <h4>MORE IDEA</h4>
+            <p>如果你有更好的想法赶快点击下边按钮让我们一起进步吧!</p>
+            <a href="https://github.com/"><span></span>I Need Your Idea</a>
+        </section>
+    </div>
+    <div class="footer">
+        <p><a href="#">自适应</a> | <a href="#">跑车</a> | <a href="#">科技</a> | <a href="#">瞎玩</a><br>More content is on the way</p>
+        <ul>
+            <li><a class="git" href="https://github.com/"></a></li>
+            <li><a class="qq" href=""></a></li>
+            <li><a class="wechat" href=""></a></li>
+        </ul>
+    </div>
+</div>
+<div class="mask" data_class="../img/laferrari/">
+    <div class="quit"></div>
+    <div class="wrap_out">
+        <div class="wrap_inner">
+            <div class="wrap_item out">
+                <img  alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>six</p>
+            </div>
+            <div class="wrap_item middle_left">
+                <img  alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>seven</p>
+            </div>
+            <div class="wrap_item show">
+                <img src="" alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>one</p>
+            </div>
+            <div class="wrap_item middle_right">
+                <img  alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>two</p>
+            </div>
+            <div class="wrap_item out">
+                <img  alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>three</p>
+            </div>
+            <div class="wrap_item out">
+                <img  alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>four</p>
+            </div>
+            <div class="wrap_item out">
+                <img  alt="">
+                <div class="line_t"></div>
+                <div class="line_r"></div>
+                <div class="line_b"></div>
+                <div class="line_l"></div>
+                <p>five</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/main.js"></script>
+<script>//有视频的就加一句这个
+$("video").get(0).addEventListener("canplaythrough",allTime,false);
+Video();
+</script>
+</body>
+</html>
+

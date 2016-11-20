@@ -144,7 +144,9 @@
 .neirong>a>div{
     margin:5px;
 }
-
+.middle4{
+    clear:both;
+}
 /**************************/
 .aside{
     position: absolute;
