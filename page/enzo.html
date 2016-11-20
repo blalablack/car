@@ -21,6 +21,7 @@
                 navcar();
                 var sp=$(".center span");
                 sp.get(0).onclick=showPicture;
+                Video();
             };
         }else{
             f("head link")[1].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:992px)' href='../css/ipad1.css'/>");
@@ -65,7 +66,7 @@
                 <div id="pause_on" style="display: none"><span></span></div>
                 <div id="poster_on" style="display: none"><img src="../img/enzo/poster_1.jpg" alt=""></div>
                 <video controls id="media" width="100%" poster="../img/enzo/poster_1.jpg" preload="metadata"
-                       src="../video/Ultimate_Final_h264_v02.mp4">您的浏览器不支持video</video>
+                       src="../video/enzo.mp4">您的浏览器不支持video</video>
                 <div  id="control" onselectstart="return false;" style="display: none">
                     <div class="neirong">
                         <div id="buttons">
@@ -205,9 +206,8 @@
 </div>
 <script src="../js/jquery-1.11.3.js"></script>
 <script src="../js/main.js"></script>
-<script>//有视频的就加一句这个
-$("video").get(0).addEventListener("canplaythrough",allTime,false);
-Video();
+<script>
+    $("video").get(0).addEventListener("canplaythrough",allTime,false);
 </script>
 </body>
 </html>

@@ -21,6 +21,7 @@
                 navcar();
                 var sp=$(".center span");
                 sp.get(0).onclick=showPicture;
+                Video();
             };
         }else{
             f("head link")[1].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:992px)' href='../css/ipad1.css'/>");
@@ -29,7 +30,6 @@
             f("head link")[4].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (max-width:300px)' href='../css/phone1.css'/>");
         }
     </script>
-    <script src="../js/jquery-1.11.3.js"></script>
 </head>
 <body>
 <div class="kuang">
@@ -208,10 +208,10 @@
         </div>
     </div>
 </div>
+<script src="../js/jquery-1.11.3.js"></script>
 <script src="../js/main.js"></script>
-<script>//有视频的就加一句这个
-$("video").get(0).addEventListener("canplaythrough",allTime,false);
-Video();
+<script>
+    $("video").get(0).addEventListener("canplaythrough",allTime,false);
 </script>
 </body>
 </html>
