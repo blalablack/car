@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e09124a-aa1f-485c-a94b-a5dec1085ffa" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/big.css" afterPath="$PROJECT_DIR$/css/big.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/pc.css" afterPath="$PROJECT_DIR$/css/pc.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/pc1.css" afterPath="$PROJECT_DIR$/css/pc1.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/chrion.html" afterPath="$PROJECT_DIR$/page/chrion.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/biglittle.css" afterPath="$PROJECT_DIR$/css/biglittle.css" />
     </list>
     <ignored path="自适应网站.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -102,8 +97,8 @@
       <file leaf-file-name="biglittle.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/biglittle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3588">
-              <caret line="156" column="8" selection-start-line="156" selection-start-column="8" selection-end-line="156" selection-end-column="8" />
+            <state relative-caret-position="23">
+              <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -159,7 +154,6 @@
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/css/video.css" />
         <option value="$PROJECT_DIR$/css/biglittle2.css" />
-        <option value="$PROJECT_DIR$/css/biglittle.css" />
         <option value="$PROJECT_DIR$/css/middle1.css" />
         <option value="$PROJECT_DIR$/css/middle.css" />
         <option value="$PROJECT_DIR$/css/small.css" />
@@ -176,6 +170,7 @@
         <option value="$PROJECT_DIR$/css/pc1.css" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/page/chrion.html" />
+        <option value="$PROJECT_DIR$/css/biglittle.css" />
       </list>
     </option>
   </component>
@@ -356,15 +351,15 @@
       <workItem from="1479555150203" duration="11103000" />
       <workItem from="1479609391851" duration="7125000" />
       <workItem from="1479627484523" duration="5590000" />
-      <workItem from="1479687908713" duration="1661000" />
+      <workItem from="1479687908713" duration="2082000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="477483000" />
+    <option name="totallyTimeSpent" value="477904000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12079063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -727,8 +722,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/biglittle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3588">
-          <caret line="156" column="8" selection-start-line="156" selection-start-column="8" selection-end-line="156" selection-end-column="8" />
+        <state relative-caret-position="23">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
           <folding />
         </state>
       </provider>
