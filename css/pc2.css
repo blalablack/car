@@ -1,5 +1,8 @@
 .kuang{
-    width:930px;
+    width:88%;
+}
+.clear_left{
+    clear:left;
 }
 .nav ul li a{
     font-size: 1.6em;

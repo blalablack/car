@@ -14,8 +14,10 @@
         }
         if(ua.indexOf("Windows NT")!=-1||ua.indexOf("Mac OS X 10")!=-1){
             //这是pc端
-            f("head link")[1].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/pc.css'/>");
-            f("head link")[2].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/video.css'/>");
+            f("head link")[1].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:1300px)' href='../css/pc1.css'/>");
+            f("head link")[2].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:992px) and (max-width:1300px)' href='../css/pc2.css'/>");
+            f("head link")[3].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (max-width:992px)' href='../css/pc3.css'/>");
+            f("head link")[4].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/video.css'/>");
             //每次点击进度条是会触发canplaythrough 会重复绑定事件所以该为$()初始化绑定;
             window.onload=function () {
                 navcar();
@@ -67,8 +69,8 @@
         <div class="content_content">
             <section id="player">
                 <div id="pause_on" style="display: none"><span></span></div>
-                <div id="poster_on" style="display: none"><img src="../img/fenyr/poster_1.jpg" alt=""></div>
-                <video controls id="media" width="100%" poster="../img/fenyr/poster_1.jpg" preload="metadata"
+                <div id="poster_on" style="display: none"><img src="../img/fenyr/poster_2.jpg" alt=""></div>
+                <video controls id="media" width="100%" poster="../img/fenyr/poster_2.jpg" preload="metadata"
                        src="../video/Fenyr SuperSport.mp4">您的浏览器不支持video</video>
                 <div  id="control" onselectstart="return false;" style="display: none">
                     <div class="neirong">
@@ -120,13 +122,13 @@
                     <p class="last_p"><strong>APPEARANCE:</strong>
                         Side view, the new car side with a more complex line design language, sharp corners and very layered surrounded by the suite, so that the new car to create a full sense of the future. In addition, the car is also equipped with double five-spoke lightweight wheels, to further enhance the vehicle's mobility.
                     </p>
-                    <div><img src="../img/fenyr/fenyr3.jpg" alt=""> <p>Fenyr SuperSport based on lightweight alum chassis to build.</p></div>
+                    <div class="clear_left"><img src="../img/fenyr/fenyr3.jpg" alt=""> <p>Fenyr SuperSport based on lightweight alum chassis to build.</p></div>
                     <div class="no"><img src="../img/fenyr/fenyr4.jpg" alt=""> <p> Fenyr SuperSport based on lightweight alum chassis to build.</p></div>
                     <p><strong>DESIGN ELEMENTS:</strong>
                         In contrast, Fenyr SuperSport tail design is more exaggerated, the tail of the overall use of sharp lines, and as active aerodynamic package also incorporates them, including an adjustable large-size spoiler, and bumper below the large size Underbody spoiler. In addition the car taillight group with LED light band design, visual effect is very sharp.</p>
                     <p class="last_p"><strong>TECHNICAL:</strong>
                         According to the official said, Fenyr SuperSport based on lightweight aluminum chassis to build, the body is made of carbon fiber material, making the weight of the vehicle can be reduced. In addition, W Motors in the build when this super sports car with a number of internationally renowned auto parts manufacturers, including Magna Stahl companies and RUF (such as Tiger) company.</p>
-                    <div><img src="../img/fenyr/fenyr5.jpg" alt=""><p>In addition, W Motors in the build when this car with a number of internationally renowned auto parts manufacturers.</p></div>
+                    <div class="clear_left"><img src="../img/fenyr/fenyr5.jpg" alt=""><p>In addition, W Motors in the build when this car with a number of internationally renowned auto parts manufacturers.</p></div>
                     <div class="no"><img src="../img/fenyr/fenyr6.jpg" alt=""><p>In addition, W Motors in the build when this car with a number of internationally renowned auto parts manufacturers</p></div>
                     <p class="last_p"><strong>POWER: </strong>
                         The new car equipped with a 4.0L horizontal twin-turbocharged six-cylinder engine, the engine provided by the German company RUF, the maximum power of 913 horsepower, peak torque 1200 Nm. Transmission, and the engine match is a 7-speed dual-clutch gearbox. The new car 0-100km / h acceleration time will be less than 2.7 seconds, the maximum speed will exceed 400km / h.</p>

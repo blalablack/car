@@ -14,8 +14,10 @@
         }
         if(ua.indexOf("Windows NT")!=-1||ua.indexOf("Mac OS X 10")!=-1){
             //这是pc端
-            f("head link")[1].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/pc.css'/>");
-            f("head link")[2].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/video.css'/>");
+            f("head link")[1].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:1300px)' href='../css/pc1.css'/>");
+            f("head link")[2].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:992px) and (max-width:1300px)' href='../css/pc2.css'/>");
+            f("head link")[3].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (max-width:992px)' href='../css/pc3.css'/>");
+            f("head link")[4].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/video.css'/>");
             //每次点击进度条是会触发canplaythrough 会重复绑定事件所以该为$()初始化绑定;
             window.onload=function () {
                 navcar();
@@ -64,8 +66,8 @@
         <div class="content_content">
             <section id="player">
                 <div id="pause_on" style="display: none"><span></span></div>
-                <div id="poster_on" style="display: none"><img src="../img/enzo/poster_1.jpg" alt=""></div>
-                <video controls id="media" width="100%" poster="../img/enzo/poster_1.jpg" preload="metadata"
+                <div id="poster_on" style="display: none"><img src="../img/enzo/poster_2.jpg" alt=""></div>
+                <video controls id="media" width="100%" poster="../img/enzo/poster_2.jpg" preload="metadata"
                        src="../video/enzo.mp4">您的浏览器不支持video</video>
                 <div  id="control" onselectstart="return false;" style="display: none">
                     <div class="neirong">
@@ -116,14 +118,14 @@
                     <p class="last_p"><strong>PRODUCTION:</strong>
                         The Enzo, named after the founder, was established to commemorate Ferrari's first formula one title of the new millennium.
                     </p>
-                    <div><img src="../img/enzo/enzo3.jpg" alt=""> <p>Art specifications Chiron will four-turbocharged W16 8.0-liter engine, maximum power will reach 1103kW maximum torque 1500N·m.</p></div>
+                    <div class="clear_left"><img src="../img/enzo/enzo3.jpg" alt=""> <p>Art specifications Chiron will four-turbocharged W16 8.0-liter engine, maximum power will reach 1103kW maximum torque 1500N·m.</p></div>
                     <div class="no"><img src="../img/enzo/enzo4.jpg" alt=""> <p>Art specifications Chiron will four-turbocharged W16 8.0-liter engine, maximum power will reach 1103kW maximum torque 1500N·m.</p></div>
                     <p><strong>ACCOLADES:</strong>
                         In 2004, American magazine Sports Car International named the Enzo Ferrari number three on their list of Top Sports Cars of the 2000s. American magazine Motor Trend Classic named the Enzo as number four in their list of the ten "Greatest Ferraris of all time".
                         However, the Enzo was described as one of the "Fifty Ugliest Cars of the Past 50 Years", as Bloomberg Businessweek cited its superfluous curves and angles as too flashy, particularly the V-shaped hood, scooped-out doors, and bulbous windshield.
                     <p class="last_p"><strong>TECHNICAL SPECIFICATIONS:</strong>
                         Enzo will use four turbocharged W16 8.0-liter engine. The match will be a 7-speed dual-clutch gearbox, 0-100km/h acceleration time of just 2.3s, 0-300km h acceleration time is less than 15s, will reach a top speed of 480km/h.The new Bugatti models released tremendous technological innovation handling combination orders are improved a lot.</p>
-                    <div><img src="../img/enzo/enzo5.jpg" alt=""><p>Enzo using sharp LED headlamps, signature front grille.</p></div>
+                    <div class="clear_left"><img src="../img/enzo/enzo5.jpg" alt=""><p>Enzo using sharp LED headlamps, signature front grille.</p></div>
                     <div class="no"><img src="../img/enzo/enzo6.jpg" alt=""><p>Enzo using sharp LED headlamps, signature front grille.</p></div>
                     <p class="last_p"><strong>BODY DESIGN: </strong>
                         Enzo using sharp LED headlamps, signature front grille. In addition his sports PAX tires. Brake side will use 420mm front brake discs 400mm diameter.The future is not only on the speed champion, will be second to none in terms of innovation.</p>

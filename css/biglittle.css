@@ -1,5 +1,5 @@
 .kuang{
-    width:934px;//为了chiron下去
+    width:85%;
 }
 .nav ul li a{
     font-size: 1.4em;
@@ -99,8 +99,8 @@
 }
 .onpicture_1,.onpicture_2,.onpicture_3,.onpicture_4{
     position:absolute;
-    width:32%;
-    height:26%;
+    width:30%;
+    height:24%;
     background-color: rgba(20, 20, 20, 0.45);
     color:#fff;
     text-align:center;

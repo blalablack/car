@@ -14,8 +14,10 @@
         }
         if(ua.indexOf("Windows NT")!=-1||ua.indexOf("Mac OS X 10")!=-1){
             //这是pc端
-            f("head link")[1].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/pc.css'/>");
-            f("head link")[2].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/video.css'/>");
+            f("head link")[1].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:1300px)' href='../css/pc1.css'/>");
+            f("head link")[2].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:992px) and (max-width:1300px)' href='../css/pc2.css'/>");
+            f("head link")[3].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (max-width:992px)' href='../css/pc3.css'/>");
+            f("head link")[4].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/video.css'/>");
             //每次点击进度条是会触发canplaythrough 会重复绑定事件所以该为$()初始化绑定;
             window.onload=function () {
                 navcar();
@@ -67,8 +69,8 @@
         <div class="content_content">
             <section id="player">
                 <div id="pause_on" style="display: none"><span></span></div>
-                <div id="poster_on" style="display: none"><img src="../img/laferrari/poster_1.jpg" alt=""></div>
-                <video controls id="media" width="100%" poster="../img/laferrari/poster_1.jpg" preload="metadata"
+                <div id="poster_on" style="display: none"><img src="../img/laferrari/poster_2.jpg" alt=""></div>
+                <video controls id="media" width="100%" poster="../img/laferrari/poster_2.jpg" preload="metadata"
                        src="../video/laFerrari.mp4">您的浏览器不支持video</video>
                 <div  id="control" onselectstart="return false;" style="display: none">
                     <div class="neirong">
@@ -118,7 +120,7 @@
                         LaFerrari is the first fully developed by the Ferrari models, Pininfarina did not provide any technical support. This also marks the Pininfarina and Ferrari since the beginning of the 1951 continuous cooperation came to an end. However, Ferrari has stated that there are two models by the company involved in the design of the sports car is not released, so it will not cut off the partnership with Pininfarina.</p>
                     <p class="last_p"><strong>AERODYNAMIC:</strong>
                         In the design of LaFerrari, because of its positioning for the previous generation supercar Enzo's successor models, Ferrari for its unique aerodynamic design, the wind resistance is only 0.3. In addition, the LaFerrari is equipped with a variable telescopic tail in order to give the vehicle a better stability when running at extreme speeds. A rear spoiler is also fitted to the rear chassis that automatically adjusts to the vehicle speed.</p>
-                    <div><img src="../img/laferrari/laferrari3.jpg" alt=""> <p> The Veneno Roadster is a limited (maximum 9 units during 2014) version of the Lamborghini Veneno.</p></div>
+                    <div class="clear_left"><img src="../img/laferrari/laferrari3.jpg" alt=""> <p> The Veneno Roadster is a limited (maximum 9 units during 2014) version of the Lamborghini Veneno.</p></div>
                     <div class="no"><img src="../img/laferrari/laferrari4.png" alt=""> <p> The Veneno Roadster is a limited (maximum 9 units during 2014) version of the Lamborghini Veneno.</p></div>
                     <p><strong>POWER:</strong>
                         Ferrari test its top speed of 350 km (220 miles). 100 km acceleration within 3 seconds, 300 km acceleration time in less than 15 seconds.
@@ -126,7 +128,7 @@
                     <p class="last_p"><strong>TRACK VERSION:</strong>
                         Like Enzo's track version FXX, Ferrari will also launch LaFerrari's track version, the FXX-K, with a special engine and aerodynamic package priced at $ 4.7 million ($ 4.7 million) .
                     </p>
-                    <div><img src="../img/laferrari/laferrari5.jpg" alt=""><p>When introduced in 2013, it was the most expensive production car in the world.</p></div>
+                    <div class="clear_left"><img src="../img/laferrari/laferrari5.jpg" alt=""><p>When introduced in 2013, it was the most expensive production car in the world.</p></div>
                     <div class="no"><img src="../img/laferrari/laferrari6.jpg" alt=""><p>When introduced in 2013, it was the most expensive production car in the world.</p></div>
                     <p class="last_p"><strong>THE DOOR: </strong>
                         In the door design, LaFerrari Enzo's butterfly-style doors follow the use of the vehicle more dynamic. LaFerrari door hinge installed in the A-pillar and the body of the junction, allowing the driver out of the sports car, switch the door more convenient.

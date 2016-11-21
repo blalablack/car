@@ -14,8 +14,10 @@
         }
         if(ua.indexOf("Windows NT")!=-1||ua.indexOf("Mac OS X 10")!=-1){
             //这是pc端
-            f("head link")[1].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/pc.css'/>");
-            f("head link")[2].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/video.css'/>");
+            f("head link")[1].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:1300px)' href='../css/pc1.css'/>");
+            f("head link")[2].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:992px) and (max-width:1300px)' href='../css/pc2.css'/>");
+            f("head link")[3].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (max-width:992px)' href='../css/pc3.css'/>");
+            f("head link")[4].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/video.css'/>");
             //每次点击进度条是会触发canplaythrough 会重复绑定事件所以该为$()初始化绑定;
             window.onload=function () {
                 navcar();
@@ -66,8 +68,8 @@
         <div class="content_content">
             <section id="player">
                 <div id="pause_on" style="display: none"><span></span></div>
-                <div id="poster_on" style="display: none"><img src="../img/veneno/poster_1.jpg" alt=""></div>
-                <video controls id="media" width="100%" poster="../img/veneno/poster_1.jpg" preload="metadata"
+                <div id="poster_on" style="display: none"><img src="../img/veneno/poster_2.jpg" alt=""></div>
+                <video controls id="media" width="100%" poster="../img/veneno/poster_2.jpg" preload="metadata"
                        src="../video/Aventador Roadster.mp4">您的浏览器不支持video</video>
                 <div  id="control" onselectstart="return false;" style="display: none">
                     <div class="neirong">
@@ -117,7 +119,7 @@
                         When introduced in 2013 at a price of US$4,500,000, it was the most expensive production car in the world.The prototype, Car Zero, is finished in grey and includes an Italian flag vinyl on both sides of the car. The engine is a development of the Aventador's 6.5 L V12 and produces 750 PS (552 kW; 740 bhp).</p>
                     <p class="last_p"><strong>NUMBER:</strong>
                         Lamborghini built just five examples of the Veneno: One for factory testing, one was kept for itself and three for the customers. Car Zero, which was the vehicle on display, will be retained by the factory for the museum. The three production cars cost €3,120,000 each, and all three were sold.</p>
-                    <div><img src="../img/veneno/veneno3.jpg" alt=""> <p> The Veneno Roadster is a limited (maximum 9 units during 2014) version of the Lamborghini Veneno.</p></div>
+                    <div class="clear_left"><img src="../img/veneno/veneno3.jpg" alt=""> <p> The Veneno Roadster is a limited (maximum 9 units during 2014) version of the Lamborghini Veneno.</p></div>
                     <div class="no"><img src="../img/veneno/veneno4.jpg" alt=""> <p> The Veneno Roadster is a limited (maximum 9 units during 2014) version of the Lamborghini Veneno.</p></div>
                     <p><strong>POWER:</strong>
                         The Lamborghini Veneno has an electronically limited top speed of 354 km/h (220 mph), can do 0–97 km/h (0–60 mph) in 2.8 seconds, can brake 97–0 km/h (60–0 mph) in 30 m (98.0 ft), and corners at 1.41 G.
@@ -125,7 +127,7 @@
                     <p class="last_p"><strong>NUMBER ZERO:</strong>
                         The vehicle number 0 was unveiled at the March 2013 Geneva Motor Show, followed by 2013 Quail Motorsports Gathering, Vallelunga circuit near Rome during the World Finals of Lamborghini Super Trofeo 2013 series. There's another number 0 Veneno prototype test car.
                     </p>
-                    <div><img src="../img/veneno/veneno5.jpg" alt=""><p>When introduced in 2013, it was the most expensive production car in the world.</p></div>
+                    <div class="clear_left"><img src="../img/veneno/veneno5.jpg" alt=""><p>When introduced in 2013, it was the most expensive production car in the world.</p></div>
                     <div class="no"><img src="../img/veneno/veneno6.jpg" alt=""><p>When introduced in 2013, it was the most expensive production car in the world.</p></div>
                     <p class="last_p"><strong>INTRODUCTION: </strong>
                         The Veneno Roadster is a limited (maximum 9 units during 2014) version of the Lamborghini Veneno, commemorating the 50th anniversary of Automobili Lamborghini. It has exclusive alloy wheels, Rosso Veneno (red) body colour and 2 bucket seats made in forged composite, woven carbon-fibre carbonSkin interior upholstery. The Veneno Roadster has a top speed of 356 km/h (221 mph) and goes from 0–100 km/h (0–62 mph) in 2.9 seconds.

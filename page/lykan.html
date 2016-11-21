@@ -14,8 +14,10 @@
         }
         if(ua.indexOf("Windows NT")!=-1||ua.indexOf("Mac OS X 10")!=-1){
             //这是pc端
-            f("head link")[1].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/pc.css'/>");
-            f("head link")[2].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/video.css'/>");
+            f("head link")[1].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:1300px)' href='../css/pc1.css'/>");
+            f("head link")[2].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:992px) and (max-width:1300px)' href='../css/pc2.css'/>");
+            f("head link")[3].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (max-width:992px)' href='../css/pc3.css'/>");
+            f("head link")[4].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/video.css'/>");
             //每次点击进度条是会触发canplaythrough 会重复绑定事件所以该为$()初始化绑定;
             window.onload=function () {
                 navcar();
@@ -66,8 +68,8 @@
         <div class="content_content">
             <section id="player">
                 <div id="pause_on" style="display: none"><span></span></div>
-                <div id="poster_on" style="display: none"><img src="../img/lykan/poster_1.jpg" alt=""></div>
-                <video controls id="media" width="100%" poster="../img/lykan/poster_1.jpg" preload="metadata"
+                <div id="poster_on" style="display: none"><img src="../img/lykan/poster_2.jpg" alt=""></div>
+                <video controls id="media" width="100%" poster="../img/lykan/poster_2.jpg" preload="metadata"
                        src="../video/Lykan Hypersport.mp4">您的浏览器不支持video</video>
                 <div  id="control" onselectstart="return false;" style="display: none">
                     <div class="neirong">
@@ -118,13 +120,13 @@
                         The price of this car is expensive because it contains the optional. This is the first car in the headlights with a diamond car, headlamps from titanium light LED with 420 diamonds (15 kt) formed. Buyers can choose which ruby ​​and diamonds they want to embed headlamps. In addition, customers can choose between a range of rubies, diamonds, yellow diamonds or sapphires for use in vehicles.</p>
                     <p class="last_p"><strong>ORIGIN:</strong>
                         Lykan Hypersport was founded in 2012 by the Lebanese company W Motors limited production of sports car, is the Middle East produced the first super sports car. </p>
-                    <div><img src="../img/lykan/lykan3.jpg" alt=""> <p>W Motors is an important milestone in the region and the world automotive industry.</p></div>
+                    <div class="clear_left"><img src="../img/lykan/lykan3.jpg" alt=""> <p>W Motors is an important milestone in the region and the world automotive industry.</p></div>
                     <div class="no"><img src="../img/lykan/lykan4.jpg" alt=""> <p>W Motors is an important milestone in the region and the world automotive industry.</p></div>
                     <p><strong>POWER:</strong>
                         Lykan HyperSport is powered by a six-cylinder twin-turbo engine (3746 ml) from Porsche with output horsepower of up to 552 kW (740 bhp; 751 PS) and 960 N·m (98 kg·m) of peak torque. The car claims a maximum speed of 385 km/h (239 mph) and an acceleration time of 0 to 100 km/h (0 to 62 mph) in just 2.8 seconds.
                     <p class="last_p"><strong>W MTORS:</strong>
                     W Motors is an important milestone in the region and the world automotive industry, W car will be the Premiere Arab development of high-performance luxury sports car, launched in July 11, 2012 in high-end wedding luxury Sursock Palace Beirut.</p>
-                    <div><img src="../img/lykan/lykan5.jpg" alt=""><p>In addition, W Motors in the build when this car with a number of internationally renowned auto parts manufacturers.</p></div>
+                    <div class="clear_left"><img src="../img/lykan/lykan5.jpg" alt=""><p>In addition, W Motors in the build when this car with a number of internationally renowned auto parts manufacturers.</p></div>
                     <div class="no"><img src="../img/lykan/lykan6.jpg" alt=""><p>In addition, W Motors in the build when this car with a number of internationally renowned auto parts manufacturers</p></div>
                     <p class="last_p"><strong>INTRODUCTION: </strong>
                         July 28, 2013 Qatar Motor Show W Motors released a limited 7 units of Lykan HyperSport. More than 150,000 visitors took part in the auto show, won the regional and international media coverage of this historical event and exposure in the world. After the launch of Qatar in January 2013, W Motors was on tour, exhibited in Dubai, Abu Dhabi, Kuwait, Belgium and Spain, Lykan HyperSport.
