@@ -22,7 +22,10 @@
            window.onload=function () {
                navcar();
                var sp=$(".center span");
-               sp.get(0).onclick=showPicture;
+               sp.get(0).onclick=show.shows;
+               //绑定退出事件
+               var quit=$(".quit");
+               quit.get(0).onclick=show.exit;
                Video();
            };
         }else{

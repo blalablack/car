@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e09124a-aa1f-485c-a94b-a5dec1085ffa" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/pagemain.css" afterPath="$PROJECT_DIR$/css/pagemain.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/chrion.html" afterPath="$PROJECT_DIR$/page/chrion.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/enzo.html" afterPath="$PROJECT_DIR$/page/enzo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/fenyr.html" afterPath="$PROJECT_DIR$/page/fenyr.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/ferrari458.html" afterPath="$PROJECT_DIR$/page/ferrari458.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/laferrari.html" afterPath="$PROJECT_DIR$/page/laferrari.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/lykan.html" afterPath="$PROJECT_DIR$/page/lykan.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/veneno.html" afterPath="$PROJECT_DIR$/page/veneno.html" />
     </list>
@@ -460,12 +454,12 @@
       <workItem from="1479609391851" duration="7125000" />
       <workItem from="1479627484523" duration="5590000" />
       <workItem from="1479687908713" duration="6973000" />
-      <workItem from="1479709033293" duration="8784000" />
+      <workItem from="1479709033293" duration="8918000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="491579000" />
+    <option name="totallyTimeSpent" value="491713000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
