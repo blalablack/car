@@ -652,59 +652,20 @@ function Video() {
         $("#media").removeAttr("controls");
     });
 }
-/**************滚轮禁用************/
-function wheel(e) {
-    e.preventDefault();
-}
-function jinyong(e){
-    var isFF=/FireFox/i.test(navigator.userAgent);
-    if(e){
-        if(!isFF){
-            window.onmousewheel=document.onmousewheel=function(){return false;}
-        }else{
-            window.addEventListener("DOMMouseScroll",wheel,false);
-        }
-    }else if(!e){
-        if(!isFF){
-            window.onmousewheel=document.onmousewheel=function(){return true;}
-        }else{
-            window.removeEventListener("DOMMouseScroll",wheel,false);
-        }
-    }
-}
+
+
+
 /**************************************pc端图片展示*/
-function showPicture() {
-    var wrap_items=$(".wrap_item");
-    var Src=$(".mask").attr("data_class");
-    wrap_items.each(function (i){
-        $(this).children("img").attr("src",Src+i+".jpg");
-        $(this).click( function(){
-            if($(this).attr("class")=="wrap_item middle_right"){
-                show.right();
-            }else if($(this).attr("class")=="wrap_item middle_left"){
-                show.left();
-            }
-        });
-    });
-    $(".kuang").attr("class"," kuang blur");
-    $(".mask").css("display","block");
-    jinyong(true);
- /******退出展示****/
-    var quit=$(".quit");
-    quit.click(function () {
-        $(".kuang").attr("class"," kuang");
-        $(".mask").css("display","none");
-        jinyong(false);
-    });
-}
-/*******图片切换******/
 var show=(function () {
+    var mask=$(".mask");
+    var kuang=$(".kuang");
     var wrap_items=$(".wrap_item");
-    var m=100*wrap_items.length;
-    function ceshi() {
+    var i_m=wrap_items.length;
+    var m=100*i_m;
+    //向右转
+    function right() {
         m++;
-        var i_m=wrap_items.length;
-        for(var i=0;i<wrap_items.length;i++){
+        for(var i=0;i<i_m;i++){
             $(wrap_items[i]).removeClass();
         }
         $(wrap_items[m%i_m]).attr("class","wrap_item out");
@@ -716,13 +677,13 @@ var show=(function () {
         }
 
     }
-    function ceshi1() {
+    //向左转
+    function left() {
         m--;
-        var i_m=wrap_items.length;
         if(m==-1){
-            m=100*wrap_items.length;
+            m=100*i_m;
         }
-        for(var i=0;i<wrap_items.length;i++){
+        for(var i=0;i<i_m;i++){
             $(wrap_items[i]).removeClass();
         }
         $(wrap_items[m%i_m]).attr("class","wrap_item out");
@@ -733,9 +694,79 @@ var show=(function () {
             $(wrap_items[(m+x)%i_m]).attr("class","wrap_item out");
         }
     };
+    /******退出展示****/
+    function ex() {
+        jinyong(false);
+        kuang.removeClass("blur");
+        mask.css({"display":"none","opacity":"0"});
+        clearTimeout(kaishi);
+        wrap_items.each(function (i){
+            if(i==2){
+                $(this).attr("class","wrap_item show")
+            }else{
+                $(this).attr("class","wrap_item")
+            }
+        });
+        m=100*i_m;
+    };
+    //左右图片分开的动画
+    function kaishi() {
+        mask.animate({"opacity":1},500,function () {
+            wrap_items.each(function (i){
+                if(i==1){
+                    $(this).addClass("middle_left");
+                }else if(i==2){
+                }else if(i==3){
+                    $(this).addClass("middle_right");
+                }else{
+                    $(this).addClass("out");
+                }
+            });
+        });
+    }
+    //展示图片
+    function showPicture() {
+        jinyong(true);
+        var Src=mask.attr("data_class");
+        //绑定左右click事件
+        wrap_items.each(function (i){
+            $(this).children("img").attr("src",Src+i+".jpg");
+            $(this).click( function(){
+                if($(this).attr("class")=="wrap_item middle_right"){
+                    right();
+                }else if($(this).attr("class")=="wrap_item middle_left"){
+                    left();
+                }
+            });
+        });
+        //blur的同时加载图片
+        kuang.addClass("blur");//0.5s
+        mask.css("display","block");
+        setTimeout(kaishi,800);
+    }
+    /**************滚轮禁用************/
+    function wheel(e) {
+        e.preventDefault();
+    }
+    function jinyong(e){
+        var isFF=/FireFox/i.test(navigator.userAgent);
+        if(e){
+            if(!isFF){
+                window.onmousewheel=document.onmousewheel=function(){return false;}
+            }else{
+                window.addEventListener("DOMMouseScroll",wheel,false);
+            }
+        }else if(!e){
+            if(!isFF){
+                window.onmousewheel=document.onmousewheel=function(){return true;}
+            }else{
+                window.removeEventListener("DOMMouseScroll",wheel,false);
+            }
+        }
+    }
     return {
-        right:ceshi,
-        left:ceshi1
+        exit:ex,
+        shows:showPicture,
     };
 })()
 

@@ -21,8 +21,12 @@
             //每次点击进度条是会触发canplaythrough 会重复绑定事件所以该为$()初始化绑定;
             window.onload=function () {
                 navcar();
+                //绑定开始事件
                 var sp=$(".center span");
-                sp.get(0).onclick=showPicture;
+                sp.get(0).onclick=show.shows;
+                //绑定退出事件
+                var quit=$(".quit");
+                quit.get(0).onclick=show.exit;
                 Video();
             };
         }else{
@@ -159,7 +163,7 @@
     <div class="quit"></div>
     <div class="wrap_out">
         <div class="wrap_inner">
-            <div class="wrap_item out">
+            <div class="wrap_item">
                 <img  alt="">
                 <div class="line_t"></div>
                 <div class="line_r"></div>
@@ -167,7 +171,7 @@
                 <div class="line_l"></div>
                 <p>six</p>
             </div>
-            <div class="wrap_item middle_left">
+            <div class="wrap_item">
                 <img  alt="">
                 <div class="line_t"></div>
                 <div class="line_r"></div>
@@ -183,7 +187,7 @@
                 <div class="line_l"></div>
                 <p>one</p>
             </div>
-            <div class="wrap_item middle_right">
+            <div class="wrap_item">
                 <img  alt="">
                 <div class="line_t"></div>
                 <div class="line_r"></div>
@@ -191,7 +195,7 @@
                 <div class="line_l"></div>
                 <p>two</p>
             </div>
-            <div class="wrap_item out">
+            <div class="wrap_item">
                 <img  alt="">
                 <div class="line_t"></div>
                 <div class="line_r"></div>
@@ -199,7 +203,7 @@
                 <div class="line_l"></div>
                 <p>three</p>
             </div>
-            <div class="wrap_item out">
+            <div class="wrap_item">
                 <img  alt="">
                 <div class="line_t"></div>
                 <div class="line_r"></div>
@@ -207,7 +211,7 @@
                 <div class="line_l"></div>
                 <p>four</p>
             </div>
-            <div class="wrap_item out">
+            <div class="wrap_item">
                 <img  alt="">
                 <div class="line_t"></div>
                 <div class="line_r"></div>
