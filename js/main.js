@@ -388,8 +388,8 @@ function screenchange() {
         fullscreen_span.css({"backgroundPosition":"-191px 0"});
         bar_parent.animate({"width":"68%"},10,ziShiYong);
         //poster切换
-        img_new_src=img_src.slice(0,img_src.length-5)+"2.jpg";
-        poster_on_img.attr("src",img_new_src);
+        // img_new_src=img_src.slice(0,img_src.length-5)+"2.jpg";
+        // poster_on_img.attr("src",img_new_src);
         //全屏fullscreen的hover事件
         fullscreen_span.unbind("mouseenter mouseleave");
         fullscreen_span.mouseenter(function () {
