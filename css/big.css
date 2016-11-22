@@ -15,6 +15,12 @@ body{
 
 
 /*********************************/
+.heading{
+    width: 102px;
+    height: 102px;
+    background: url("../img/logo.png") no-repeat 0 0;
+    margin-left:20px;
+}
 .content{
     float: left;
     overflow: hidden;
@@ -94,10 +100,6 @@ body{
 .nav_content h4{
     margin-bottom:0;
 }
-
-
-
-
 /********************/
 #middle{
     border-bottom:1px dashed #ddd;
@@ -250,13 +252,7 @@ a:hover{
         overflow: hidden;
         width:18%;
     }
-    .heading{
-        width: 90px;
-        height: 90px;
-        background: url("../img/food-sense.png") no-repeat 0 0;
-        border:1px solid red;
-        margin-left:20px;
-    }
+
     .nav{
         text-align: left;
         margin-top:20px;
@@ -426,13 +422,7 @@ a:hover{
         overflow: hidden;
         width:18%;
     }
-    .heading{
-        width: 90px;
-        height: 90px;
-        background: url("../img/food-sense.png") no-repeat 0 0;
-        border:1px solid red;
-        margin-left:20px;
-    }
+
     .nav{
         text-align: left;
         margin-top:20px;
@@ -625,13 +615,7 @@ a:hover{
         overflow: hidden;
         width:18%;
     }
-    .heading{
-        width: 90px;
-        height: 90px;
-        background: url("../img/food-sense.png") no-repeat 0 0;
-        border:1px solid red;
-        margin-left:20px;
-    }
+
     .nav{
         text-align: left;
         margin-top:20px;

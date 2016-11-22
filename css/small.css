@@ -253,13 +253,6 @@ a:hover{
         width:100%;
         margin-bottom:10px;
     }
-    .heading{
-        width: 90px;
-        height: 90px;
-        background: url("../img/food-sense.png") no-repeat 0 0;
-        border:1px solid red;
-        float:left;
-    }
     .nav{
         text-align: left;
         margin-top:20px;
@@ -286,10 +279,12 @@ a:hover{
     .nav ul li a{
         display: block;
         text-align: left;
-
-
-
-
+    }
+    .heading {
+        width: 102px;
+        height: 102px;
+        background: url(../img/logo.png) no-repeat 0 0;
+        float: left;
     }
     /******************/
     .content{
@@ -407,11 +402,11 @@ a:hover{
         margin-bottom:10px;
     }
     .heading{
-        width: 90px;
-        height: 90px;
-        background: url("../img/food-sense.png") no-repeat 0 0;
-        border:1px solid red;
-        float:left;
+        width: 102px;
+        height: 102px;
+        background: url("../img/logo.png") no-repeat 0 0;
+        margin-left:20px;
+        float: left;
     }
     .nav{
         text-align: left;
@@ -553,18 +548,18 @@ a:hover{
     #middle h3{
         font-size:1.5em;
     }
-
+    .heading{
+        width: 90px;
+        height: 92px;
+        background: url("../img/logo.png") no-repeat 0 0;
+        background-size: 90%;
+        margin-left:20px;
+        float: left;
+    }
     .header{
         overflow: hidden;
         width:100%;
         margin-bottom:10px;
-    }
-    .heading{
-        width: 90px;
-        height: 90px;
-        background: url("../img/food-sense.png") no-repeat 0 0;
-        border:1px solid red;
-        float:left;
     }
     .nav{
         text-align: left;
@@ -712,18 +707,17 @@ a:hover{
     .header{
         overflow: hidden;
         width:100%;
-        margin-bottom:10px;
         height:130px;
         position: relative;
     }
     .heading{
         height: 90px;
         width:90px;
-        background: url("../img/food-sense.png") no-repeat 0 0;
-        margin:50px auto;
-        padding-top:20px;
+        background: url("../img/logo.png") no-repeat 0 0;
+        background-size: 90%;
+        border:1px solid transparent;
+        margin:40px auto;
     }
-
     .nav{
         position: absolute;
         width:90%;
@@ -894,16 +888,16 @@ a:hover{
     .header{
         overflow: hidden;
         width:100%;
-        margin-bottom:10px;
         height:130px;
         position: relative;
     }
     .heading{
         height: 90px;
         width:90px;
-        background: url("../img/food-sense.png") no-repeat 0 0;
-        margin:50px auto;
-        padding-top:20px;
+        background: url("../img/logo.png") no-repeat 0 0;
+        background-size: 90%;
+        border:1px solid transparent;
+        margin:40px auto;
     }
 
     .nav{
