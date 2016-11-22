@@ -1,146 +1,1034 @@
+
+body{
+    color: #141414;
+    font: 300 62.5% 'ff-zwo-web',Arial,sans-serif;
+}
+
 .kuang{
-    width:100%;
-}
-/*********字体*********/
-.nav ul li a{
-    font-size: 1em;
-}
-.nav_content ul li h4{
-    font-size:1em;
-}
-
-#bottom .neirong p{
-    font-size:1em;
-}
-#bottom .neirong h4{
-    font-size:1em;
-}
-#bottom .neirong span{
-    font-size:1em;
-}
-#picture div div h3{
-    font-size:1.2em;
-}
-#picture div div p{
-    font-size:1.2em;
-}
-#middle h3{
-    font-size:1.5em;
-}
-
-.header{
+    margin:0 auto;
+    padding-top:30px;
+    position: relative;
     overflow: hidden;
-    width:100%;
-    margin-bottom:10px;
 }
-.heading{
-    width: 90px;
-    height: 90px;
-    background: url("../img/food-sense.png") no-repeat 0 0;
-    border:1px solid red;
-    float:left;
-}
-.nav{
-    text-align: left;
-    margin-top:20px;
 
-}
-.nav ul{
-    list-style: none;
-    padding:0;
-    overflow: hidden;
-    margin-right:5px;
-    float:right;
-}
-.nav ul li{
-    float: left;
-    margin-left:13px;//一会改成百分比
+/***********************************/
 
-}
-.nav ul li img{
-    display: none;
-}
-.nav ul li a{
-    display: block;
-    text-align: left;
-}
-/******************/
+
+/*********************************/
 .content{
-    width:100%;
-    padding-bottom:30px;
+    float: left;
+    overflow: hidden;
+}
+#hide{
+    margin: 0;
+}
+#hide img{
+    visibility: hidden;
+    display: block;
+    max-width:100%;//这个图片也要自适应，解决子元素absolute,父元素自适应
 }
 #picture img{
-    max-width:100%;
-}
-#picture div span{
-    display: none;
-}
-#picture div{
-    overflow: visible;
-    width:100%;
+    display: block;
     height:auto;
-    background:none;
-
 }
-#picture div div{
+#picture{
+    position:relative;
+}
+#picture>div{
     position: absolute;
-    bottom:-10px;
+    top:0;
+}
+#picture span{
+    position:absolute;
+    left:0;
+    right:0;
+    margin:0 auto;
+    border:1px solid #fff;
+    display:block;
+    color:#fff;
+    transition:all 240ms linear;
+    border-radius:1px;
+    cursor:pointer;
+    line-height: 24px;
+    width:20%;
+    height:22px;
+}
+/***************************/
+
+
+
+/**********/
+#back{
+    width:25%;
+    height:100%;
+    background: #D9EFEC;
+    position: absolute;
     left:0;
 }
-#picture div h3{
-    margin:0 0 0 0;
-    text-align:left;
-    background:rgba(255,255,255,.5);
-    color: #141414;
-    padding:0 2% 0 2%;
-    width:40%;
-}
-#picture div p{
-    background:black;
+.nav_content ul{
+    padding:0;
     margin:0;
-    text-align:left;
-    padding-left:2%;
-    color:#fff;
-
+    list-style: none;
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    position: absolute;
 }
-
-
-
-/****************/
+.nav_content ul li {
+    height:100%;
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    cursor: pointer;
+    border-right:1px solid #D3EDE9;
+}
+.nav_content ul li a:hover{
+    color: #34AC98;
+}
 .nav_content{
-    display: none;
+    color: #34AC98;
+    background-color:#EFF8F7;
+    text-shadow: 0 1px 0 #FAFDFC;
+    position: relative;
 }
-/****************/
+.nav_content h4{
+    margin-bottom:0;
+}
 
+
+
+
+/********************/
+#middle{
+    border-bottom:1px dashed #ddd;
+    margin-top:30px;
+    margin-bottom:3px;
+}
+#middle h3{
+    text-transform:uppercase;
+    color:#6a6a6a;
+    margin-bottom:5px;
+}
+/******************/
+#bottom{
+    overflow: hidden;
+}
+#bottom .neirong h4{
+    color:#60BEAE;
+    cursor: pointer;
+    transition:all 200ms linear;
+}
+#bottom .neirong h4:hover{
+    color: #f44129;
+}
 .neirong{
-    width:48%;
+    float:left;
+    position: relative;
 }
-.middle0,.middle2,.middle4,.middle6{
-    margin-right:4%;
+.neirong h4{
+    margin-top: 3px;
+    margin-bottom:5px;
 }
-.middle3 span{
-    display:none;
+.neirong p{
+    letter-spacing: .05em;
 }
-.middle3,.middle2,.middle4,.middle5,.middle6{
-    margin-top:10px;
+.neirong .neirong_ft{
+    text-align: left;
 }
-.neirong{
-    //border: 1px solid #E5E5E5;
-    //box-shadow: 3px 3px 6px #F0F0F0;
+.neirong>a div span{
+    position:relative;
+    display: block;
 }
 .neirong>a>div{
-    margin:5px;
+    overflow: hidden;
 }
 .neirong>a{
-    border:none;
+    border: 1px solid #E5E5E5;
+    display: block;
 }
-.aside{
-    display: none;
+.neirong img{
+    width:100%;
+    display: block;
+
 }
-#middle{
-    margin-top:35px;
-}
+/*********************/
 .footer{
-    width: 100%;
-    margin:0 auto;
+    margin-top:20px;
+    padding-top: 10px;
+    border-top: 2px solid #E5E5E5;
+    color: #AAA;
+    clear: both;
+// position:relative;
+}
+.footer p{
+    font-size:1.2em;
+    float: left;
+}
+.footer p a{
+    color:#60BEAE;
+    font-size:1em;
+    cursor: default;
+}
+.footer ul{
+    float:right;
+    list-style: none;
+}
+.footer ul li{
+    float:left;
+    margin-left:6px;
+}
+.footer ul li a{
+    display: block;
+    width:26px;
+    height:25px;
+    opacity: .4;
+}
+.git{
+    background: url("../img/tubiao.png");
+}
+.qq{
+    background: url("../img/tubiao.png") -58px 0 no-repeat;
+}
+.footer ul li .wechat{
+    width:33px;
+    background: url("../img/tubiao.png") -26px 0 no-repeat;
+}
+.footer ul li a:hover{
+    opacity: .9;
+}
+/************************/
+a{
+    transition:all 200ms linear;
+    color:#60BEAE;
+    text-decoration: none;
+}
+a:hover{
+    color: #f44129;
+}
+.aside a{
+    display: block;
+    width:121px;
+    height:21px;
+    line-height: 21px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 2px 1px 2px 0;
+
+}
+
+/*************媒体查询**************/
+@media screen and (min-width: 992px) {
+    .kuang{
+        width:1000px;
+    }
+    /****字体************/
+    .nav ul li a{
+        font-size: 1.5em;
+    }
+    .nav_content ul li h4{
+        font-size:1.4em;
+    }
+
+    #bottom .neirong p{
+        font-size:1.2em;
+    }
+    #bottom .neirong h4{
+        font-size:1.4em;
+    }
+    #bottom .neirong span{
+        font-size:1em;
+    }
+    #picture div div h3{
+        font-size:1.6em;
+    }
+    #picture div div p{
+        font-size:1.4em;
+    }
+    #middle h3{
+        font-size:1.5em;
+    }
+
+    .header{
+        overflow: hidden;
+        width:100%;
+        margin-bottom:10px;
+    }
+    .heading{
+        width: 90px;
+        height: 90px;
+        background: url("../img/food-sense.png") no-repeat 0 0;
+        border:1px solid red;
+        float:left;
+    }
+    .nav{
+        text-align: left;
+        margin-top:20px;
+        width: 100%;
+    }
+    .nav ul{
+        list-style: none;
+        padding:0;
+        overflow: hidden;
+        margin-right:5px;
+        float:right;
+    }
+    .nav ul li{
+        float: left;
+        margin-left:25px;
+
+    }
+    .nav ul li img{
+        margin-top:auto;
+        margin-bottom:auto;
+        width:55px;
+        cursor: pointer;
+    }
+    .nav ul li a{
+        display: block;
+        text-align: left;
+
+
+
+
+    }
+    /******************/
+    .content{
+        width:100%;
+        padding-bottom:30px;
+    }
+    #picture img{
+        max-width:100%;
+    }
+    #picture div span{
+        display: none;
+    }
+    #picture div{
+        overflow: visible;
+        width:100%;
+        height:auto;
+        background:none;
+
+    }
+    #picture div div{
+        position: absolute;
+        top:0;
+    }
+    #picture div h3{
+        display: none;
+    }
+    #picture div p{
+        background:rgba(255,255,255,.5);
+        text-align:left;
+        padding-left:2%;
+        color:#60BEAE;
+        margin:0;
+        display: none;
+
+    }
+
+
+    /****************/
+    .nav_content ul li{
+        padding:0 2%;
+    }
+    .nav_content{
+        height:36px;
+    }
+    .nav_content p{
+        display: none;
+    }
+    .nav_content h4{
+        line-height: 36px;
+        margin:0;
+        padding:0;
+        text-align: center;
+    }
+    /****************/
+
+    .neirong{
+        width:31%;
+        margin-right:3%;
+        margin-bottom: 10px;
+    }
+    .middle2{
+        margin-right:0;
+    }
+    .middle5{
+        margin-right:0;
+    }
+    .middle3{
+        clear: both;
+
+    }
+    /*.middle3 span{*/
+    /*display:none;*/
+    /*}*/
+    .neirong>a>div{
+        margin:3px;
+    }
+    .aside{
+        display: none;
+    }
+}
+@media screen and (min-width:730px) and (max-width:992px) {
+    .kuang{
+        width:100%;
+    }
+    /****字体************/
+    .nav ul li a{
+        font-size: 1.5em;
+    }
+    .nav_content ul li h4{
+        font-size:1.4em;
+    }
+
+    #bottom .neirong p{
+        font-size:1.2em;
+    }
+    #bottom .neirong h4{
+        font-size:1.4em;
+    }
+    #bottom .neirong span{
+        font-size:1em;
+    }
+    #picture div div h3{
+        font-size:1.6em;
+    }
+    #picture div div p{
+        font-size:1.4em;
+    }
+    #middle h3{
+        font-size:1.5em;
+    }
+
+    .header{
+        overflow: hidden;
+        width:100%;
+        margin-bottom:10px;
+    }
+    .heading{
+        width: 90px;
+        height: 90px;
+        background: url("../img/food-sense.png") no-repeat 0 0;
+        border:1px solid red;
+        float:left;
+    }
+    .nav{
+        text-align: left;
+        margin-top:20px;
+        width: 100%;
+    }
+    .nav ul{
+        list-style: none;
+        padding:0;
+        overflow: hidden;
+        margin-right:5px;
+        float:right;
+    }
+    .nav ul li{
+        float: left;
+        margin-left:25px;
+
+    }
+    .nav ul li img{
+        margin-top:auto;
+        margin-bottom:auto;
+        width:55px;
+        cursor: pointer;
+    }
+    .nav ul li a{
+        display: block;
+        text-align: left;
+
+
+
+
+    }
+    /******************/
+    .content{
+        width:100%;
+        padding-bottom:30px;
+    }
+    #picture img{
+        max-width:100%;
+    }
+    #picture div span{
+        display: none;
+    }
+    #picture div{
+        overflow: visible;
+        width:100%;
+        height:auto;
+        background:none;
+
+    }
+    #picture div div{
+        position: absolute;
+        top:0;
+    }
+    #picture div h3{
+        display: none;
+    }
+    #picture div p{
+        background:rgba(255,255,255,.5);
+        text-align:left;
+        padding-left:2%;
+        color:#60BEAE;
+        margin:0;
+        display: none;
+
+    }
+
+
+    /****************/
+    .nav_content ul li{
+        padding:0 2%;
+    }
+    .nav_content{
+        height:36px;
+    }
+    .nav_content p{
+        display: none;
+    }
+    .nav_content h4{
+        line-height: 36px;
+        margin:0;
+        padding:0;
+        text-align: center;
+    }
+    /****************/
+
+    .neirong{
+        width:31%;
+        margin-right:3%;
+        margin-bottom: 10px;
+    }
+    .middle2{
+        margin-right:0;
+    }
+    .middle5{
+        margin-right:0;
+    }
+    .middle3{
+        clear: both;
+
+    }
+    /*.middle3 span{*/
+    /*display:none;*/
+    /*}*/
+    .neirong>a>div{
+        margin:3px;
+    }
+    .aside{
+        display: none;
+    }
+}
+@media screen and (min-width: 480px )and (max-width: 730px) {
+    .kuang{
+        width:100%;
+    }
+    /*********字体*********/
+    .nav ul li a{
+        font-size: 1em;
+    }
+    .nav_content ul li h4{
+        font-size:1em;
+    }
+
+    #bottom .neirong p{
+        font-size:1em;
+    }
+    #bottom .neirong h4{
+        font-size:1em;
+    }
+    #bottom .neirong span{
+        font-size:1em;
+    }
+    #picture div div h3{
+        font-size:1.2em;
+    }
+    #picture div div p{
+        font-size:1.2em;
+    }
+    #middle h3{
+        font-size:1.5em;
+    }
+
+    .header{
+        overflow: hidden;
+        width:100%;
+        margin-bottom:10px;
+    }
+    .heading{
+        width: 90px;
+        height: 90px;
+        background: url("../img/food-sense.png") no-repeat 0 0;
+        border:1px solid red;
+        float:left;
+    }
+    .nav{
+        text-align: left;
+        margin-top:20px;
+
+    }
+    .nav ul{
+        list-style: none;
+        padding:0;
+        overflow: hidden;
+        margin-right:5px;
+        float:right;
+    }
+    .nav ul li{
+        float: left;
+        margin-left:13px;//一会改成百分比
+
+    }
+    .nav ul li img{
+        display: none;
+    }
+    .nav ul li a{
+        display: block;
+        text-align: left;
+    }
+    /******************/
+    .content{
+        width:100%;
+        padding-bottom:30px;
+    }
+    #picture img{
+        max-width:100%;
+    }
+    #picture div span{
+        display: none;
+    }
+    #picture div{
+        overflow: visible;
+        width:100%;
+        height:auto;
+        background:none;
+
+    }
+    #picture div div{
+        position: absolute;
+        bottom:-10px;
+        left:0;
+    }
+    #picture div h3{
+        margin:0 0 0 0;
+        text-align:left;
+        background:rgba(255,255,255,.5);
+        color: #141414;
+        padding:0 2% 0 2%;
+        width:40%;
+    }
+    #picture div p{
+        background:black;
+        margin:0;
+        text-align:left;
+        padding-left:2%;
+        color:#fff;
+
+    }
+
+
+
+    /****************/
+    .nav_content{
+        display: none;
+    }
+    /****************/
+
+    .neirong{
+        width:48%;
+    }
+    .middle0,.middle2,.middle4,.middle6{
+        margin-right:4%;
+    }
+    .middle3 span{
+        display:none;
+    }
+    .middle3,.middle2,.middle4,.middle5,.middle6{
+        margin-top:10px;
+    }
+    .neirong{
+    //border: 1px solid #E5E5E5;
+    //box-shadow: 3px 3px 6px #F0F0F0;
+    }
+    .neirong>a>div{
+        margin:5px;
+    }
+    .neirong>a{
+        border:none;
+    }
+    .aside{
+        display: none;
+    }
+    #middle{
+        margin-top:35px;
+    }
+    .footer{
+        width: 100%;
+        margin:0 auto;
+    }
+}
+@media (min-width: 300px) and (max-width: 480px) {
+
+    .nav ul li a{
+        font-size: 1em;
+    }
+    .nav_content ul li h4{
+        font-size:1em;
+    }
+
+    #bottom .neirong p{
+        font-size:1em;
+    }
+    #bottom .neirong h4{
+        font-size:1em;
+    }
+    #bottom .neirong span{
+        font-size:1em;
+    }
+    #picture div div h3{
+        font-size:1.1em;
+    }
+    #picture div div p{
+        font-size:1.1em;
+    }
+    #middle h3{
+        font-size:1.5em;
+    }
+    .footer p{
+        font-size: .8em;
+    }
+    .footer p a{
+        font-size: 1em;
+    }
+
+    .kuang{
+        width:100%;
+    }
+
+    .header{
+        overflow: hidden;
+        width:100%;
+        margin-bottom:10px;
+        height:130px;
+        position: relative;
+    }
+    .heading{
+        height: 90px;
+        width:90px;
+        background: url("../img/food-sense.png") no-repeat 0 0;
+        margin:50px auto;
+        padding-top:20px;
+    }
+
+    .nav{
+        position: absolute;
+        width:90%;
+        top:0;
+        left:5%;
+        padding-bottom:13px;
+        border-bottom: 1px solid #E5E5E5;
+        box-shadow: 0 1px 0 #F5F5F5;
+
+    }
+    .nav ul{
+        list-style: none;
+        padding:0;
+        margin: 0;
+        overflow: hidden;
+    }
+    .nav ul li{
+        float: left;
+
+        width:20%;
+    }
+    .nav ul li img{
+        display: none;
+    }
+    .nav ul li a{
+        display: block;
+        text-align: center;
+    }
+    /******************/
+    .content{
+        width:100%;
+        padding-bottom:30px;
+    }
+    #picture img{
+        max-width: 100%;
+    }
+
+    #picture span{
+
+        margin-top:3px;
+        line-height:20px;
+        width:40px;
+        height:18px;
+    }
+    /*more*/
+    #picture div span{
+        display: none;
+    }
+    #picture div{
+        overflow: visible;
+        width:100%;
+        height:auto;
+        background:none;
+
+    }
+    #picture div div{
+        position: absolute;
+        bottom:-8px;
+        left:0;
+    }
+    #picture div h3{
+
+        margin:0 0 0 0;
+        text-align:left;
+        background:rgba(255,255,255,.5);
+        color: #141414;
+        padding:0 2% 0 2%;
+        display: inline-block;
+    }
+    #picture div p{
+        background:black;
+
+        margin:0;
+        text-align:left;
+        padding-left:2%;
+        color:#fff;
+
+    }
+    /****************/
+    .nav_content{
+        display: none;
+    }
+    /****************/
+
+    .neirong{
+        width:80%;
+        left:10%;
+        margin-top:35px;
+        padding:6px;
+    }
+    .middle0{
+        margin-top:8px;
+    }
+    .middle3 {
+        margin-bottom:8px;
+    }
+    .neirong{
+        border:1px solid #F0F0F0;
+        box-shadow:3px 3px 6px #F0F0F0;
+    }
+    #bottom .neirong h4{
+
+        margin:0;
+        background:black;
+        color:#fff;
+        text-align:right;
+        padding-right:1%;
+    }
+
+    .neirong a{
+        border:none;
+    }
+    .neirong h4 span{
+        display: none;
+    }
+    .aside{
+        display: none;
+    }
+    #middle {
+
+        margin:35px auto 0;
+        width:80%;
+    }
+    #middle h3{
+        text-align: center;
+    }
+    .footer{
+        width: 100%;
+        margin:0 auto;
+    }
+}
+@media screen and (max-width: 300px) {
+    .nav ul li a{
+        font-size: 1em;
+    }
+    .nav_content ul li h4{
+        font-size:1em;
+    }
+
+    #bottom .neirong p{
+        font-size:1em;
+    }
+    #bottom .neirong h4{
+        font-size:1em;
+    }
+    #bottom .neirong span{
+        font-size:1em;
+    }
+    #picture div div h3{
+        font-size:1.1em;
+    }
+    #picture div div p{
+        font-size:1.1em;
+    }
+    #middle h3{
+        font-size:1.5em;
+    }
+    .footer p{
+        font-size: .8em;
+    }
+    .footer p a{
+        font-size: 1em;
+    }
+    .kuang{
+        width:300px;
+    }
+
+    .header{
+        overflow: hidden;
+        width:100%;
+        margin-bottom:10px;
+        height:130px;
+        position: relative;
+    }
+    .heading{
+        height: 90px;
+        width:90px;
+        background: url("../img/food-sense.png") no-repeat 0 0;
+        margin:50px auto;
+        padding-top:20px;
+    }
+
+    .nav{
+        position: absolute;
+        width:90%;
+        top:0;
+        left:5%;
+        padding-bottom:13px;
+        border-bottom: 1px solid #E5E5E5;
+        box-shadow: 0 1px 0 #F5F5F5;
+
+    }
+    .nav ul{
+        list-style: none;
+        padding:0;
+        margin: 0;
+        overflow: hidden;
+    }
+    .nav ul li{
+        float: left;
+
+        width:20%;
+    }
+    .nav ul li img{
+        display: none;
+    }
+    .nav ul li a{
+        display: block;
+        text-align: center;
+    }
+    /******************/
+    .content{
+        width:100%;
+        padding-bottom:30px;
+    }
+    #picture img{
+        max-width: 100%;
+    }
+
+    #picture span{
+        margin-top:3px;
+        line-height:20px;
+        width:40px;
+        height:18px;
+    }
+    /*more*/
+    #picture div span{
+        display: none;
+    }
+    #picture div{
+        overflow: visible;
+        width:100%;
+        height:auto;
+        background:none;
+    }
+    #picture div div{
+        position: absolute;
+        bottom:-8px;
+        left:0;
+    }
+    #picture div h3{
+        margin:0 0 0 0;
+        text-align:left;
+        background:rgba(255,255,255,.5);
+        color: #141414;
+        padding:0 2% 0 2%;
+        display: inline-block;
+    }
+    #picture div p{
+        background:black;
+
+        margin:0;
+        text-align:left;
+        padding-left:2%;
+        color:#fff;
+
+    }
+    /****************/
+    .nav_content{
+        display: none;
+    }
+    /****************/
+
+    .neirong{
+        width:80%;
+        left:10%;
+        margin-top:35px;
+        padding:6px;
+    }
+    .middle0{
+        margin-top:8px;
+    }
+    .middle3 {
+        margin-bottom:8px;
+    }
+    .neirong{
+        border:1px solid #F0F0F0;
+        box-shadow:3px 3px 6px #F0F0F0;
+    }
+    #bottom .neirong h4{
+        margin: 0;
+        background:black;
+        color:#fff;
+        text-align:right;
+        padding-right:1%;
+    }
+
+    .neirong a{
+        border:none;
+    }
+    .neirong h4 span{
+        display: none;
+    }
+    .aside{
+        display: none;
+    }
+    #middle {
+        margin:35px auto 0;
+        width:80%;
+    }
+    #middle h3{
+        text-align: center;
+    }
+    .footer{
+        width: 100%;
+        margin:0 auto;
+    }
 }

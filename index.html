@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
     <title>首页</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css"/>
     <script>
         //判断手机端还是pc端
         var ua = navigator.userAgent;
@@ -12,10 +11,7 @@
             return document.querySelectorAll(e);
         }
         if(ua.indexOf("Windows NT")!=-1||ua.indexOf("Mac OS X 10")!=-1){
-            //这是pc端
-            f("head link")[0].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:1300px)' href='css/big.css'/>");
-            f("head link")[1].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:992px) and (max-width:1300px)' href='css/biglittle.css'/>");
-            f("head link")[2].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (max-width:992px)' href='css/biglittle2.css'/>");
+            f("head title")[0].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='css/big.css'/>");
             window.onload=function () {
                 navcar();
                 picturechange.t();
@@ -26,11 +22,7 @@
             };
         }else{
             //这是手机,更改link
-            f("head link")[0].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:992px) ' href='css/middle1.css'/>");
-            f("head link")[1].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:730px) and (max-width:992px)' href='css/middle.css'/>");
-            f("head link")[2].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:480px )and (max-width:730px)' href='css/small.css'/>' href='css/xsmall.css'/>")
-            f("head link")[3].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:300px) and (max-width:480px)' href='css/xsmall.css'/>");
-            f("head link")[4].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (max-width:300px)' href='css/xsmall2.css'/>");
+            f("head title")[0].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='css/small.css'/>");
             window.onload=function () {
                 pictureChangePhone.t();
                 phoneNavcar();
@@ -134,7 +126,6 @@
                         <span>March 02, 2016</span> /
                         <a href="page/chrion.html">Read »</a>
                     </p>
-                    <div id="mask"></div>
                 </div>
                 <div class="neirong middle3">
                     <a href="page/ferrari458.html"><div><span><img src="img/458/poster_1.jpg"  alt="image"></span></div></a>
@@ -153,7 +144,6 @@
                         <span>April 16, 2013</span> /
                         <a href="page/veneno.html">Read »</a>
                     </p>
-                    <div id="mask"></div>
                 </div>
                 <div class="neirong middle5" >
                     <a href="page/laferrari.html"><div><span><img src="img/laferrari/poster_1.jpg"  alt="image"></span></div></a>

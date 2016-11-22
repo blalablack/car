@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
     <title>enzo</title>
-    <link rel="stylesheet" type="text/css" href="../css/main.css"/>
-    <link rel="stylesheet" href="../css/pagemain.css"/>
     <script>
         //判断手机端还是pc端
         var ua = navigator.userAgent;
@@ -14,10 +12,7 @@
         }
         if(ua.indexOf("Windows NT")!=-1||ua.indexOf("Mac OS X 10")!=-1){
             //这是pc端
-            f("head link")[1].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:1300px)' href='../css/pc1.css'/>");
-            f("head link")[2].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:992px) and (max-width:1300px)' href='../css/pc2.css'/>");
-            f("head link")[3].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (max-width:992px)' href='../css/pc3.css'/>");
-            f("head link")[4].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/video.css'/>");
+            f("head title")[0].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/pc.css'/>");
             //每次点击进度条是会触发canplaythrough 会重复绑定事件所以该为$()初始化绑定;
             window.onload=function () {
                 navcar();
@@ -29,10 +24,7 @@
                 Video();
             };
         }else{
-            f("head link")[1].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:992px)' href='../css/ipad1.css'/>");
-            f("head link")[2].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:480px) and (max-width:992px)' href='../css/ipad.css'/>");
-            f("head link")[3].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (min-width:300px) and (max-width:480px)' href='../css/phone.css'/>");
-            f("head link")[4].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' media='screen and (max-width:300px)' href='../css/phone1.css'/>");
+            f("head title")[0].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/phone.css'/>");
         }
     </script>
 </head>
