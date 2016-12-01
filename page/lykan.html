@@ -21,7 +21,6 @@
                 //绑定退出事件
                 var quit=$(".quit");
                 quit.get(0).onclick=show.exit;
-                Video();
             };
         }else{
             f("head title")[0].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/phone.css'/>");
@@ -206,7 +205,10 @@
 <script src="../js/jquery-1.11.3.js"></script>
 <script src="../js/main.js"></script>
 <script>
-    $("video").get(0).addEventListener("canplaythrough",allTime,false);
+    $("video").get(0).addEventListener("canplaythrough",video.all_time,false);
+    $(function (){
+        video.initial();
+    });
 </script>
 </body>
 </html>

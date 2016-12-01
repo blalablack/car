@@ -3,8 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="3e09124a-aa1f-485c-a94b-a5dec1085ffa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/chrion.html" afterPath="$PROJECT_DIR$/page/chrion.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/enzo.html" afterPath="$PROJECT_DIR$/page/enzo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/fenyr.html" afterPath="$PROJECT_DIR$/page/fenyr.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/ferrari458.html" afterPath="$PROJECT_DIR$/page/ferrari458.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/laferrari.html" afterPath="$PROJECT_DIR$/page/laferrari.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/lykan.html" afterPath="$PROJECT_DIR$/page/lykan.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/veneno.html" afterPath="$PROJECT_DIR$/page/veneno.html" />
     </list>
     <ignored path="自适应网站.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -108,84 +113,76 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="small.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/small.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16445">
-              <caret line="715" column="0" selection-start-line="715" selection-start-column="0" selection-end-line="715" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pc.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/pc.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6969">
-              <caret line="437" column="22" selection-start-line="437" selection-start-column="22" selection-end-line="437" selection-end-column="22" />
-              <folding>
-                <element signature="e#3488#3507#0" expanded="false" />
-                <element signature="e#3520#3545#0" expanded="false" />
-                <element signature="e#3564#3588#0" expanded="false" />
-                <element signature="e#3608#3630#0" expanded="false" />
-                <element signature="e#3648#3672#0" expanded="false" />
-                <element signature="e#3694#3717#0" expanded="false" />
-                <element signature="e#3730#3864#0" expanded="false" />
-                <element signature="e#3883#3925#0" expanded="false" />
-                <element signature="e#3932#3957#0" expanded="false" />
-                <element signature="e#3965#3990#0" expanded="false" />
-                <element signature="e#3998#4055#0" expanded="false" />
-                <element signature="e#4064#4180#0" expanded="false" />
-                <element signature="e#4185#4247#0" expanded="false" />
-                <element signature="e#4255#4295#0" expanded="false" />
-                <element signature="e#4306#4397#0" expanded="false" />
-                <element signature="e#4412#4543#0" expanded="false" />
-                <element signature="e#4556#4670#0" expanded="false" />
-                <element signature="e#4701#4744#0" expanded="false" />
-                <element signature="e#4760#4788#0" expanded="false" />
-                <element signature="e#4822#4847#0" expanded="false" />
-                <element signature="e#4856#4875#0" expanded="false" />
-                <element signature="e#4888#4906#0" expanded="false" />
-                <element signature="e#4920#4941#0" expanded="false" />
-                <element signature="e#4955#4974#0" expanded="false" />
-                <element signature="e#5000#5058#0" expanded="false" />
-                <element signature="e#5121#5143#0" expanded="false" />
-                <element signature="e#5169#5204#0" expanded="false" />
-                <element signature="e#5226#5293#0" expanded="false" />
-                <element signature="e#5322#5408#0" expanded="false" />
-                <element signature="e#5435#5533#0" expanded="false" />
-                <element signature="e#5567#5614#0" expanded="false" />
-                <element signature="e#5645#5691#0" expanded="false" />
-                <element signature="e#5726#5793#0" expanded="false" />
-                <element signature="e#5802#5888#0" expanded="false" />
-                <element signature="e#5898#6000#0" expanded="false" />
-                <element signature="e#6145#6178#0" expanded="false" />
-                <element signature="e#6192#6332#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="phone.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/phone.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19803">
-              <caret line="861" column="19" selection-start-line="861" selection-start-column="19" selection-end-line="861" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chrion.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="chrion.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page/chrion.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="230" column="7" selection-start-line="230" selection-start-column="7" selection-end-line="230" selection-end-column="7" />
+            <state relative-caret-position="233">
+              <caret line="227" column="56" selection-start-line="227" selection-start-column="56" selection-end-line="227" selection-end-column="70" />
               <folding>
                 <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#1;n#section#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="enzo.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page/enzo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="205" column="70" selection-start-line="205" selection-start-column="70" selection-end-line="205" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fenyr.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page/fenyr.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="218" column="70" selection-start-line="218" selection-start-column="70" selection-end-line="218" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ferrari458.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page/ferrari458.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="209" column="70" selection-start-line="209" selection-start-column="70" selection-end-line="209" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="laferrari.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page/laferrari.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="219">
+              <caret line="217" column="70" selection-start-line="217" selection-start-column="70" selection-end-line="217" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lykan.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page/lykan.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="307">
+              <caret line="207" column="70" selection-start-line="207" selection-start-column="70" selection-end-line="207" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="veneno.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/page/veneno.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="302">
+              <caret line="218" column="70" selection-start-line="218" selection-start-column="70" selection-end-line="218" selection-end-column="70" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -236,12 +233,6 @@
         <option value="$PROJECT_DIR$/css/pagemain.css" />
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/css/pc1.css" />
-        <option value="$PROJECT_DIR$/page/ferrari458.html" />
-        <option value="$PROJECT_DIR$/page/laferrari.html" />
-        <option value="$PROJECT_DIR$/page/lykan.html" />
-        <option value="$PROJECT_DIR$/page/enzo.html" />
-        <option value="$PROJECT_DIR$/page/fenyr.html" />
-        <option value="$PROJECT_DIR$/page/veneno.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/big.css" />
         <option value="$PROJECT_DIR$/css/pc.css" />
@@ -249,6 +240,12 @@
         <option value="$PROJECT_DIR$/css/small.css" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/page/chrion.html" />
+        <option value="$PROJECT_DIR$/page/enzo.html" />
+        <option value="$PROJECT_DIR$/page/fenyr.html" />
+        <option value="$PROJECT_DIR$/page/ferrari458.html" />
+        <option value="$PROJECT_DIR$/page/laferrari.html" />
+        <option value="$PROJECT_DIR$/page/lykan.html" />
+        <option value="$PROJECT_DIR$/page/veneno.html" />
       </list>
     </option>
   </component>
@@ -496,15 +493,15 @@
       <workItem from="1479815353162" duration="8560000" />
       <workItem from="1479953624030" duration="31000" />
       <workItem from="1480510671834" duration="8410000" />
-      <workItem from="1480556785476" duration="16207000" />
+      <workItem from="1480556785476" duration="16704000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="533639000" />
+    <option name="totallyTimeSpent" value="534136000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1378" height="766" extended-state="1" />
+    <frame x="-1" y="0" width="1378" height="766" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09838473" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -629,48 +626,6 @@
     <entry file="file://$PROJECT_DIR$/css/phone1.css" />
     <entry file="file://$PROJECT_DIR$/css/ipad1.css" />
     <entry file="file://$PROJECT_DIR$/css/ipad.css" />
-    <entry file="file://$PROJECT_DIR$/page/veneno.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="26" column="129" selection-start-line="26" selection-start-column="129" selection-end-line="26" selection-end-column="129" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/fenyr.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="27" column="129" selection-start-line="27" selection-start-column="129" selection-end-line="27" selection-end-column="129" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/enzo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="26" column="129" selection-start-line="26" selection-start-column="129" selection-end-line="26" selection-end-column="129" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/lykan.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="26" column="129" selection-start-line="26" selection-start-column="129" selection-end-line="26" selection-end-column="129" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/laferrari.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="26" column="129" selection-start-line="26" selection-start-column="129" selection-end-line="26" selection-end-column="129" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/ferrari458.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="129" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/biglittle.css" />
     <entry file="file://$PROJECT_DIR$/css/biglittle2.css" />
     <entry file="file://$PROJECT_DIR$/css/middle.css" />
@@ -817,13 +772,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/page/chrion.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="230" column="7" selection-start-line="230" selection-start-column="7" selection-end-line="230" selection-end-column="7" />
+        <state relative-caret-position="233">
+          <caret line="227" column="56" selection-start-line="227" selection-start-column="56" selection-end-line="227" selection-end-column="70" />
           <folding>
             <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#1;n#section#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/enzo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="205" column="70" selection-start-line="205" selection-start-column="70" selection-end-line="205" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/fenyr.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="218" column="70" selection-start-line="218" selection-start-column="70" selection-end-line="218" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/ferrari458.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="209" column="70" selection-start-line="209" selection-start-column="70" selection-end-line="209" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/laferrari.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="217" column="70" selection-start-line="217" selection-start-column="70" selection-end-line="217" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/lykan.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="207" column="70" selection-start-line="207" selection-start-column="70" selection-end-line="207" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/veneno.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="218" column="70" selection-start-line="218" selection-start-column="70" selection-end-line="218" selection-end-column="70" />
+          <folding />
         </state>
       </provider>
     </entry>
