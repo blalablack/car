@@ -14,7 +14,6 @@
         if(ua.indexOf("Windows NT")!=-1||ua.indexOf("Mac OS X 10")!=-1){
             //这是pc端
             f("head title")[0].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/pc.css'/>");
-            //每次点击进度条是会触发canplaythrough 会重复绑定事件所以该为$()初始化绑定;
             Agent="pc2";
         }else{
             f("head title")[0].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/phone.css'/>");

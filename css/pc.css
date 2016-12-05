@@ -10,6 +10,12 @@ body{
     overflow: hidden;
 }
 /***********************************/
+.heading:hover{
+    opacity: .8;
+}
+.heading{
+    transition: all 250ms ease;
+}
 /*********************************/
 .content{
     float: left;
@@ -87,7 +93,15 @@ body{
 .nav_content h4{
     margin-bottom:0;
 }
-
+.center span{
+    color: #60BEAE;
+    border: 1px solid #aaa;
+    transition: all 200ms linear;
+}
+.center span:hover{
+    background-color: #EFF8F7;
+    color: #f44129;
+}
 
 
 
@@ -231,15 +245,10 @@ a:hover{
 }
 .center span{
     font-size:1.4em;
-    font-weight:600;
-    border:1px solid #000;
+    font-weight:400;
     display: block;
     padding:3px 5px;
     cursor: pointer;
-}
-.center span:hover{
-    color:#666;
-    border-color:#666;
 }
 .aside{
     font-size: 1.2em;

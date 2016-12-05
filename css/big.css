@@ -10,16 +10,17 @@ body{
     position: relative;
     overflow: hidden;
 }
-
 /***********************************/
-
-
 /*********************************/
 .heading{
     width: 102px;
     height: 102px;
     background: url("../img/logo.png") no-repeat 0 0;
     margin-left:20px;
+    transition: all 250ms ease;
+}
+.heading:hover{
+    opacity: .8;
 }
 .content{
     float: left;
