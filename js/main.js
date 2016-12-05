@@ -29,7 +29,7 @@ function navcar(){
         });
 }
 /******轮播图切换*****/
-var i=0;//i控制是哪张图片
+var y=0;//i控制是哪张图片
 var picturechange=(function (){
         var timer;
         var pictures=$("#picture>div");
@@ -44,45 +44,45 @@ var picturechange=(function (){
             var onpicture_3=$(".onpicture_3");
             var onpicture_4=$(".onpicture_4");
             var w2=onpicture_1.width();
-            if(i==1){
+            if(y==1){
                 onpicture_2.animate({"bottom":h,right:-w2},200);
-            }else if(i==2){
+            }else if(y==2){
 
                 onpicture_3.animate({"top":h,right:-w2},200);
-            }else if(i==3){
+            }else if(y==3){
 
                 onpicture_4.animate({"top":h,left:-w2},200);
-            }else if(i==0){
+            }else if(y==0){
 
                 onpicture_1.animate({"bottom":h,left:-w2},200);
             }
 
             //上一次显示的图片hidden，这一次的visible
-            $(pictures[i]).animate({"opacity": 0.8}, 600, function () {
-                if(i==3){
-                    i=-1;
+            $(pictures[y]).animate({"opacity": 0.8}, 600, function () {
+                if(y==3){
+                    y=-1;
                 }
-                var next=$(pictures[i+1])
+                var next=$(pictures[y+1])
                 next.css("visibility","visible");//先把下一次的visible防止切换空白
                 $(this).css("visibility","hidden");
                 $(this).attr("class","");
                 next.attr("class","active");//加一个active属性方便后面选取
                 next.animate({"opacity": 1}, 100, function () {
-                    i++;
+                    y++;
                     //图片上的文字显示
-                    if(i==1){
+                    if(y==1){
                         onpicture_2.animate({"right":w,"bottom":h},400);
-                    }else if(i==2){
+                    }else if(y==2){
                         onpicture_3.animate({"right":w,"top":h},400);
-                    }else if(i==3){
+                    }else if(y==3){
                         onpicture_4.animate({"left":w,"top":h},400);
-                    }else if(i==0){
+                    }else if(y==0){
                         onpicture_1.animate({"left":w,"bottom":h},400);
                     }
                 })
             })
             //定义m控制li背景的切换
-            var m=i;
+            var m=y;
             if(m==3){
                 m=-1
             }
@@ -90,42 +90,32 @@ var picturechange=(function (){
             $("#back").animate({"left":width},800)
         }
         function start(){
-            timer=setInterval(ha,4000);
+            timer=setInterval(ha,5000);
             //interval的间隔时间要大于上面走的时间才能控制住
         }
         function stop(){
             clearInterval(timer);
-            timer=null;
+            //timer=null;
         }
         return{
             t:start,
             p:stop
         }
     })();
-/********鼠标移入轮播图停止轮播********/
-function picturemouse(){
-    var pictures = $("#picture");
-    pictures.delegate("div", "mouseenter",function(){
+/********鼠标移入轮播图和下面的li停止轮播********/
+function topHover(){
+    var top=$("#top");
+    top.mouseenter(function () {
         picturechange.p();
-    });
-    pictures.delegate("div", "mouseleave",function(){
+    })
+    top.mouseleave(function () {
         picturechange.t();
-    });
-}
-/******鼠标移入轮播图下面的li停止轮播*******/
-function limouse(){
-    var nav_content=$(".nav_content");
-    nav_content.delegate("li","mouseenter",function(){
-        picturechange.p();
-    });
-    nav_content.delegate("li","mouseleave",function(){
-        picturechange.t();
-    });
+    })
 }
 /****轮播图下面的li的点击事件，所有的东西都换************/
 function liclick(){
     var nav_content=$(".nav_content");
-    nav_content.delegate("li","click",function liclickway(){
+    nav_content.delegate("li","click",function(){
         var pic=$("#picture");
         var onpicture_1=$(".onpicture_1");
         var onpicture_2=$(".onpicture_2");
@@ -136,7 +126,6 @@ function liclick(){
         //修改之前显示的div
         var before=picture.parent().children(".active");
         var id=before.attr("id");
-        console.log(picture);
         //定义m控制代表上一次显示的文字
         var h=pic.height()*8/100;
         var w=pic.width()*4/100;
@@ -145,7 +134,6 @@ function liclick(){
         if(id){
             m=id.slice(8);
         }
-        console.log(m);
         if(m==2){
             onpicture_2.stop(true,true);
             onpicture_2.animate({"bottom":h,right:-w2},1);//1ms消除切换时的more bug
@@ -164,23 +152,23 @@ function liclick(){
         //显示点击的图片
         picture.css({"visibility":"visible",opacity:1});
         picture.attr("class","active");
-        i=(dataId.slice(8)-1);//这是个dom str方法
+        y=(dataId.slice(8)-1);//这是个dom str方法
         //修改文字
-        if(i==1){
+        if(y==1){
             onpicture_2.stop(true,true);
             onpicture_2.animate({"right":w,"bottom":h},300);//全部数据调成百分比除了外框
-        }else if(i==2){
+        }else if(y==2){
             onpicture_3.stop(true,true);
             onpicture_3.animate({"right":w,"top":h},300);
-        }else if(i==3){
+        }else if(y==3){
             onpicture_4.stop(true,true);
             onpicture_4.animate({"left":w,"top":h},300);
-        }else if(i==0){
+        }else if(y==0){
             onpicture_1.stop(true,true);
             onpicture_1.animate({"left":w,"bottom":h},300);
         }
         /****背景颜色的切换****/
-        var width= ($(".nav_content ul").width())*(i)/4;
+        var width= ($(".nav_content ul").width())*(y)/4;
         $("#back").animate({"left":width},10)
 
     });
@@ -208,6 +196,11 @@ function imghover(){
         });
     })
 }
+
+
+
+
+
 /*****************************************手机端的js*/
 /*******图片轮播切换*****/
 var z=0;//和上边的a一样的作用
@@ -244,7 +237,7 @@ var pictureChangePhone=(function (){
     }
     function stop(){
         clearInterval(timer);
-        timer=null;
+        //timer=null;
     }
     return{
         t:start,
@@ -268,7 +261,7 @@ function PhoneLiClick(){
         var dataId=$(this).attr('data-id');
         var picture=$("#"+dataId);
         //修改之前显示的div
-        var before=picture.siblings("div[class='active']");
+        var before=picture.parent().children(".active");
         before.css({"visibility":"hidden","opacity":.8});
         before.attr("class","");
         //显示点击的图片
