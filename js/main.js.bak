@@ -90,7 +90,7 @@ var picturechange=(function (){
             $("#back").animate({"left":width},800)
         }
         function start(){
-            timer=setInterval(ha,4000);
+            timer=setInterval(ha,5000);
             //interval的间隔时间要大于上面走的时间才能控制住
         }
         function stop(){
