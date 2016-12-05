@@ -1,59 +1,61 @@
 
-/************************************************pc端效果*/
-/************汽车navhover**********/
+/*************************************************pc端效果*/
+/******汽车navhover******/
 function navcar(){
     var nav=$(".nav");
     //事件代理替换减少dom操作
     nav.delegate("a","mouseenter",function () {
         var w=nav.width();//放在外面只能在页面加载时执行一次变了以后的数值不变
-               var img= $(this).prev();
-                img.stop();
-                img.animate({"width":w*.6,"left":w*.25},300,function () {
-                    $(this).next("a").css({"color":"#fff"});
-                    var src=$(this).attr("src");
-                    var src2=src.slice(0,src.length-5)+"2.png";
-                    $(this).attr("src",src2);
-                });
+        var img= $(this).prev();
+        img.stop();
+        img.animate({"width":w*.6,"left":w*.25},300,function () {
+            $(this).next("a").css({"color":"#fff"});
+            var src=$(this).attr("src");
+            var src2=src.slice(0,src.length-5)+"2.png";
+            $(this).attr("src",src2);
+        });
     });
     nav.delegate("a","mouseleave",function () {
         var w=nav.width();
-            var img= $(this).prev();
-                img.stop();
-                img.animate({"width":w*.33,"left":"0",},300,function () {
-                    $(this).next("a").css({"color":"#60BEAE"});
-                    var src=$(this).attr("src");
-                    var src2=src.slice(0,src.length-5)+"1.png"
-                    $(this).attr("src",src2);
-                    $(this).css({width:""});//清除内部样式，保证图片大小是外部定义的，保证自适应
-                });
+        var img= $(this).prev();
+        img.stop();
+        img.animate({"width":w*.33,"left":"0"},300,function () {
+            $(this).next("a").css({"color":"#60BEAE"});
+            var src=$(this).attr("src");
+            var src2=src.slice(0,src.length-5)+"1.png"
+            $(this).attr("src",src2);
+            $(this).css({width:""});//清除内部样式，保证图片大小是外部定义的，保证自适应
         });
+    });
 }
-/******轮播图切换*****/
-var y=0;//i控制是哪张图片
-var picturechange=(function (){
+/*************************************************************banner的轮播控制*/
+var banner=(function () {
+    var pictures=$("#picture>div");
+    var pic=$("#picture");
+    var top=$("#top");
+    var onpicture_1=$(".onpicture_1");
+    var onpicture_2=$(".onpicture_2");
+    var onpicture_3=$(".onpicture_3");
+    var onpicture_4=$(".onpicture_4");
+    var back=$("#back");
+    var ul_width=$(".nav_content ul");
+    /******轮播图切换******/
+    var y=0;//y控制是哪张图片
+    var picturechange=(function (){
         var timer;
-        var pictures=$("#picture>div");
-        var pic=$("#picture");
-//要想动画依次执行只能用回调函数，无论是for循环还是依次绑定都不行（会一块执行）
+        //要想动画依次执行只能用回调函数，无论是for循环还是依次绑定都不行（会一块执行）
         function ha() {
             //把上一次的图片上的文字回归原处
             var h=pic.height()*8/100;
             var w=pic.width()*4/100;
-            var onpicture_1=$(".onpicture_1");
-            var onpicture_2=$(".onpicture_2");
-            var onpicture_3=$(".onpicture_3");
-            var onpicture_4=$(".onpicture_4");
             var w2=onpicture_1.width();
             if(y==1){
                 onpicture_2.animate({"bottom":h,right:-w2},200);
             }else if(y==2){
-
                 onpicture_3.animate({"top":h,right:-w2},200);
             }else if(y==3){
-
                 onpicture_4.animate({"top":h,left:-w2},200);
             }else if(y==0){
-
                 onpicture_1.animate({"bottom":h,left:-w2},200);
             }
 
@@ -80,14 +82,14 @@ var picturechange=(function (){
                         onpicture_1.animate({"left":w,"bottom":h},400);
                     }
                 })
-            })
+            });
             //定义m控制li背景的切换
             var m=y;
             if(m==3){
                 m=-1
             }
-            var width= ($(".nav_content ul").width())*(m+1)/4;
-            $("#back").animate({"left":width},800)
+            var width= (ul_width.width())*(m+1)/4;
+            back.animate({"left":width},800)
         }
         function start(){
             timer=setInterval(ha,5000);
@@ -102,78 +104,81 @@ var picturechange=(function (){
             p:stop
         }
     })();
-/********鼠标移入轮播图和下面的li停止轮播********/
-function topHover(){
-    var top=$("#top");
-    top.mouseenter(function () {
-        picturechange.p();
-    })
-    top.mouseleave(function () {
-        picturechange.t();
-    })
-}
-/****轮播图下面的li的点击事件，所有的东西都换************/
-function liclick(){
-    var nav_content=$(".nav_content");
-    nav_content.delegate("li","click",function(){
-        var pic=$("#picture");
-        var onpicture_1=$(".onpicture_1");
-        var onpicture_2=$(".onpicture_2");
-        var onpicture_3=$(".onpicture_3");
-        var onpicture_4=$(".onpicture_4");
-        var dataId=$(this).attr('data-id');
-        var picture=$("#"+dataId);
-        //修改之前显示的div
-        var before=picture.parent().children(".active");
-        var id=before.attr("id");
-        //定义m控制代表上一次显示的文字
-        var h=pic.height()*8/100;
-        var w=pic.width()*4/100;
-        var w2=pic.width()*32/100;
-        var m;
-        if(id){
-            m=id.slice(8);
-        }
-        if(m==2){
-            onpicture_2.stop(true,true);
-            onpicture_2.animate({"bottom":h,right:-w2},1);//1ms消除切换时的more bug
-        }else if(m==3){
-            onpicture_3.stop(true,true);
-            onpicture_3.animate({"top":h,right:-w2},1);
-        }else if(m==4){
-            onpicture_4.stop(true,true);
-            onpicture_4.animate({"top":h,left:-w2},1);
-        }else if(m==1){
-            onpicture_1.stop(true,true);
-            onpicture_1.animate({"bottom":h,left:-w2},1);
-        }else{}
-        before.css({"visibility":"hidden","opacity":.8});
-        before.attr("class","");
-        //显示点击的图片
-        picture.css({"visibility":"visible",opacity:1});
-        picture.attr("class","active");
-        y=(dataId.slice(8)-1);//这是个dom str方法
-        //修改文字
-        if(y==1){
-            onpicture_2.stop(true,true);
-            onpicture_2.animate({"right":w,"bottom":h},300);//全部数据调成百分比除了外框
-        }else if(y==2){
-            onpicture_3.stop(true,true);
-            onpicture_3.animate({"right":w,"top":h},300);
-        }else if(y==3){
-            onpicture_4.stop(true,true);
-            onpicture_4.animate({"left":w,"top":h},300);
-        }else if(y==0){
-            onpicture_1.stop(true,true);
-            onpicture_1.animate({"left":w,"bottom":h},300);
-        }
-        /****背景颜色的切换****/
-        var width= ($(".nav_content ul").width())*(y)/4;
-        $("#back").animate({"left":width},10)
+    /*****鼠标移入轮播图和下面的li停止轮播*****/
+    function tophover(){
+        top.mouseenter(function () {
+            picturechange.p();
+        });
+        top.mouseleave(function () {
+            picturechange.t();
+        })
+    }
+    /*****轮播图下面的li的点击事件，所有的东西都换*****/
+    function liclick(){
+        var nav_content=$(".nav_content");
+        nav_content.delegate("li","click",function(){
+            var dataId=$(this).attr('data-id');
+            var picture=$("#"+dataId);
+            //修改之前显示的div
+            var before=picture.parent().children(".active");
+            var id=before.attr("id");
+            //定义m控制代表上一次显示的文字
+            var h=pic.height()*8/100;
+            var w=pic.width()*4/100;
+            var w2=pic.width()*32/100;
+            var m;
+            if(id){
+                m=id.slice(8);
+            }
+            if(m==2){
+                onpicture_2.stop(true,true);
+                onpicture_2.animate({"bottom":h,right:-w2},1);//1ms消除切换时的more bug
+            }else if(m==3){
+                onpicture_3.stop(true,true);
+                onpicture_3.animate({"top":h,right:-w2},1);
+            }else if(m==4){
+                onpicture_4.stop(true,true);
+                onpicture_4.animate({"top":h,left:-w2},1);
+            }else if(m==1){
+                onpicture_1.stop(true,true);
+                onpicture_1.animate({"bottom":h,left:-w2},1);
+            }else{}
+            before.css({"visibility":"hidden","opacity":.8});
+            before.attr("class","");
+            //显示点击的图片
+            picture.css({"visibility":"visible",opacity:1});
+            picture.attr("class","active");
+            y=(dataId.slice(8)-1);//这是个dom str方法
+            //修改文字
+            if(y==1){
+                onpicture_2.stop(true,true);
+                onpicture_2.animate({"right":w,"bottom":h},300);//全部数据调成百分比除了外框
+            }else if(y==2){
+                onpicture_3.stop(true,true);
+                onpicture_3.animate({"right":w,"top":h},300);
+            }else if(y==3){
+                onpicture_4.stop(true,true);
+                onpicture_4.animate({"left":w,"top":h},300);
+            }else if(y==0){
+                onpicture_1.stop(true,true);
+                onpicture_1.animate({"left":w,"bottom":h},300);
+            }
+            /****背景颜色的切换****/
+            var width= (ul_width.width())*(y)/4;
+            back.animate({"left":width},10)
 
-    });
-}
-/******内容图片hover变大******/
+        });
+    }
+    return{
+        navCar:navcar,
+        topHover:tophover,
+        st:picturechange.t,
+        sp:picturechange.p,
+        liClick:liclick,
+    }
+})();
+
+/*****内容图片hover变大******/
 function imghover(){
     var bottom=$("#bottom");
     bottom.delegate(".neirong>a div span","mouseenter",function () {
@@ -198,47 +203,76 @@ function imghover(){
 }
 
 
-/*****************************************手机端的js*/
+/*********************************************手机端的js*/
 /*******图片轮播切换*****/
-var z=0;//和上边的a一样的作用
-var pictureChangePhone=(function (){
-    var timer;
+var pcBanner=(function() {
+    var z=0;//和上边的a一样的作用
     var pictures = $("#picture>div");
+    var back=$("#back");
+    var ul_width=$(".nav_content ul");
+    var nav_content=$(".nav_content");
+    var pictureChangePhone=(function (){
+        var timer;
 //要想动画依次执行只能用回调函数，无论是for循环还是依次绑定都不行（会一块执行）
-    function ha() {
-        //上一次显示的图片hidden，这一次的visible
-        $(pictures[z]).animate({"opacity": 0.8}, 600, function () {
-            if(z==3){
-                z=-1;
+        function ha() {
+            //上一次显示的图片hidden，这一次的visible
+            $(pictures[z]).animate({"opacity": 0.8}, 600, function () {
+                if(z==3){
+                    z=-1;
+                }
+                var next=$(pictures[z+1]);
+                next.css("visibility","visible");//先把下一次的visible防止切换空白
+                $(this).css("visibility","hidden");
+                $(this).attr("class","");
+                next.attr("class","active");//加一个active属性方便后面选取
+                next.animate({"opacity": 1}, 100, function () {
+                    z++;
+                })
+            });
+            //定义m控制li背景的切换
+            var m=z;
+            if(m==3){
+                m=-1
             }
-            var next=$(pictures[z+1])
-            next.css("visibility","visible");//先把下一次的visible防止切换空白
-            $(this).css("visibility","hidden");
-            $(this).attr("class","");
-            next.attr("class","active");//加一个active属性方便后面选取
-            next.animate({"opacity": 1}, 100, function () {
-                z++;
-            })
-        })
-        //定义m控制li背景的切换
-        var m=z;
-        if(m==3){
-            m=-1
+            var width= (ul_width.width())*(m+1)/4;
+            back.animate({"left":width},800)
         }
-        var width= ($(".nav_content ul").width())*(m+1)/4;
-        $("#back").animate({"left":width},800)
-    }
-    function start(){
-        timer=setInterval(ha,5000);
-        //interval的间隔时间要大于上面走的时间才能控制住
-    }
-    function stop(){
-        clearInterval(timer);
-        //timer=null;
+        function start(){
+            timer=setInterval(ha,5000);
+            //interval的间隔时间要大于上面走的时间才能控制住
+        }
+        function stop(){
+            clearInterval(timer);
+            //timer=null;
+        }
+        return{
+            t:start,
+            p:stop
+        }
+    })();
+    /*******点击轮播图下的li切换图片*****/
+    function phoneliclick(){
+        nav_content.delegate("li","click",function () {
+            //找到li对应的图片
+            var dataId=$(this).attr('data-id');
+            var picture=$("#"+dataId);
+            //修改之前显示的div
+            var before=picture.parent().children(".active");
+            before.css({"visibility":"hidden","opacity":.8});
+            before.attr("class","");
+            //显示点击的图片
+            picture.css({"visibility":"visible",opacity:1});
+            picture.attr("class","active");
+            z=(dataId.slice(8)-1);//这是个dom str方法
+            /****背景颜色的切换****/
+            var width= (ul_width.width())*(z)/4;
+            back.animate({"left":width},10)
+        })
     }
     return{
-        t:start,
-        p:stop
+        st:pictureChangePhone.t,
+        sp:pictureChangePhone.p,
+        PhoneLiClick:phoneliclick,
     }
 })();
 /*********把汽车nav换成黑色的**********/
@@ -250,32 +284,9 @@ function phoneNavcar() {
         $(this).attr("src",src3);
     });
 }
-/*******点击轮播图下的li切换图片*****/
-function PhoneLiClick(){
-    var nav_content=$(".nav_content");
-    nav_content.delegate("li","click",function () {
-        //找到li对应的图片
-        var dataId=$(this).attr('data-id');
-        var picture=$("#"+dataId);
-        //修改之前显示的div
-        var before=picture.parent().children(".active");
-        before.css({"visibility":"hidden","opacity":.8});
-        before.attr("class","");
-        //显示点击的图片
-        picture.css({"visibility":"visible",opacity:1});
-        picture.attr("class","active");
-        i=(dataId.slice(8)-1);//这是个dom str方法
-        /****背景颜色的切换****/
-        var width= ($(".nav_content ul").width())*(i)/4;
-        $("#back").animate({"left":width},10)
-
-    })
-}
 
 
-
-/*****************************video的js***************************************/
-/***********封装video*************/
+/*******************************************************************video的js*/
 var video=(function(){
     var media=$("#media").get(0);
     var tops=$("#tops");
@@ -611,8 +622,7 @@ var video=(function(){
         initial:Initial
     }
 })();
-
-/**************************************pc端图片展示*/
+/*****************************************************************pc端图片展示*/
 var show=(function () {
     var mask=$(".mask");
     var kuang=$(".kuang");
@@ -731,14 +741,14 @@ var show=(function () {
 $(function () {
     if(Agent==="pc1"){
         navcar();
-        picturechange.t();
-        topHover()
-        liclick();
+        banner.st();
+        banner.topHover();
+        banner.liClick();
         imghover();
     }else if(Agent==="pid1"){
-        pictureChangePhone.t();
+        pcBanner.st();
         phoneNavcar();
-        PhoneLiClick()
+        pcBanner.PhoneLiClick()
     }else if(Agent==="pc2"){
         navcar();
         //绑定开始事件
@@ -751,10 +761,7 @@ $(function () {
         video.initial();
         $("video").get(0).addEventListener("canplaythrough",video.all_time,false);
     }else {
-
     }
-
-
-})
+});
 
 
