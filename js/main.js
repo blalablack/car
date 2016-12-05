@@ -198,9 +198,6 @@ function imghover(){
 }
 
 
-
-
-
 /*****************************************手机端的js*/
 /*******图片轮播切换*****/
 var z=0;//和上边的a一样的作用
@@ -731,6 +728,33 @@ var show=(function () {
     };
 })();
 
+$(function () {
+    if(Agent==="pc1"){
+        navcar();
+        picturechange.t();
+        topHover()
+        liclick();
+        imghover();
+    }else if(Agent==="pid1"){
+        pictureChangePhone.t();
+        phoneNavcar();
+        PhoneLiClick()
+    }else if(Agent==="pc2"){
+        navcar();
+        //绑定开始事件
+        var sp=$(".center span");
+        sp.get(0).onclick=show.shows;
+        //绑定退出事件
+        var quit=$(".quit");
+        quit.get(0).onclick=show.exit;
+        //视频初始化
+        video.initial();
+        $("video").get(0).addEventListener("canplaythrough",video.all_time,false);
+    }else {
 
+    }
+
+
+})
 
 

@@ -10,20 +10,15 @@
         function f(e){
             return document.querySelectorAll(e);
         }
+        var Agent;
         if(ua.indexOf("Windows NT")!=-1||ua.indexOf("Mac OS X 10")!=-1){
             //这是pc端
             f("head title")[0].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/pc.css'/>");
             //每次点击进度条是会触发canplaythrough 会重复绑定事件所以该为$()初始化绑定;
-            window.onload=function () {
-                navcar();
-                var sp=$(".center span");
-                sp.get(0).onclick=show.shows;
-                //绑定退出事件
-                var quit=$(".quit");
-                quit.get(0).onclick=show.exit;
-            };
+            Agent="pc2";
         }else{
             f("head title")[0].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='../css/phone.css'/>");
+            Agent="pid2"
         }
     </script>
 </head>
@@ -215,12 +210,6 @@
 </div>
 <script src="../js/jquery-1.11.3.js"></script>
 <script src="../js/main.js"></script>
-<script>
-    $("video").get(0).addEventListener("canplaythrough",video.all_time,false);
-    $(function (){
-        video.initial();
-    });
-</script>
 </body>
 </html>
 

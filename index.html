@@ -10,23 +10,14 @@
         function f(e){
             return document.querySelectorAll(e);
         }
+        var Agent;
         if(ua.indexOf("Windows NT")!=-1||ua.indexOf("Mac OS X 10")!=-1){
             f("head title")[0].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='css/big.css'/>");
-            window.onload=function () {
-                navcar();
-                picturechange.t();
-                topHover()
-                liclick();
-                imghover();
-            };
+            Agent="pc1";
         }else{
             //这是手机,更改link
             f("head title")[0].insertAdjacentHTML("afterEnd","<link rel='stylesheet' type='text/css' href='css/small.css'/>");
-            window.onload=function () {
-                pictureChangePhone.t();
-                phoneNavcar();
-                PhoneLiClick()
-            }
+            Agent="pid1";
         }
     </script>
 </head>
