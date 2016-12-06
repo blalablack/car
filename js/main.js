@@ -304,7 +304,7 @@ var video=(function(){
     var poster_on=$("#poster_on");
     var buffer=$("#bar_parent .buffer");
     var now=$("#time_now");
-    /********************控制video父元素全屏*******************/
+    /********************全屏箭头按钮控制video父元素全屏*******************/
     function fullscreen(){
         if(document.fullscreen || document.webkitIsFullScreen || document.mozFullScreen){
             if (document.exitFullscreen) {
@@ -333,7 +333,7 @@ var video=(function(){
             }
         }
     };
-    /**********监听全屏切换状态******/
+    /**********监听全屏切换状态（主要是有原来的esc退出）提供相对应的css变化******/
     function screenchange() {
         //判断当前是否全屏
         if(document.FullScreen===true||document.webkitIsFullScreen===true||document.mozFullScreen){
@@ -513,7 +513,7 @@ var video=(function(){
             poster_on.css("display","none");
             //一动control就回来
             //绑定一个计时器多次会加速，isPlay用来控制
-            if(isPlay){
+            if(isPlay){//只能进去一次
                 $(media).bind("mousemove",function () {
                     now_TIME=0;
                     if(control.css("display")=="none"){
@@ -565,7 +565,7 @@ var video=(function(){
         now.get(0).innerHTML=shi+":"+miao;
     }
     function start(){
-        timer=setInterval(time,100);
+        timer=setInterval(time,400);
     }
     function stop(){
         clearInterval(timer);
