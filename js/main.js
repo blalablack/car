@@ -787,15 +787,6 @@ var show = (function () {
 })();
 
 /*********loading事件加载完页面后去掉*********/
-(function loading(){
-    var body=$("body");
-    body.append("<div id='loading'><div><img src='img/loading.gif'></div></div>");
-    var loading=$("#loading");
-    loading.css({"position":"fixed","left":0,"top":0,"width":"100%","height":"100%","z-index":"100","background":"#24302e"});
-    var div_loading=$("div",loading);
-    div_loading.css({"width":"86px","position":"absolute","left":0,"right":0,"margin":"250px auto"});
-})()
-
 window.onload=function () {
     $("#loading").remove();
 }
