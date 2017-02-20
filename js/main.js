@@ -297,24 +297,34 @@ function phoneNavcar() {
 /*******************************************************************video的js*/
 var video = (function () {
     var media = $("#media").get(0);
+    //重写的control
+    var control = $("#control");
+    //音量调节的元素
     var tops = $("#tops");
     var cicle = $(".cicle");
     var volume_class = $(".volume");
     var voice_progress = $(".voice_progress");
-    var fullscreen_span = $("#fullscreen span");
-    var control = $("#control");
-    var bar_parent_bar = $("#bar_parent .bar");
     var voice_voice_bar = $("#voice .voice_bar");
+    //全屏控制元素
+    var fullscreen_span = $("#fullscreen span");
+    //播放进度
+    var bar_parent_bar = $("#bar_parent .bar");
     var bar_parent = $("#bar_parent");
     var bar_parent_progress = $("#bar_parent .progress");
-    var btn = $("#buttons .btn");
-    var pause_on = $("#pause_on");
-    var poster_on = $("#poster_on");
+    //缓存
     var buffer = $("#bar_parent .buffer");
+    //暂停播放
+    var btn = $("#buttons .btn");
+    //中间暂停
+    var pause_on = $("#pause_on");
+    //暂停图片
+    var poster_on = $("#poster_on");
+    //目前时间
     var now = $("#time_now");
 
     /********************全屏箭头按钮控制video父元素全屏*******************/
     function fullscreen() {
+        //是全屏就退出，不是就变为全屏
         if (document.fullscreen || document.webkitIsFullScreen || document.mozFullScreen) {
             if (document.exitFullscreen) {
                 document.exitFullscreen();
@@ -328,6 +338,7 @@ var video = (function () {
                 document.webkitExitFullscreen();
             }
         } else {
+            //这里使用其父元素全屏，解决如果vido全屏禁用controls会捕捉不到esc
             var element = $("#player").get(0);
             if (element.requestFullscreen) {
                 element.requestFullscreen();
@@ -343,10 +354,11 @@ var video = (function () {
         }
     };
     /**********监听全屏切换状态（主要是有原来的esc退出）提供相对应的css变化******/
+    //状态一改变就触发这个
     function screenchange() {
-        //判断当前是否全屏
         if (document.FullScreen === true || document.webkitIsFullScreen === true || document.mozFullScreen) {
             //contorl是absolute不用担心reflow
+            //全部变为全屏状态
             control.css({"height": "55px", "padding-top": "5px", "bottom": "25px"});
             bar_parent_bar.css({"height": "3px"});
             voice_voice_bar.css({height: "3px"});
@@ -774,6 +786,20 @@ var show = (function () {
     };
 })();
 
+/*********loading事件加载完页面后去掉*********/
+(function loading(){
+    var body=$("body");
+    body.append("<div id='loading'><div><img src='img/loading.gif'></div></div>");
+    var loading=$("#loading");
+    loading.css({"position":"fixed","left":0,"top":0,"width":"100%","height":"100%","z-index":"100","background":"#24302e"});
+    var div_loading=$("div",loading);
+    div_loading.css({"width":"86px","position":"absolute","left":0,"right":0,"margin":"250px auto"});
+})()
+
+window.onload=function () {
+    $("#loading").remove();
+}
+/**********根据机型绑定事件*********/
 $(function () {
     if (Agent === "pc1") {
         navcar();
