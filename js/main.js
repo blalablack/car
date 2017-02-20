@@ -654,13 +654,15 @@ var show = (function () {
     var kuang = $(".kuang");
     var wrap_items = $(".wrap_item");
     var i_m = wrap_items.length;
-    var m = 100 * i_m;
+    var m = 100 * i_m;//避免下面频繁赋值
     //向右转
     function right() {
         m++;
+        //暂时把所有的item的class去除掉
         for (var i = 0; i < i_m; i++) {
             $(wrap_items[i]).removeClass();
         }
+        //每一个都赋予新的class
         $(wrap_items[m % i_m]).attr("class", "wrap_item out");
         $(wrap_items[(m + 1) % i_m]).attr("class", "wrap_item middle_left");
         $(wrap_items[(m + 2) % i_m]).attr("class", "wrap_item show");
@@ -668,10 +670,8 @@ var show = (function () {
         for (var x = 4; x < i_m; x++) {
             $(wrap_items[(m + x) % i_m]).attr("class", "wrap_item out");
         }
-
     }
-
-    //向左转
+    //向左转同上
     function left() {
         m--;
         if (m == -1) {
@@ -691,6 +691,7 @@ var show = (function () {
     /******退出展示****/
     function ex() {
         jinyong(false);
+        //所有的东西都还原
         kuang.removeClass("blur");
         mask.css({"display": "none", "opacity": "0"});
         clearTimeout(kaishi);
@@ -701,11 +702,12 @@ var show = (function () {
                 $(this).attr("class", "wrap_item")
             }
         });
+        //保证下一次打开还是这个顺序
         m = 100 * i_m;
     };
     //左右图片分开的动画（分配图片位置）
     function kaishi() {
-        mask.animate({"opacity": 1}, 500, function () {
+        mask.animate({"opacity": 1}, 600, function () {
             wrap_items.each(function (i) {
                 if (i == 1) {
                     $(this).addClass("middle_left");
@@ -721,11 +723,11 @@ var show = (function () {
 
     //展示图片
     function showPicture() {
-        jinyong(true);
-        var Src = mask.attr("data_class");
-        //绑定左右click事件
+        jinyong(true);//禁用滚轮
+        var Src = mask.attr("data_class");//展示图片的路径
         wrap_items.each(function (i) {
-            $(this).children("img").attr("src", Src + i + ".jpg");
+            $(this).children("img").attr("src", Src + i + ".jpg");//给每个item src
+            //绑定左右click事件
             $(this).click(function () {
                 if ($(this).attr("class") == "wrap_item middle_right") {
                     right();
@@ -745,7 +747,6 @@ var show = (function () {
     function wheel(e) {
         e.preventDefault();
     }
-
     function jinyong(e) {
         var isFF = /FireFox/i.test(navigator.userAgent);
         if (e) {
@@ -794,6 +795,7 @@ $(function () {
         quit.get(0).onclick = show.exit;
         //视频初始化
         video.initial();
+        //获取总时长
         $("video").get(0).addEventListener("canplaythrough", video.all_time, false);
     } else {
     }
