@@ -364,8 +364,9 @@ var video = (function () {
             voice_voice_bar.css({height: "3px"});
             cicle.css({"top": "3px"});
             fullscreen_span.css({"backgroundPosition": "-191px 0"});
+            //进度条变为全屏状态下
             bar_parent.animate({"width": "68%"}, 10, ziShiYong);
-            //全屏fullscreen的hover事件
+            //全屏fullscreen的hover事件（去除原先的position,换成现在的）
             fullscreen_span.unbind("mouseenter mouseleave");
             fullscreen_span.mouseenter(function () {
                 $(this).css("backgroundPosition", "-211px 0");
@@ -375,6 +376,7 @@ var video = (function () {
             });
 
         } else {
+            //同时变为非全屏状态
             control.css({height: "40px", "padding-top": "0", "bottom": "15px"});
             bar_parent_bar.css({"height": "2px"});
             voice_voice_bar.css({height: "2px"});
@@ -395,30 +397,31 @@ var video = (function () {
 
         }
     };
-    /************voice拖拽******************/
+    /************voice拖拽优化******************/
     function tops_mousemove(e) {
-        var distance = Math.abs(e.offsetX);
-        var voi = media.volume;
+        var distance = Math.abs(e.offsetX);//取绝对值（去除有负值的情况）
+        var voi = media.volume;//目前的vioce。
         //函数节流的方式拖完整个条只要执行24次，而原本的mouseover则要100多次（正常情况下）
         if (distance / tops.width() - voi >= 0.03 || distance / tops.width() - voi <= -0.03) {
             var lef = (distance - 4) / tops.width() * 100 + "%";
-            cicle.css("left", lef);
+            cicle.css("left", lef);//拖拽球
             var wid = distance / tops.width() * 100 + "%";
-            voice_progress.css("width", wid);
+            voice_progress.css("width", wid);//声音条
+            //赋值volume。
             media.volume = (distance / tops.width()).toFixed(2);
         }
 
     }
-
     function tops_mousedown(e) {
-        //判断鼠标左键
-        if (e.button == 0) {
+        if (e.button == 0) { //判断鼠标左键
+            //点击声音条，声音条，拖拽球，声音大小变化
             var distance = Math.abs(e.offsetX);
             var lef = (distance - 4) / tops.width() * 100 + "%";
             cicle.css("left", lef);
             var wid = distance / tops.width() * 100 + "%";
             voice_progress.css("width", wid);
             media.volume = (distance / tops.width()).toFixed(2);
+            //按下左键后绑定move事件
             tops.bind("mousemove", tops_mousemove);
         }
     }
@@ -428,9 +431,12 @@ var video = (function () {
         tops.unbind("mousemove");
         //判断是否音量为0
         if (media.volume <= .05) {
+            //静音的声音按钮的图标。
             volume_class.css({"backgroundPosition": "-103px 0"});
         } else {
+            //非静音的声音图标
             volume_class.css({"backgroundPosition": "-59px 0"});
+            //绑定hover和over事件
             volume_class.mouseenter(function () {
                 $(this).css({"backgroundPosition": "-81px 0"});
             });
@@ -463,6 +469,7 @@ var video = (function () {
         volume_class.mouseleave(function () {
             $(this).css({"backgroundPosition": "-59px 0"});
         });
+        //点击静音
         volume_class.click(function () {
             $(this).css({"backgroundPosition": "-103px 0"});
             voice_progress.css({"width": "0%"});
@@ -475,6 +482,7 @@ var video = (function () {
     /***获取总时间***/
     function allTime() {
         var allTime = parseInt(media.duration);
+        //变成：0:00
         var shi = Math.floor(allTime / 60);
         var miao = allTime % 60;
         if (miao < 10) {
@@ -486,21 +494,27 @@ var video = (function () {
 
     /*****监听结束事件******/
     function mediaEnded() {
+        //计时器暂停
         stop();
+        //视频暂停
         media.pause();
+        //目前时间为0
         media.currentTime = 0;
+        //暂停图标出现
         poster_on.css("display", "block");
         pause_on.css("display", "block");
+        //进度条为0
         bar_parent_progress.css("width", "0%");
     }
 
-    /**********播放进度********/
+    /**********播放进度点击变化*/
     function barClick(e) {
         var distance = e.offsetX;
         var wid = distance / bar_parent.width() * 100 + "%";
         bar_parent_progress.css("width", wid);
         var currentTime = (distance / bar_parent_bar.width() * media.duration).toFixed(0);
-        media.currentTime = currentTime;
+        //赋值时间
+         media.currentTime = currentTime;
         var shi = Math.floor(currentTime / 60);
         var miao = currentTime % 60;
         if (miao < 10) {
@@ -511,10 +525,10 @@ var video = (function () {
 
     /*****控制control几秒后隐藏****/
     var now_TIME = 0;
-
     function shijian() {
         if (now_TIME >= 6) {
-            if (control.css("display") == "block") {//加个判断避免运行压力
+            //加个if判断避免运行压力(大于6但是一直隐藏)
+            if (control.css("display") == "block") {
                 //4秒没动就会隐藏control
                 control.animate({"opacity": 0}, 500, function () {
                     control.css({"display": "none"});
@@ -530,6 +544,7 @@ var video = (function () {
     function btnClick() {
         if (!media.ended && !media.paused) {
             media.pause();
+            //中间暂停键出现
             pause_on.css({"display": "block"});
             btn.css("backgroundPosition", "0 0");
             btn.unbind("mouseenter mouseleave");
@@ -539,14 +554,15 @@ var video = (function () {
             btn.mouseleave(function () {
                 $(this).css("backgroundPosition", "0 0");
             });
+            //结束定时器
             stop();
         } else {
             media.play();
             pause_on.css("display", "none");
             poster_on.css("display", "none");
-            //一动control就回来
+            //在play的状态下一动control就回来
             //绑定一个计时器多次会加速，isPlay用来控制
-            if (isPlay) {//只能进去一次
+            if (isPlay) {//只能进去一次，事件只绑定一次，计时器也绑定一个
                 $(media).bind("mousemove", function () {
                     now_TIME = 0;
                     if (control.css("display") == "none") {
@@ -568,6 +584,7 @@ var video = (function () {
                 setInterval(shijian, 1000);
                 isPlay = false;
             }
+            //播放时暂停消失，contorls出现
             control.css({"display": "block"});
             control.animate({"opacity": 1}, 200);
             pause_on.css({"display": "none"});
@@ -588,6 +605,7 @@ var video = (function () {
     function time() {
         var width_progress = media.currentTime / media.duration * 100 + "%";
         bar_parent_progress.css("width", width_progress);
+        //缓存进度（只有从头开始的）
         var width_buffer = media.buffered.end(0) / media.duration * 100 + "%";
         buffer.css("width", width_buffer);
         var currentTime = parseInt(media.currentTime);
@@ -600,6 +618,7 @@ var video = (function () {
     }
 
     function start() {
+        //400ms调整一下进度以免太卡顿
         timer = setInterval(time, 400);
     }
 
@@ -617,6 +636,7 @@ var video = (function () {
         control.css("display", "block");
         poster_on.css("display", "block");
         pause_on.css("display", "block");
+        //关闭网页自带controls
         $(media).removeAttr("controls");
         //播放按钮绑定暂停播放事件
         btn.bind("click", btnClick);
@@ -638,7 +658,7 @@ var video = (function () {
         fullscreen_span.mouseleave(function () {
             $(this).css("backgroundPosition", "-151px 0");
         });
-        //绑定全屏事件
+        //绑定监听全屏事件
         $(document).bind('webkitfullscreenchange mozfullscreenchange MSFullscreenChange fullscreenChange fullscreenchange', screenchange);
         //页面加载时paly的hover事件
         btn.mouseenter(function () {
